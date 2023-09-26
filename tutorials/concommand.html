@@ -1,0 +1,40 @@
+<body style="background-color:#AAADAC;">
+<p style="padding-left: 120px;"><a href="..\index.html">Return to Main Page</a></p>
+<p style="padding-left: 90px; text-align: center;"><span style="font-size: 26px;"><strong>Lua ConCommand Tutorial</strong></span><br /> <span style="font-size: 16px;">Description: Guide to create scripted Command.<br /> Author: Dim1xs</span></p>
+<h2 style="padding-left: 90px; text-align: center;">Getting Started</h2>
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">Okay, this tutorial gonna explain how to make a custom lua command.</span></p>
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">The first one, go to the <em>../lua/autorun/</em> path and create here random .lua script, it doesn't matter what you call it.</span></p>
+<h2 style="padding-left: 90px; text-align: center;">Doing it!</h2>
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">Basic function for creation ConCommand is:</span></p>
+<p style="padding-left: 720px;"><span style="background-color: #999999;">concommand.Add( "commandname", functionname )</span></p>
+<p style="padding-left: 180px; text-align: left;"><span style="font-size: 16px;">In fact, you can create function into it.</span></p>
+<p style="padding-left: 180px; text-align: left;"><span style="font-size: 16px;">Here are some example of ConCommand in use:</span></p>
+<pre style="padding-left: 210px;"><code><span style="background-color: #999999;"> 
+local function RunPrint()
+	print("print is done")
+end
+
+concommand.Add("runPrint", RunPrint)
+
+--========
+
+concommand.Add("printRun", function()
+	print("print is done")
+end)
+</span> <br /><br /><br /></code></pre>
+
+<p style="padding-left: 180px; text-align: left;"><span style="font-size: 16px;">You also can remove it!</span></p>
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">Basic function for creation ConCommand is:</span></p>
+<p style="padding-left: 720px;"><span style="background-color: #999999;">concommand.Remove( "commandname" )</span></p>
+
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">Example:</span></p>
+
+<pre style="padding-left: 210px;"><code><span style="background-color: #999999;"> 
+concommand.Remove("runPrint")
+
+--========
+
+concommand.Remove("printRun")
+</span> <br /><br /><br /></code></pre>
+
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">That's all!</span></p>
