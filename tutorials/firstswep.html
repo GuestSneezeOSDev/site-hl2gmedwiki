@@ -35,6 +35,7 @@ end
 <p style="padding-left: 540px;"><span style="background-color: #999999;">function SWEP:CapabilitiesGet()</span><br /><span style="background-color: #999999;">end</span></p>
 <p style="padding-left: 540px; text-align: left;">&nbsp;</p>
 <h2 style="padding-left: 510px;">SWEP Functions</h2>
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">You have to know, how classes in lua are working, for simple: If function has self: in the string it means self is the base class of the script. If you will dont have SWEP: or ENT: etc in your function name, self: will not work! Because SWEP: is like a structure.</span></p>
 <p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Okay so, you must put a basic functions like Name, Viewmodel, Worldmodel, so for that you can use same functions like in GMOD:</span></p>
 <p style="text-align: left;"><span style="font-size: 16px;">&nbsp;</span></p>
 <pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
@@ -96,3 +97,184 @@ SWEP.Secondary =
 }
 </span> <br /><br /><br /></code></pre>
 <p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">I like the second way better, it looks clearer to me. </span></p>
+<p style="text-align: left; padding-left: 510px;"><span style="font-size: 16px;"><strong>Ammo list:</strong></span></p>
+<p style="padding-left: 540px;"><span style="font-size: 16px; background-color: #999999;">AR2 - Ammunition of the AR2/Pulse Rifle<br />AlyxGun - (name in-game "5.7mm Ammo")<br />Pistol - Ammunition of the 9MM Pistol <br />SMG1 - Ammunition of the SMG/MP7<br />357 - Ammunition of the .357 Magnum<br />XBowBolt - Ammunition of the Crossbow<br />Buckshot - Ammunition of the Shotgun<br />RPG_Round - Ammunition of the RPG/Rocket Launcher<br />SMG1_Grenade - Ammunition for the SMG/MP7 grenade launcher (secondary fire)</span></p>
+<p style="padding-left: 540px;">&nbsp;</p>
+
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">And the last one is Damage of SWEP: </span></p>
+
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+SWEP.damage					= 15
+</span> <br /><br /><br /></code></pre>
+
+<h2 style="padding-left: 510px;">Animations</h2>
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Now, i will show how to add a animations for the player: </span></p>
+
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+SWEP.m_acttable				=
+{
+		{ ACT_RANGE_ATTACK1,			ACT_RANGE_ATTACK_AR2,			true },
+	    { ACT_RELOAD,					ACT_RELOAD_SMG1,				true },
+	    { ACT_IDLE,						ACT_IDLE_SMG1,					true },
+	    { ACT_IDLE_ANGRY,				ACT_IDLE_ANGRY_SMG1,			true },
+	    { ACT_WALK,						ACT_WALK_RIFLE,					true },
+
+	{ ACT_HL2MP_IDLE,					ACT_HL2MP_IDLE_AR2,					false },
+	{ ACT_HL2MP_RUN,					ACT_HL2MP_RUN_AR2,					false },
+	{ ACT_HL2MP_IDLE_CROUCH,			ACT_HL2MP_IDLE_CROUCH_AR2,			false },
+	{ ACT_HL2MP_WALK_CROUCH,			ACT_HL2MP_WALK_CROUCH_AR2,			false },
+	{ ACT_HL2MP_GESTURE_RANGE_ATTACK,	ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2,	false },
+	{ ACT_HL2MP_GESTURE_RELOAD,			ACT_HL2MP_GESTURE_RELOAD_AR2,		false },
+	{ ACT_HL2MP_JUMP,					ACT_HL2MP_JUMP_AR2,					false },
+	{ ACT_RANGE_ATTACK1,				ACT_RANGE_ATTACK_AR2,				false },
+    { ACT_MP_STAND_IDLE,				ACT_HL2MP_IDLE_AR2,					false },
+	{ ACT_MP_CROUCH_IDLE,				ACT_HL2MP_IDLE_CROUCH_AR2,			false },
+
+	{ ACT_MP_RUN,						ACT_HL2MP_RUN_AR2,					false },
+	{ ACT_MP_CROUCHWALK,				ACT_HL2MP_WALK_CROUCH_AR2,			false },
+
+	{ ACT_MP_ATTACK_STAND_PRIMARYFIRE,	ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2,	false },
+	{ ACT_MP_ATTACK_CROUCH_PRIMARYFIRE,	ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2,	false },
+
+	{ ACT_MP_RELOAD_STAND,				ACT_HL2MP_GESTURE_RELOAD_AR2,		false },
+	{ ACT_MP_RELOAD_CROUCH,				ACT_HL2MP_GESTURE_RELOAD_AR2,		false },
+
+	{ ACT_MP_JUMP,						ACT_HL2MP_JUMP_AR2,					false },
+};
+</span> <br /><br /><br /></code></pre>
+
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Sadly HoldType from gmod is still not realised, so we have to use a act table like in C++,tbelow this is a example with AR2 animations (aka rifle), if you want to change them, look for ACT Enums on gmod wiki, or wait untill they will be done in this wiki. </span></p>
+
+<h2 style="padding-left: 510px;">Sounds</h2>
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Sadly, you can't do the shoot sound with the same way like in gmod, and you have to use SWEP.SoundData table: </span></p>
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">That's probably same thing like in game weapon scripts (.txt)</span></p>
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+SWEP.SoundData				=
+{
+	empty						= "Weapon_Pistol.Empty",
+	single_shot				= "weapons/sound.wav" --any sound here
+}
+</span> <br /><br /><br /></code></pre>
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Remember! You don't need to write 'sound/' in path! It puts it automatically!</span></p>
+<h2 style="padding-left: 510px;">Functions</h2>
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Now you gonna code!</span></p>
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Starting from basics, SWEP:Initialize is used for defining values/bools and also is used for default weapon functions:</span></p>
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+function SWEP:Initialize()
+	self.m_bReloadsSingly	= false;
+	self.m_bFiresUnderwater	= false;
+end
+</span> <br /><br /><br /></code></pre>
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Below you can see 2 basic functions, they do the same thing that is written on them.</span></p>
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">But of course i will give you a example, i'm not sure you could understand anything:</span></p>
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+function SWEP:Initialize()
+	self.IsBool = true -- it's gonna be true by default
+    IsBool = true --the same but without self.
+    
+    self.RandVal = 5 -- it's gonna equals to 5 by default
+    RandVal = 5 -- the same but without self.
+end
+</span> <br /><br /><br /></code></pre>
+
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Next we will do the primary attack in our script!</span></p>
+
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+function SWEP:PrimaryAttack()
+	--code
+end
+</span> <br /><br /><br /></code></pre>
+
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Every time you do the SWEP, don't forget to identify the entity of the player who uses the weapon!</span></p>
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+function SWEP:PrimaryAttack()
+	local pPlayer = self:GetOwner() --getting player who uses a weapon.
+    
+    if ( ToBaseEntity( pPlayer ) == NULL ) then -- returning if player is not valid ( basic check )
+		return;
+	end
+
+end
+</span> <br /><br /><br /></code></pre>
+
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Then there are primitive functions, animations, sound, subtraction of bullets from the clip:</span></p>
+
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+function SWEP:PrimaryAttack()
+	local pPlayer = self:GetOwner() --getting player who uses a weapon.
+    
+    if ( ToBaseEntity( pPlayer ) == NULL ) then -- returning if player is not valid ( basic check )
+		return;
+	end
+	
+    if ( self.m_iClip1 <= 0 ) then --checking  for a empty clip
+		if ( not self.m_bFireOnEmpty ) then
+			self:Reload();
+		else
+			self:WeaponSound( 0 );
+			self.m_flNextPrimaryAttack = 0.3;
+		end
+
+		return;
+	end
+    
+    self:WeaponSound(1) --emit a shoot sound from SoundData
+    self:SendWeaponAnim(ACT_VM_PRIMARYATTACK) --do the animation of viewmodel
+    pPlayer:SetAnimation( 5 ) --do the animation of player
+    self.m_iClip1 = self.m_iClip1 - 1; --remove one ammo from clip
+    
+    self.m_flNextPrimaryAttack = gpGlobals.curtime() + 0.10; --next primary attack after shoot
+
+end
+</span> <br /><br /><br /></code></pre>
+
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">Okay, after that, i gonna show how to do the function for bullet, and recoil:</span></p>
+
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+function SWEP:PrimaryAttack()
+	local pPlayer = self:GetOwner() --getting player who uses a weapon.
+    
+    if ( ToBaseEntity( pPlayer ) == NULL ) then -- returning if player is not valid ( basic check )
+		return;
+	end
+	
+    if ( self.m_iClip1 <= 0 ) then --checking  for a empty clip
+		if ( not self.m_bFireOnEmpty ) then
+			self:Reload();
+		else
+			self:WeaponSound( 0 );
+			self.m_flNextPrimaryAttack = 0.3;
+		end
+
+		return;
+	end
+    
+    self:WeaponSound(1) --emit a shoot sound from SoundData
+    self:SendWeaponAnim(ACT_VM_PRIMARYATTACK) --do the animation of viewmodel
+    pPlayer:SetAnimation( 5 ) --do the animation of player
+    self.m_iClip1 = self.m_iClip1 - 1; --remove one ammo from clip
+    
+    self.m_flNextPrimaryAttack = gpGlobals.curtime() + 0.10; --next primary attack after shoot
+
+	local vecSrc		= pPlayer:Weapon_ShootPosition(); --these two functions must be defined!
+	local vecAiming		= pPlayer:GetAutoaimVector( 0.08715574274766 );
+
+	-- vecSrc - position of fire, vecAiming - Directory where is shooting, bullet spread, distance, Ammo Type
+	local info = FireBulletsInfo_t(1, vecSrc, vecAiming, vec3_origin,4096, self.m_iPrimaryAmmoType) -- actually BulletInfo table
+    info.m_pAttacker = pPlayer --defining our attacker
+    
+    pPlayer:FireBullets( info ) --and shoot the bullet with info from table
+    
+    pPlayer:ViewPunch( QAngle( -0.5, random.RandomFloat( -1, 1 ), 0 ) ); -- recoil
+end
+</span> <br /><br /><br /></code></pre>
+
+<p style="padding-left: 510px; text-align: left;"><span style="font-size: 16px;">And the last one thing is reload function:</span></p>
+
+<pre style="padding-left: 540px;"><code><span style="background-color: #999999;"> 
+function SWEP:Reload()
+	ToHL2MPPlayer(self:GetOwner()):DoAnimationEvent( 3 ) -- do the reload animation
+	return self:DefaultReload( self:GetMaxClip1(), self:GetMaxClip2(), 182 ); --actually reload our gun
+end
+</span> <br /><br /><br /></code></pre>
+
