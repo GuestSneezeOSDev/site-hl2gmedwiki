@@ -1,0 +1,33 @@
+<body style="background-color:#AAADAC;">
+<p style="padding-left: 120px;"><a href="..\index.html">Return to Main Page</a></p>
+<p style="padding-left: 90px; text-align: center;"><span style="font-size: 26px;"><strong>Lua ConVar Tutorial</strong></span><br /> <span style="font-size: 16px;">Description: Guide to create scripted CVar.<br /> Author: Dim1xs</span></p>
+<h2 style="padding-left: 90px; text-align: center;">Getting Started</h2>
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">Okay, now i'm gonna explain how to make a ConVar by lua.</span></p>
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">The first one, go to the <em>../lua/autorun/</em> and create here random .lua script, it doesn't matter what you call it.</span></p>
+<h2 style="padding-left: 90px; text-align: center;">Doing it!</h2>
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">Basic function for creation ConVar is:</span></p>
+<p style="padding-left: 720px;"><span style="background-color: #999999;">CreateConVar( "name", "defval", flag, "helptext", "minval", "maxval" )</span></p>
+<p style="padding-left: 180px; text-align: left;"><span style="font-size: 16px;">In fact, it is not important to specify all the arguments, the first 3 are enough for a minimum.</span></p>
+<p style="padding-left: 180px; text-align: left;"><span style="font-size: 16px;">Here are some example of ConVars in use:</span></p>
+<pre style="padding-left: 210px;"><code><span style="background-color: #999999;"> 
+local checkBool = CreateConVar("gmed_giveweapons", "1", FCVAR_CLIENT, "0", "1")
+
+if (checkBool:GetBool() == true) then
+	print("cvar is working")
+end
+
+--========
+
+local checkInt = CreateConVar("checkInteger", "1", FCVAR_SERVER, "0", "255")
+
+if (checkInt:GetInt() == 133) then
+	print("Answer is 133!")
+end
+</span> <br /><br /><br /></code></pre>
+<p style="text-align: center; padding-left: 90px;"><span style="font-size: 16px;">ConVar Flags:</span></p>
+<pre style="padding-left: 210px;"><code><span style="background-color: #999999;"> 
+FCVAR_CLIENT
+FCVAR_SERVER
+FCVAR_NONE
+
+</span> <br /><br /><br /></code></pre>
