@@ -1,2 +1,2 @@
 # site
-HL2GMED Wiki
+HL2GMED Wiki (not official)
