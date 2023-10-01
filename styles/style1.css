@@ -214,8 +214,8 @@ body.ltr #footer #footer-places {
 BODY
 {
     background-image: url("../img/page_gradient.png") !important;
-    background-image: url("../img/page_gradient.png"), url( "../img/stripes.png" ) !important;
-    background-position: left top !important;
+    background-image: url("../img/page_gradient.png"), url( "../img/trollface.png" ) !important;
+    background-position: top !important;
     background-repeat: repeat-x, repeat !important;
     background-color: #eaeaef !important;
 }

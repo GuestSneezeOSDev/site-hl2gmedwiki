@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>Variables</title>
+   </head>
+
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint"></div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>Variables</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a href="index43df.html" title="ConCommands"><img alt="Page white text.png" src="../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>This is an introduction to the lua language in general and is a recommended read if you are a beginner.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="CreatingRunning"><img alt="Calendar.png" src="../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>September 29th 2023</td></tr>
+         </tbody></table>
+         <br>
+
+         <h2 id="firstHeading" class="firstHeading">Defining variables</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               Variables let your script hold information. Using a variable you can put aside some data for later and then call it back whenever you want. Variables themselves don't have a type assigned to them and they can hold absolutely anything. <br />
+               <br />
+
+               Variable can store: string, float, int, bool etc.
+
+               A variable can be created by doing this: <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+myName<span style="color: #008000;"> = </span><span style="color: #FF0000;">"Dmitry"</span>
+               </pre>
+
+               Or in such variants: <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+myName<span style="color: #008000;"> = </span><span style="color: #FF0000;">"Dmitry"</span>
+myHeight<span style="color: #008000;"> = </span><span style="color: #FF0000;">"173"</span>
+isWearingGlasses<span style="color: #008000;"> = </span><span style="color: #FF0000;">false</span>
+               </pre>
+
+               And you can return this data (excluding boolean), or change it:<br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+myName<span style="color: #008000;"> = </span><span style="color: #FF0000;">"Dmitry"</span>
+myHeight<span style="color: #008000;"> = </span><span style="color: #FF0000;">"173"</span>
+isWearingGlasses<span style="color: #008000;"> = </span><span style="color: #FF0000;">false</span>
+
+<span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Your name is:"..myName</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Your height is:"..myHeight</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">if</span> isWearingGlasses <span style="color: #008000;">==</span> <span style="color: #0000ff;">false</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Do you wear glasses?: No"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">else</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Do you wear glasses?: Yes"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+                <h3 id="RunningScript" class="subFirstHeading2">Running the script</h3>
+
+                Now, run your script, and if you did everything right, the console will show you this: <br />
+
+               <pre class="lua" style="font-family:monospace;">
+Your name is:Dmitry
+Your height is:173
+Do you wear glasses?: No
+               </pre>
+               
+               <h3 id="ChanginVars" class="subFirstHeading2">Changing the created variables</h3>
+
+               You can change already created Var's like that:<br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+myName<span style="color: #008000;"> = </span><span style="color: #FF0000;">"Dmitry"</span>
+myHeight<span style="color: #008000;"> = </span><span style="color: #FF0000;">"173"</span>
+isWearingGlasses<span style="color: #008000;"> = </span><span style="color: #FF0000;">false</span>
+isNerd<span style="color: #008000;"> = </span><span style="color: #FF0000;">nil</span>
+
+<span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Your name is:"..myName</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Your height is:"..myHeight</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">if</span> isWearingGlasses <span style="color: #008000;">==</span> <span style="color: #0000ff;">false</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Do you wear glasses?: No"</span><span style="color:#008000;">)</span>
+   isNerd<span style="color: #008000;"> = </span><span style="color: #FF0000;">false</span>
+<span style="color: #0000ff;">else</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Do you wear glasses?: Yes"</span><span style="color:#008000;">)</span>
+   isNerd<span style="color: #008000;"> = </span><span style="color: #FF0000;">true</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               <h3 id="CombiningStrings" class="subFirstHeading2">Combining the strings</h3>
+
+               You can combine the strings with 2 ways. <br />
+               <br />
+
+               First way is simpliest, by putting <i>,</i> between strings:<br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Your name is: Dmitry" , "Your height is: 173"</span><span style="color:#008000;">)</span>
+               </pre>
+
+               Output:<br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+Your name is: Dmitry    Your height is: 173
+               </pre>
+
+               The second way can be done like this (we did it already above):<br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+myName<span style="color: #008000;"> = </span><span style="color: #FF0000;">"Dmitry"</span>
+myHeight<span style="color: #008000;"> = </span><span style="color: #FF0000;">"173"</span>
+
+<span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Your name is:"..myName</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Your height is:"..myHeight</span><span style="color:#008000;">)</span>
+               </pre>
+
+               Output: <br />
+               <br />
+               
+               <pre class="lua" style="font-family:monospace;">
+Your name is:Dmitry
+Your height is:173
+               </pre>
+         
+               And you can combine them:<br />
+               <br />
+
+<pre class="lua" style="font-family:monospace;">
+myName<span style="color: #008000;"> = </span><span style="color: #FF0000;">"Dmitry"</span>
+myHeight<span style="color: #008000;"> = </span><span style="color: #FF0000;">"173"</span>
+
+<span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Your name is:"..myName , "Your height is:"..myHeight </span><span style="color:#008000;">)</span>
+               </pre>
+
+               Output: <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+Your name is:Dmitry  Your height is:173
+               </pre>
+               <br />
+
+               Thank you for reading this tutorial, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.png);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 28.09.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>
