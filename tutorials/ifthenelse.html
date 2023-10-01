@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>If, then, else</title>
+   </head>
+
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint"></div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>If, then, else</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a href="index43df.html" title="ConCommands"><img alt="Page white text.png" src="../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>This is an introduction to the lua language in general and is a recommended read if you are a beginner.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="CreatingRunning"><img alt="Calendar.png" src="../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>September 29-30th 2023</td></tr>
+         </tbody></table>
+         <br>
+
+         <h2 id="firstHeading" class="firstHeading">If statements</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               The first thing I want to teach you is the "if" statement. This statement is a very basic, direct order to lua. This can be really useful in creating your own scripts. "If" tells the code to do something if a condition is true or not. This is a simple if statement:  <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> Int<span style="color: #008000;"> = </span><span style="color: #FF0000;">5</span>
+
+<span style="color: #0000ff;">if</span> Int <span style="color: #008000;">==</span> <span style="color: #0000ff;">3</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Int is 3"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               Or in such variants: <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> isTrue<span style="color: #008000;"> = </span><span style="color: #FF0000;">false</span>
+
+<span style="color: #0000ff;">if</span> isTrue <span style="color: #008000;">==</span> <span style="color: #0000ff;">false</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">(</span><span style="color: #FF0000;">"False"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               Condition has to be false to run the code block after it. A code block is code that only runs under certain conditions. In this case, the code block runs if the condition is false. <br />
+               
+            <h2 id="Else" class="subFirstHeading2">Else statements</h2>
+
+                Else is used to define the opposite of the condition, so if a condition is true, then else would tell it to execute the following code, a good usage of else is shown below. <br />
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> Int<span style="color: #008000;"> = </span><span style="color: #FF0000;">5</span>
+
+<span style="color: #0000ff;">if</span> Int <span style="color: #008000;">==</span> <span style="color: #0000ff;">3</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Int is 3"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">else</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Int is NOT 3"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               The above example checks if the variable "Int" is 3, if this is true, then it prints to console "Int is 3", but if the variable "Int" is NOT 3, then it prints "Int is NOT 3" to console. 
+
+            <h2 id="Conditions" class="subFirstHeading3">Conditions Available For Use</h2>
+               
+               <h3 id="Equal" class="subFirstHeading4">Equal To</h3>
+
+               The equal to condition is true if the thing on the left and right of == are equal. <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> Int<span style="color: #008000;"> = </span><span style="color: #FF0000;">5</span>
+
+<span style="color: #0000ff;">if</span> Int <span style="color: #008000;">==</span> <span style="color: #0000ff;">3</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Int is 3"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               <h3 id="NotEqual" class="subFirstHeading5">Not Equal To</h3>
+
+               The "not equal to" condition is true if the thing on the left and right of ~= aren't equal. You can also use != instead of ~= <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> Int<span style="color: #008000;"> = </span><span style="color: #FF0000;">5</span>
+
+<span style="color: #0000ff;">if</span> Int <span style="color: #008000;">~=</span> <span style="color: #0000ff;">3</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Int is NOT 3"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               <h3 id="Less" class="subFirstHeading6">Less Than</h3>
+
+               The "less than" condition is true if the thing on the left is less than the thing on the right. <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> Int<span style="color: #008000;"> = </span><span style="color: #FF0000;">5</span>
+
+<span style="color: #0000ff;">if</span> Int <span style="color: #008000;"><</span> <span style="color: #0000ff;">3</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Int is less than 3"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               <h3 id="Greater" class="subFirstHeading7">Greater Than</h3>
+         
+               The "greater than" condition is true if the thing on the left is more than the thing on the right. <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> Int<span style="color: #008000;"> = </span><span style="color: #FF0000;">5</span>
+
+<span style="color: #0000ff;">if</span> Int <span style="color: #008000;">></span> <span style="color: #0000ff;">3</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Int is greater than 3"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               <h3 id="LessOr" class="subFirstHeading8">Less Than or Equal To</h3>
+
+<pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> Int<span style="color: #008000;"> = </span><span style="color: #FF0000;">5</span>
+
+<span style="color: #0000ff;">if</span> Int <span style="color: #008000;"><=</span> <span style="color: #0000ff;">3</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Int is less than 3 or below"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               <h3 id="GreaterOr" class="subFirstHeading9">Greater Than or Equal To</h3>
+
+<pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> Int<span style="color: #008000;"> = </span><span style="color: #FF0000;">5</span>
+
+<span style="color: #0000ff;">if</span> Int <span style="color: #008000;">>=</span> <span style="color: #0000ff;">3</span> <span style="color: #0000ff;">then</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">( </span><span style="color: #FF0000;">"Int is greater than 3 or over"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               <br />
+
+               Thank you for reading this tutorial, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.png);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 28.09.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

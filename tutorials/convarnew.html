@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>ConVars</title>
+   </head>
+
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint"></div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>ConVars</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a href="index43df.html" title="ConCommands"><img alt="Page white text.png" src="../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>Article about convars.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="ConCommands"><img alt="Calendar.png" src="../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>September 28th 2023</td></tr>
+         </tbody></table>
+         <br>
+
+         This article will learn you, how to create and use lua ConVars
+         <h1 id="firstHeading" class="firstHeading">The beginning</h1>
+         <div id="bodyContent">
+            <div id="contentSub">
+               ConVar is executing to the game automatically,<br />
+               if the script is located in <i>'../lua/autorun'</i> , or the function is runned via/from SWEP/ENTITY.<br />
+               <br />
+               <h3 id="CreateConVar" class="subFirstHeading">CreateConVar</h3>
+
+               For adding ConVar you can use this function:
+
+               <pre class="lua" style="font-family:monospace;">
+--Command Name, Default Value, FLAGS, Minimum Value, Maximum Value
+CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"CommandName"</span>, <span style="color: #FF0000;">"defValue"</span>, FCVAR_NONE, <span style="color: #FF0000;">"minValue"</span>, <span style="color: #FF0000;">"maxValue"</span><span style="color:#008000;">)</span>
+               </pre>
+
+               <h2 id="Examples" class="subFirstHeading1">Examples</h2>
+
+               Here some examples, how you can use it.<br />
+               <br />
+               First is going example, for getting bool from ConVar:
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> checkBool<span style="color:#008000;"> = </span>CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"gmed_giveweapons"</span>, <span style="color: #FF0000;">"1"</span>, FCVAR_CLIENT, <span style="color: #FF0000;">"0"</span>, <span style="color: #FF0000;">"1"</span><span style="color:#008000;">)</span>
+
+<span style="color: #0000ff;">if</span> checkBool<span style="color: #0000ff;">:GetBool()</span> <span style="color:#008000;">==</span> <span style="color: #FF0000;">true</span><span style="color: #0000ff;"> then</span>
+   <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConVar is Working!"</span><span style="color: #0000ff;">)
+</span><span style="color: #0000ff;">end</span><span style="color:#008000;"></span>
+               </pre>
+
+               Next is example, how to get int from ConVar:
+
+<pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> checkInt<span style="color:#008000;"> = </span>CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"checkInteger"</span>, <span style="color: #FF0000;">"1"</span>, FCVAR_SERVER, <span style="color: #FF0000;">"0"</span>, <span style="color: #FF0000;">"255"</span><span style="color:#008000;">)</span>
+
+<span style="color: #0000ff;">if</span> checkBool<span style="color: #0000ff;">:GetInt()</span> <span style="color:#008000;">==</span> <span style="color: #FF0000;">133</span><span style="color: #0000ff;"> then</span>
+   <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"int = 133"</span><span style="color: #0000ff;">)
+</span><span style="color: #0000ff;">end</span><span style="color:#008000;"></span>
+               </pre>
+
+                <h2 id="Flags" class="subFirstHeading2">Flags</h2>
+
+                FCVAR_NONE - Just Simple ConVar, can be executed from Server and Client states. <br />
+
+                FCVAR_CLIENT - Executable only from Client state.<br />
+
+                FCVAR_SERVER - Executalbe only from Server state.<br />
+                <br />
+
+               Thank you for reading this tutorial, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.png);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 28.09.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>ConCommands</title>
+   </head>
+
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint"></div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>ConCommands</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a href="index43df.html" title="ConCommands"><img alt="Page white text.png" src="../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>Article about concommands.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="ConCommands"><img alt="Calendar.png" src="../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>September 28th 2023</td></tr>
+         </tbody></table>
+         <br>
+
+         This article will learn you, how to create/remove lua ConCommands.
+         <h1 id="firstHeading" class="firstHeading">The beginning</h1>
+         <div id="bodyContent">
+            <div id="contentSub">
+               ConCommand is executing to the game automatically,<br />
+               if the script is located in <i>'../lua/autorun'</i> , or the function is runned via/from SWEP/ENTITY.<br />
+               <br />
+               <h3 id="concommandAdd" class="subFirstHeading">concommand.Add</h3>
+
+               For adding ConCommand you can use this function:
+
+               <pre class="lua" style="font-family:monospace;">
+concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span>, FunctionName<span style="color:#008000;">)</span>
+               </pre>
+
+               There are two different ways to use this, above is the first.
+               Here the second way:
+
+               <pre class="lua" style="font-family:monospace;">
+concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span>, <span style="color: #0000ff;">function()</span> 
+   <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConCommand is Working!"</span><span style="color: #0000ff;">)</span>
+end<span style="color:#008000;">)</span>
+               </pre>
+
+               <span style="color: #0000ff;">function()</span> is supporting arguments:
+               <pre class="lua", style="font-family: monospace;">
+concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span>, <span style="color: #0000ff;">function(</span><span style="color: #0000ff;"> args )</span>
+   <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConCommand is Working!"</span><span style="color: #0000ff;">)
+</span>end<span style="color:#008000;">)</span>
+               </pre>
+            </div>
+         </div>
+         <h3 id="secondHeading" class="secondHeading">concommand.Remove</h3>
+         <div id="bodyContent">
+            <div id="contentSub">
+               Sometimes, you might want to remove a console command. It's going to be very simple, since there is only one argument in the function and that would be the console command:
+
+               <pre class="lua" style="font-family:monospace;">
+concommand.Remove<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span><span style="color:#008000;">)</span>
+               </pre>
+
+               Thank you for reading this tutorial, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.png);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 28.09.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

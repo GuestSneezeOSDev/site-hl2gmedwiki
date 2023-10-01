@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>Instances</title>
+   </head>
+
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint"></div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>HL2GMED Instances</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a href="index43df.html" title="ConCommands"><img alt="Page white text.png" src="../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>This is an introduction to the lua language in general and is a recommended read if you are a beginner.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="CreatingRunning"><img alt="Calendar.png" src="../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>September 28th 2023</td></tr>
+         </tbody></table>
+         <br>
+
+         <h2 id="firstHeading" class="firstHeading">Introdution</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               As a bit of a recap, I'll remind you there can be up to three instances at once - the Server Instance, the Client Instance, and the Menu Instance (broken rn). When loading a script, a Lua Instance turns the plain text inside of it into code. This process is called compiling, and is done every time a script is loaded. Right after the code is compiled, it runs on the instance it was compiled on. Scripts can be loaded as much as you like. You can load a script, modify it outside of the game, and load it up again as much as you want. <br />
+               <br />
+               <h3 id="InPractice" class="subFirstHeading">In Practice</h3>
+
+               So, to load a script on the server instance, I would do: <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">
+lua_dofile myscript.lua
+               </pre>
+
+               Now this script is run on the server instance.<br />
+               <br />
+
+               If I wanted to load a script on the client instance, I would do: <br />
+               <br /> 
+
+               <pre class="lua" style="font-family:monospace;">
+lua_dofile_cl myscript
+               </pre>
+
+               Now this script is run on the client instance. <br />
+               <br /> 
+
+               But it is important for you to note that when you change the script from the <i>'../lua/autorun'</i> directory, you definitely need to restart the map in order for the changes to apply. And if your script is located in the directory <i>'../lua'</i>, you just need to restart it using the commands listed above.
+
+
+                <h3 id="InstanceOccurrences" class="subFirstHeading2">Instance Occurrences</h3>
+
+                <p>
+                  1.
+                  <a title="Shared Lua">
+                     <img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="16">
+                  </a>
+                  Shared - This is used on both the server and the client.
+               </p>
+
+               <p>
+                  2.
+                  <a title="Server Lua">
+                     <img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17">
+                  </a>
+                  Server - This side, is used on Dedicated Servers, and your local hosted game, it can`t do client-side scripts.
+               </p>
+
+               <p>
+                  3.
+                  <a title="Client Lua">
+                     <img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="18">
+                  </a>
+                  Client - This side, is used only on your local game, it can`t do server-side scripts.
+               </p>
+
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.png);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 28.09.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>
