@@ -4,10 +4,45 @@
       <link href="../styles/style.css" rel="stylesheet" type="text/css" />
       <title>HL2GMED Lua Documentation</title>
    </head>
-
+   <script src="../base.js"></script>
    <body> 
       <div id="mw-page-base" class="noprint"></div>
-      <div id="mw-head-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+   </div>
       <div id="content">
          <a id="top"></a>
 
@@ -17,51 +52,47 @@
          Lua tutorials still in development!
          <br>
 
-         <h1 id="firstHeading" class="firstHeading">Basic Tutorials</h1>
+         <h2 id="firstHeading" class="firstHeading">Basic Tutorials</h1>
          <div id="bodyContent">
             <div id="contentSub"></div>
             <ul>
-               <li><a href="creatingrunning.html" title="CreatingRunning">Creating & Running</a> - Creating and opening scripts.</li>
-            </ul>
-            <ul>
-               <li><a href="ifthenelse.html" title="IfThenElse">If, Then, Else</a> - About If, Then, Else.</li>
-            </ul>
-            <ul>
-               <li><a href="vars.html" title="Variables">Variables</a> - Covers the basics of variables.</li>
-            </ul>
-            <ul>
-               <li><a href="comments.html" title="comments">Comments</a> - About Comments.</li>
-            </ul>
-            <ul>
-               <li><a href="gmedinstances.html" title="GmedInstances">HL2GMED Instances</a> - About HL2GMED Instances. (Clientside, Serverside, Shared) </li>
+               <li><a class="tutorial" href="creatingrunning.html" title="CreatingRunning">Creating & Running</a> - Creating and opening scripts.</li>
+               <li><a class="tutorial" href="vars.html" title="Variables">Variables</a> - Covers the basics of variables.</li>
+               <li><a class="tutorial" href="ifthenelse.html" title="IfThenElse">If, Then, Else</a> - About If, Then, Else.</li>
+               <li><a class="tutorial" href="comments.html" title="Сomments">Comments</a> - About Script Comments.</li>
+               <li><a class="tutorial" href="gmedinstances.html" title="GmedInstances">HL2GMED Instances</a> - About HL2GMED Instances. (Clientside, Serverside, Shared) </li>
+               <li><a class="tutorial" href="hooks.html" title="Hooks">Hooks</a> - Explains what events and hooks are and how to use them  </li>
             </ul>
          </div>
 
-         <h1 id="secondHeading" class="secondHeading">Starter Tutorials</h1>
+         <h2 id="secondHeading" class="secondHeading">Starter Tutorials</h1>
          <div id="bodyContent">
             <div id="contentSub"></div>
             <ul>
-               <li><a href="convarnew.html" title="ConVars">ConVars</a> - Adding ConVars, and functions related to them.</li>
+               <li><a class="tutorial" href="convarnew.html" title="ConVars">ConVars</a> - Adding ConVars, and functions related to them.</li>
             </ul>
             <ul>
-               <li><a href="concommandnew.html" title="ConCommands">ConCommands</a> - Adding ConCommands, and removing them.</li>
+               <li><a class="tutorial" href="concommandnew.html" title="ConCommands">ConCommands</a> - Adding ConCommands, and removing them.</li>
             </ul>
             <ul>
-               <li><a href="firstswepnew.html" title="FirstSWEP">First Scripted Weapon</a> - How to make a basic SWep that shoot the bullets!</li> 
+               <li><a class="tutorial" href="firstswepnew.html" title="FirstSWEP">First Scripted Weapon</a> - How to make a basic SWep that shoot the bullets!</li> 
             </ul>
-
+            <ul>
+               <li><a class="tutorial" href="firstsent.html" title="FirstSENT">First Scripted Entity</a> - Making Entity with changing color function.</li> 
+            </ul>
          </div>
       <div id="mw-panel" class="noprint collapsible bav"> 
          <div id="p-logo">
-            <a style="background-image: url(img/logo.png);"> 
+            <a style="background-image: url(img/logo.svg);"> 
             </a>
          </div>
       </div>
+   </div>
 
       <div id="footer">
          <ul id="footer-info">
             <li id="footer-info-lastmod">
-               This page was last modified on 30.09.2023
+               This page was last modified on 15.12.2023
             </li>
             <li id="footer-info-viewcount">
                Thank you, for opening this page

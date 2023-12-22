@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>HL2GMED Docs</title>
+   </head>
+   <script src="../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+   </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../index.html" title="GetBack">Return to Main Page</a> <br>
+         <br>
+
+         <table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Contents</h2>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Classes"><span class="tocnumber">1</span> <span class="toctext">Classes</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Libraries"><span class="tocnumber">2</span> <span class="toctext">Libraries</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Enums"><span class="tocnumber">3</span> <span class="toctext">Enums</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Globals"><span class="tocnumber">4</span> <span class="toctext">Globals</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Hooks"><span class="tocnumber">5</span> <span class="toctext">Hooks</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Other"><span class="tocnumber">6</span> <span class="toctext">Other</span></a></li>
+</ul>
+</td></tr></tbody></table>
+<br>
+
+         <div id="bodyContent">
+            <h1>HL2GMED Documentation</h1>
+            <div id="contentSub">
+               <h2 id="Classes">Classes</h2>
+               <ul>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/button/basepage.html">Button</a></li>
+                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><a href="classes/cai_basenpc/basepage.html">CAI_BaseNPC</a></li>
+                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><a href="classes/cai_navigator/basepage.html">CAI_Navigator</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/cbaseanimating/basepage.html">CBaseAnimating</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/cbasecombatweapon/basepage.html">CBaseCombatWeapon</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/cbaseentity/basepage.html">CBaseEntity</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/cbaseplayer/basepage.html">CBasePlayer</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/ceffectdata/basepage.html">CEffectData</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/cgametrace/basepage.html">CGameTrace</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/checkbutton/basepage.html">CheckButton</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/chl2mp_player/basepage.html">CHL2MPPlayer</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/color/basepage.html">Color</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/concommand/basepage.html">ConCommand</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/convar/basepage.html">ConVar</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/cpasfilter/basepage.html">CPASFilter</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/cphysicsprop/basepage.html">CPhysicsProp</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/crecipientfilter/basepage.html">CRecipientFilter</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/ctakedamageinfo/basepage.html">CTakeDamageInfo</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/editablepanel/basepage.html">EditablePanel</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/filehandle_t/basepage.html">FileHandle_t</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/firebulletsinfo_t/basepage.html">FireBulletsInfo_t</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/frame/basepage.html">Frame</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/hfont/basepage.html">HFont</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/hscheme/basepage.html">HScheme</a></li>
+                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><a href="classes/ilocomotion/basepage.html">ILocomotion</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/imaterial/basepage.html">IMaterial</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/imovehelper/basepage.html">IMoveHelper</a></li>
+                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><a href="classes/inetchannelinfo/basepage.html">INetChannelInfo</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/inetworkstringtable/basepage.html">INetworkStringTable</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/iphysicsobject/basepage.html">IPhysicsObject</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/ischeme/basepage.html">IScheme</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/keyvalues/basepage.html">KeyValues</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/matrix3x4_t/basepage.html">matrix3x4_t</a></li>
+                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><a href="classes/nextbotcombatcharacter/basepage.html">NextBotCombatCharacter</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/panel/basepage.html">Panel</a></li>
+                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><a href="classes/pathfollower/basepage.html">PathFollower</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/propertydialog/basepage.html">PropertyDialog</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="classes/propertypage/basepage.html">PropertyPage</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/qangle/basepage.html">QAngle</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/vector/basepage.html">Vector</a></li>
+                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><a href="classes/vehicle/basepage.html">Vehicle</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="classes/vmatrix/basepage.html">VMatrix</a></li>
+               </ul>
+               <h2 id="Libraries">Libraries</h2>
+               <ul>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/ai_basetaskfailurecodes_t/basepage.html">AI_BaseTaskFailureCodes_t</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/bit/basepage.html">bit</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/class_t/basepage.html">Class_T</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/concommand/basepage.html">concommand</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/contents/basepage.html">CONTENTS</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/cvar/basepage.html">cvar</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/dbg/basepage.html">dbg</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/debugoverlay/basepage.html">debugoverlay</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/disposition_t/basepage.html">Disposition_t</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/engine/basepage.html">engine</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="libs/enginevgui/basepage.html">enginevgui</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/entity/basepage.html">entity</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/filesystem/basepage.html">filesystem</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="libs/fontflag/basepage.html">FONTFLAG</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="libs/g_pclientshadowmgr/basepage.html">g_pClientShadowMgr</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/game/basepage.html">game</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/gamemode/basepage.html">gamemode</a></li>
+                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><a href="libs/gentlist/basepage.html">gEntList</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/gpglobals/basepage.html">gpGlobals</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/hook/basepage.html">hook</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/in/basepage.html">IN</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="libs/input/basepage.html">input</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/ipredictionsystem/basepage.html">IPredictionSystem</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/mathlib/basepage.html">mathlib</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/navigation_t/basepage.html">Navigation_t</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/networkstringtable/basepage.html">networkstringtable</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/physenv/basepage.html">physenv</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="libs/prediction/basepage.html">prediction</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/random/basepage.html">random</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="libs/scheme/basepage.html">scheme</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/snpc/basepage.html">snpc</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/surf/basepage.html">surf</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="libs/surface/basepage.html">surface</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/util/basepage.html">UTIL</a></li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><a href="libs/vgui/basepage.html">vgui</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/vmatrix/basepage.html">vmatrix</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="libs/weapon/basepage.html">weapon</a></li>
+               </ul>
+               <h2 id="Enums">Enums</h2>
+               <ul>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="../other/placeholders/wip.html">ACT</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="enums/ammo.html">AMMO</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="enums/dmg.html">DMG</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="enums/hud.html">HUD</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="enums/movetype.html">MOVETYPE</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="enums/tracer.html">TRACER</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="enums/wpnsound.html">WPN</a></li>
+               </ul>
+               <h2 id="Globals">Globals</h2>
+               <ul>
+                  <li><a href="../other/placeholders/wip.html">Globals Page...</a></li>
+               </ul>
+               <h2 id="Hooks">Hooks</h2>
+               <ul>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="../other/placeholders/wip.html">ENTITY</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="hooks/gamemode.html">GAMEMODE</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="../other/placeholders/wip.html">PLAYER</a></li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"><a href="hooks/weapon.html">WEAPON</a></li>
+               </ul>
+               <h2 id="Other">Other</h2>
+               <ul>
+                  <li><a href="other/effects.html">Effects</a></li>
+                  <li><a href="other/svguicontrols.html">SVGUI Controls</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 15.12.2023 [4:35]
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

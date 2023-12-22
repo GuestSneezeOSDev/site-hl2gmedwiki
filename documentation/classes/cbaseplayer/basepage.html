@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>CBasePlayer</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>CBasePlayer</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="ServerSide" class="subFirstHeading">Server-Side</h3>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BodyAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BodyTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BumpWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CheatImpulseCommands</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CheckObserverSettings</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CheckTrainUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Classify</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateCorpse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DamageEffect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DeathSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyViewModels</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawDebugGeometryOverlays</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Duck</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EnableControl</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EntSelectSpawnPoint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EquipSuit</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Event_Dying</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Event_Killed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Event_KilledOther</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindNextObserverTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FlashlightIsOn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FlashlightTurnOff</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FlashlightTurnOn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ForceObserverMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ForceRespawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ForceSimulation</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClientIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDelayTicks</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNetworkIDString</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNextObserverSearchStartPoint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetReplayEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVehicleAnalogControlBias</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVehicleEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GiveAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GiveNamedItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasAnyAmmoOfType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasNamedPlayerItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasPhysicsFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasWeapons</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HideViewModels</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ImpulseCommands</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InitHUD</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InitialSpawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsDead</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsFakeClient</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsIlluminatedByFlashlight</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsNetClient</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsOnLadder</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSinglePlayerGameEnding</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsValidObserverTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Jump</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">JumptoPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LockPlayerInPlace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ModeWantsSpectatorGUI</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NotifySinglePlayerGameEnding</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnTakeDamage_Alive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnVehicleStart</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PackDeadPlayerItems</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PauseBonusProgress</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PlayerDeathThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveAllItems</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemovePlayerItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveSuit</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RequiredEdictIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RumbleEffect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBodyPitch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBonusChallenge</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBonusProgress</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetFlashlightEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlayerName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetVehicleAnalogControlBias</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWeaponAnimType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldFadeOnDeath</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShowCrosshair</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShowViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SnapEyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartObserverMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartReplayMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopObserverMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopReplayMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TakeHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UnlockPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdatePlayerSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateTransmitState</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ValidateCurrentObserverTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_CanUse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_Detach</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_Drop</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_DropSlot</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_Equip</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_GetLast</span><span style="color:#008000;">()</span>
+               </pre>
+
+               <h3 id="ClietnSide" class="subFirstHeading">Client-Side</h3>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AbortReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddToPlayerSimulationList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Armor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearZoomOwner</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CurrentCommandNumber</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DoMuzzleFlash</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ExitLadder</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePositionAndVectors</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyeVectors</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindUseEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetActiveWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAutoaimVector</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBonusChallenge</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBonusProgress</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDeathTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultFOV</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEFNoInterpParity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFOV</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFOVDistanceAdjustFactor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFOVTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetImpulse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLaggedMovementValue</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLastKnownPlaceName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNextAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetObserverMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetObserverTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetOffset_m_Local</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlayerLocalData</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlayerMaxs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlayerMins</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlayerName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPreviouslyPredictedOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPunchAngle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetStepSoundCache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetStepSoundVelocities</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSwimSoundTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTimeBase</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTracerType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetUseEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetUserID</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWaterJumpTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HintMessage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IncrementEFNoInterpParity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBot</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsHLTV</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsInAVehicle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsObserver</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayerUnderwater</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSuitEquipped</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsUseableEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPostFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPreFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LeaveVehicle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LocalEyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MaxSpeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MyCombatCharacterPointer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnRestore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSimulate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSolidMaskForEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PlayStepSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PlayerUse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PostThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PreThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveAllAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveFromPlayerSimulationList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetAutoaim</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetObserverMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SelectItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SelectLastItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimation</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimationExtension</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBloodColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetFOV</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLadderNormal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMaxSpeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetNextAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlayerLocalData</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlayerUnderwater</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPreviouslyPredictedOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPunchAngle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetStepSoundCache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSuitUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSwimSoundTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWaterJumpTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SharedSpawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldShowHints</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SimulatePlayerSimulatedEntities</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SmoothViewOnStairs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Spawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SwitchToNextBestWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateClientData</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateUnderwaterState</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsingStandardWeaponsInVehicle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ViewPunch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ViewPunchReset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_CanSwitchTo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_OwnsThisType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_SetLast</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_ShootPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_ShouldSelectItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_ShouldSetLast</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_Switch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+               </pre>
+               
+               <h3 id="Shared" class="subFirstHeading">Shared</h3>
+
+<pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AbortReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddToPlayerSimulationList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Armor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearZoomOwner</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CurrentCommandNumber</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DoMuzzleFlash</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ExitLadder</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePositionAndVectors</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyeVectors</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindUseEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetActiveWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAutoaimVector</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBonusChallenge</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBonusProgress</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDeathTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultFOV</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEFNoInterpParity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFOV</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFOVDistanceAdjustFactor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFOVTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetImpulse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLaggedMovementValue</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLastKnownPlaceName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNextAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetObserverMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetObserverTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetOffset_m_Local</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlayerLocalData</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlayerMaxs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlayerMins</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlayerName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPreviouslyPredictedOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPunchAngle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetStepSoundCache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetStepSoundVelocities</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSwimSoundTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTimeBase</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTracerType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetUseEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetUserID</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWaterJumpTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HintMessage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IncrementEFNoInterpParity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBot</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsHLTV</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsInAVehicle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsObserver</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayerUnderwater</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSuitEquipped</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsUseableEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPostFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPreFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LeaveVehicle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LocalEyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MaxSpeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MyCombatCharacterPointer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnRestore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSimulate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSolidMaskForEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PlayStepSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PlayerUse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PostThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PreThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveAllAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveFromPlayerSimulationList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetAutoaim</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetObserverMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SelectItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SelectLastItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimation</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimationExtension</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBloodColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetFOV</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLadderNormal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMaxSpeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetNextAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlayerLocalData</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlayerUnderwater</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPreviouslyPredictedOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPunchAngle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetStepSoundCache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSuitUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSwimSoundTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWaterJumpTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SharedSpawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldShowHints</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SimulatePlayerSimulatedEntities</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SmoothViewOnStairs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Spawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SwitchToNextBestWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateClientData</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateUnderwaterState</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsingStandardWeaponsInVehicle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ViewPunch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ViewPunchReset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_CanSwitchTo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_OwnsThisType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_SetLast</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_ShootPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_ShouldSelectItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_ShouldSetLast</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Weapon_Switch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+               </pre>
+
+               <h2 id="secondHeading" class="secondHeading">Values</h2>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Booleans</h3>
+               These values will return boolean. [true/false]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_fOnTarget</span>
+               </pre>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Numbers</h3>
+               These values will return numbers. [floats]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_flNextAttack</span>
+               </pre>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Numbers</h3>
+               These values will return numbers. [ints]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_afButtonLast</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_afButtonPressed</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_afButtonReleased</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_nButtons</span>
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_StuckLast</span>
+               </pre>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Strings</h3>
+               These values will return strings.
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBasePlayer</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_szAnimExtension</span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 14.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

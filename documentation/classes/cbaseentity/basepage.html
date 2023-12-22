@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>CBaseEntity</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>CBaseEntity</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="ServerSide" class="subFirstHeading">Server-Side</h3>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="acceptinput.html">AcceptInput</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Activate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddContext</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddDataObjectType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddEntityRelationship</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddPoints</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddPointsToTeam</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddTimedOverlay</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ApplyAbsVelocityImpulse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ApplyLocalAngularVelocityImpulse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Blocked</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BlocksLOS</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BloodColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BodyTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BoundingRadius</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanBeHitByMeleeAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanStandOn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ChangeTeam</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Classify</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearNavIgnore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CollisionRulesChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeAbsDirection</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeAbsPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeWorldSpaceSurroundingBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Create</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateDataObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateNoSpawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreatePredictedEntityByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateVPhysics</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DamageDecal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DeathNotice</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DecalTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DecrementTransmitStateOwnedCounter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyAllDataObjects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyDataObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DetectInSkybox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DispatchResponse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DispatchTraceAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DoImpactEffect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DoesHavePlayerChild</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawAbsBoxOverlay</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawBBoxOverlay</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawDebugGeometryOverlays</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawDebugTextOverlays</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawRBoxOverlay</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawTimedOverlays</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DumpResponseCriteria</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EarPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EmitAmbientSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EmitSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EndBlocked</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EndGroundContact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EndTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EntIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EntityText</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EntityToWorldSpace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Event_Killed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Event_KilledOther</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Extinguish</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FireBullets</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FirstMoveChild</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FollowEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FrameAdvance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GenderExpandString</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAbsAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAbsOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAbsVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAnimTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAutoAimCenter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAutoAimRadius</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBaseAnimating</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBaseEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCheckUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClass</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClassname</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCollisionGroup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCreator</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDLLType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDamage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDamageType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDataObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDebugName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDelay</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEffectEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetElasticity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEnemy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEntityName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEntitySkybox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFirstThinkTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFollowedEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetForward</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFriction</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGravity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGroundChangeTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGroundEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGroundVelocityToApply</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetInputDispatchEffectPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetKeyValue</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLastThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLastThinkTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalAngularVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetModelIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetModelName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMoveDoneTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMoveParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getmovetype.html">GetMoveType</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNextTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetOwnerEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetParametersForSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPhysicsObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPhysicsObjectCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPhysicsObjectNum</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPredictionPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPredictionRandomSeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetReceivedDamageScale</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRight</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSimulatingPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSimulationTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSmoothedVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSoundDuration</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSoundEmissionOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSoundSourceIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTeamNumber</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTextureFrameIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTouchTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTracerAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTracerType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTransmitState</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetUp</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVectors</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWaterLevel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWaterType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasDataObjectType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasNPCsOnIt</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Health</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Ignite</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ImpactTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InSameTeam</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IncrementLocalTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IncrementTransmitStateOwnedCounter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Instance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Intersects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAIWalkable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAbsQueriesValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAlive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAnimatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBSPModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBaseObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBaseTrain</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsClient</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsCurrentlyTouching</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsDormant</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsEFlagSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsEffectActive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsFloating</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsFollowingEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsInAnyTeam</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsLockedByMaster</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMarkedForDeletion</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMoving</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsNPC</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsNavIgnored</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsNetClient</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayerSimulated</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPointSized</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPrecacheAllowed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsServer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSimulatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSimulatingOnAlternateTicks</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSolidFlagSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsStandable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTemplate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTransparent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTriggered</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsViewable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWorld</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">KeyValue</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LocalEyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MakeDormant</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MoveDone</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NameMatches</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NextMovePeer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NextMovePeer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ObjectCaps</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnControls</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnRestore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnTakeDamage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PassesDamageFilter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsCheckForEntityUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsCheckWater</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsCheckWaterTransition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsImpact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsMarkEntitiesAsTouching</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsNotifyOtherOfGroundRemoval</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsNotifyOtherOfUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsRemoveGroundList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsRemoveTouchedList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSimulate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSolidMaskForEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSplash</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsStartGroundContact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsTouchTriggers</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PostClientActive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PostClientMessagesSent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PostConstructor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Precache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrecacheModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrecacheScriptSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrecacheSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrefetchScriptSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrefetchSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RecalcHasPlayerChildBit</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RegisterThinkContext</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Remove</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveAllDecals</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveDataObjectType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveDeferred</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RequiredEdictIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Respawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_AllowedToFade</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_CallUseToggle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_DoNothing</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_FadeOut</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_PerformFadeOut</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_Remove</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_StartFadeOut</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_StartFadeOutInstant</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_Vanish</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SendDebugPivotOverlay</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAIWalkable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsAngles</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsQueriesValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAllowPrecache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBaseVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBlocksLOS</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCheckUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetClassname</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCollisionBounds</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCollisionGroup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetDamage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEffectEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEffects</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetElasticity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetFriction</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGravity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGroundChangeTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGroundEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalAngularVelocity</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMaxHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModelIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModelName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMoveCollide</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMoveDoneTime</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="setmovetype.html">SetMoveType</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetNavIgnore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetNextThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetOwnerEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetParentAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlayerSimulated</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPredictionEligible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPredictionPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorA</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorR</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorG</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorB</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetShadowCastDistance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSimulatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSimulationTime</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetTextureFrameIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetTransmitState</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetViewOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWaterLevel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWaterType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldAttractAutoAim</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldCollide</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldSavePhysics</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldToggle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Spawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Splash</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartBlocked</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartGroundContact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopFollowingEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TakeDamage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TakeHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TeamID</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Teleport</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Think</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ToggleFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Touch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TraceAttackToTriggers</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TraceBleed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UnsetPlayerSimulated</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateOnRemove</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateTransmitState</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Use</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsDestroyObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsGetObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsGetObjectList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsInitNormal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsInitStatic</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsIsFlesh</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsSetObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ValidateEntityConnections</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VelocityPunch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WakeRestingObjects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldAlignMaxs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldAlignMins</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldAlignSize</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldSpaceCenter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldToEntitySpace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">entindex</span><span style="color:#008000;">()</span>  
+               </pre>
+
+               <h3 id="ClientSide" class="subFirstHeading">Client-Side</h3>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Activate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddDataObjectType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ApplyAbsVelocityImpulse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ApplyLocalAngularVelocityImpulse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BlocksLOS</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BloodColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BoundingRadius</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ChangeTeam</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CollisionRulesChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeAbsDirection</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeAbsPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeFxBlend</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeWorldSpaceSurroundingBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateDataObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreatePredictedEntityByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateVPhysics</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DamageDecal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DecalTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyAllDataObjects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyDataObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DispatchTraceAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DoImpactEffect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DontRecordInTools</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EarPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EmitAmbientSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EmitSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EnableInToolView</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EndGroundContact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EndTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EntIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EntityToWorldSpace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Extinguish</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FireBullets</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FirstMoveChild</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FollowEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FrameAdvance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GenderExpandString</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAbsAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAbsOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAbsVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAnimTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBaseAnimating</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBaseEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCheckUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClass</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClassname</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCollisionGroup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCreator</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDLLType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDataObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDebugName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEffectEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetElasticity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFirstThinkTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFollowedEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetForward</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFxBlend</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGravity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGroundChangeTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGroundEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetKeyValue</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLastThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLastThinkTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalAngularVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetModelIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetModelName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMoveParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getmovetype.html">GetMoveType</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetObserverCamOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetOwnerEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetParametersForSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPhysicsObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPhysicsObjectCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPhysicsObjectNum</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPredictionPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPredictionRandomSeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRenderAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRenderOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRight</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSimulatingPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSimulationTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSoundDuration</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSoundSourceIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTeamNumber</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTextureFrameIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTouchTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTracerAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTracerType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetUp</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVectors</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWaterLevel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWaterType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasDataObjectType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasNPCsOnIt</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasRecordedThisFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Health</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Ignite</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ImpactTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InSameTeam</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Init</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Interp_HierarchyUpdateInterpolationAmounts</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAIWalkable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAbsQueriesValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAlive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAnimatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBSPModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBaseObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBaseTrain</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsClient</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsCurrentlyTouching</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsDormant</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsEFlagSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsEffectActive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsEnabledInToolView</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsFloating</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsFollowingEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsInWorld</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMarkedForDeletion</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsNPC</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayerSimulated</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPointSized</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPrecacheAllowed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsServer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSimulatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSimulatingOnAlternateTicks</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSolidFlagSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsStandable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsToolRecording</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTransparent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTwoPass</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">KeyValue</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LODTest</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LocalEyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NextMovePeer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NextThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ObjectCaps</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnRestore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsCheckForEntityUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsCheckWater</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsCheckWaterTransition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsImpact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsMarkEntitiesAsTouching</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsNotifyOtherOfGroundRemoval</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsNotifyOtherOfUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsRemoveGroundList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsRemoveTouchedList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSimulate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSolidMaskForEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsStartGroundContact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Precache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrecacheModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrecacheScriptSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrecacheSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrefetchScriptSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrefetchSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RecordToolMessage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RegisterThinkContext</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Release</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Remove</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveAllDecals</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveDataObjectType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_Remove</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAIWalkable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsAngles</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsQueriesValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAllowPrecache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBaseVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBlocksLOS</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCheckUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetClassname</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCollisionBounds</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCollisionGroup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEffectEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetFriction</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGravity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGroundChangeTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGroundEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalAngularVelocity</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModelIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModelName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMoveCollide</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="setmovetype.html">SetMoveType</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetNextClientThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetNextThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetOwnerEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetParentAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlayerSimulated</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPredictionEligible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPredictionPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorA</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorR</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorG</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorB</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSimulatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSimulationTime</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetTextureFrameIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetToolRecording</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetViewOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWaterLevel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWaterType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldCollide</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldRecordInTools</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldSavePhysics</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Spawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SpawnClientEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartGroundContact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopFollowingEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Term</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Think</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ToggleFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Touch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TraceBleed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UnsetPlayerSimulated</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateOnRemove</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesFullFrameBufferTexture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesPowerOfTwoFrameBufferTexture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsDestroyObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsGetObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsGetObjectList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsInitNormal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsInitStatic</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsIsFlesh</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsSetObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WakeRestingObjects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldAlignMaxs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldAlignMins</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldAlignSize</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldSpaceCenter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldToEntitySpace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">entindex</span><span style="color:#008000;">()</span>
+               </pre>
+               
+               <h3 id="Shared" class="subFirstHeading">Shared</h3>
+
+<pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Activate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddDataObjectType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ApplyAbsVelocityImpulse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ApplyLocalAngularVelocityImpulse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BlocksLOS</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BloodColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BoundingRadius</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ChangeTeam</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CollisionRulesChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeAbsDirection</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeAbsPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeWorldSpaceSurroundingBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateDataObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreatePredictedEntityByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateVPhysics</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DamageDecal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DecalTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyAllDataObjects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyDataObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DispatchTraceAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DoImpactEffect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EarPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EmitAmbientSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EmitSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EndGroundContact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EndTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EntIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EntityToWorldSpace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Extinguish</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EyePosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FireBullets</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FirstMoveChild</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FollowEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FrameAdvance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GenderExpandString</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAbsAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAbsOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAbsVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAnimTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBaseAnimating</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBaseEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCheckUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClass</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClassname</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCollisionGroup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCreator</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDLLType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDataObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDebugName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEffectEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetElasticity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFirstThinkTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFollowedEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetForward</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGravity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGroundChangeTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGroundEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetKeyValue</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLastThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLastThinkTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalAngularVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetLocalVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetModelIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetModelName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMoveParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getmovetype.html">GetMoveType</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetOwnerEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetParametersForSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPhysicsObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPhysicsObjectCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPhysicsObjectNum</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPredictionPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPredictionRandomSeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRight</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSimulatingPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSimulationTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSoundDuration</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSoundSourceIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTeamNumber</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTextureFrameIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTouchTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTracerAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTracerType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetUp</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVectors</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWaterLevel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWaterType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasDataObjectType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasNPCsOnIt</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Health</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Ignite</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ImpactTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InSameTeam</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAIWalkable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAbsQueriesValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAlive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAnimatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBSPModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBaseObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBaseTrain</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsClient</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsCurrentlyTouching</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsDormant</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsEFlagSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsEffectActive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsFloating</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsFollowingEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsInWorld</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMarkedForDeletion</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsNPC</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPlayerSimulated</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPointSized</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPrecacheAllowed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsServer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSimulatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSimulatingOnAlternateTicks</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSolidFlagSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsStandable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTransparent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">KeyValue</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LocalEyeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NextMovePeer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NextThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ObjectCaps</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnRestore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsCheckForEntityUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsCheckWater</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsCheckWaterTransition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsImpact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsMarkEntitiesAsTouching</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsNotifyOtherOfGroundRemoval</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsNotifyOtherOfUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsRemoveGroundList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsRemoveTouchedList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSimulate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsSolidMaskForEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PhysicsStartGroundContact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Precache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrecacheModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrecacheScriptSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrecacheSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrefetchScriptSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrefetchSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RegisterThinkContext</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Remove</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveAllDecals</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveDataObjectType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveSpawnFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SUB_Remove</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAIWalkable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsAngles</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsQueriesValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAbsVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAllowPrecache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAnimatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBaseVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBlocksLOS</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCheckUntouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetClassname</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCollisionBounds</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCollisionGroup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEffectEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetFriction</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGravity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGroundChangeTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGroundEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetHealth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalAngularVelocity</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetLocalVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModelIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModelName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMoveCollide</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="setmovetype.html">SetMoveType</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetNextThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetOwnerEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetParentAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlayerSimulated</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPredictionEligible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPredictionPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorA</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorR</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorG</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderColorB</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetRenderMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSimulatedEveryTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSimulationTime</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSolidFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetTextureFrameIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetViewOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWaterLevel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWaterType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldCollide</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldSavePhysics</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Spawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartGroundContact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopFollowingEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Think</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ToggleFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Touch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TraceBleed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UnsetPlayerSimulated</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateOnRemove</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsDestroyObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsGetObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsGetObjectList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsInitNormal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsInitStatic</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsIsFlesh</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsSetObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WakeRestingObjects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldAlignMaxs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldAlignMins</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldAlignSize</span><span style="color:#008000;">()</span>  
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldSpaceCenter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldToEntitySpace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">:</span><span style="color: #FF0000;">entindex</span><span style="color:#008000;">()</span>
+               </pre>
+
+               <h2 id="secondHeading" class="secondHeading">Values</h2>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Booleans</h3>
+               This value will return boolean. [true/false]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_bAllowPrecache</span>
+               </pre>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Floats</h3>
+               These values will return numbers. [floats]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_flAnimTimem_flAnimTime</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_flSimulationTime</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_flSpeed</span>
+               </pre>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Numbers</h3>
+               These values will return numbers. [ints]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iClassname</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iHealth</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_nLastThinkTick</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_nModelIndex</span>
+<span style="color: #0000ff;">CBaseEntity</span><span style="color:#008000;">.</span><span style="color: #FF0000;">touchStamp</span> <span style="color: #888;">--idk what is this. </span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 30.11.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

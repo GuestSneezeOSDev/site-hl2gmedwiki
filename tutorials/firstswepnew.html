@@ -4,10 +4,45 @@
       <link href="../styles/style.css" rel="stylesheet" type="text/css" />
       <title>First SWEP</title>
    </head>
-
+   <script src="../base.js"></script>
    <body> 
       <div id="mw-page-base" class="noprint"></div>
-      <div id="mw-head-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+   </div>
       <div id="content">
          <a id="top"></a>
 
@@ -20,11 +55,11 @@
          </tbody></table>
          <br>
 
-         This article will learn you, how to create code your first Scirpted Weapon - SWEP
+         This article will learn you, how to create code your first Scirpted Weapon - <span style="color: #FF0000;">SWEP</span>
          <h1 id="firstHeading" class="firstHeading">Scripted Weapons</h1>
          <div id="bodyContent">
             <div id="contentSub">
-               Better known as a SWep (or SWEP in some cases) a scripted weapon is a weapon that has an underlying script controlling its operation. In this tutorial, we will be making a SWep with fire bullets function.
+               Better known as a SWep (or SWEP in some cases) a scripted weapon is a weapon that has an underlying script controlling its operation. In this tutorial, we will be making a SWep with fire bullets <span style="color: #0000ff;">function</span>.
                <br />
             </div>
          </div>
@@ -55,34 +90,34 @@
                   <br />
                   🔵shared.lua<br />
                   <br />
-               init.lua is run Serverside functions.<br />
+               init.lua is run Serverside <span style="color: #0000ff;">functions</span>.<br />
                <br />
-               cl_init.lua is run Clientside functions.<br />
+               cl_init.lua is run Clientside <span style="color: #0000ff;">functions</span>.<br />
                <br />
                shared.lua is run in both environments (server/clientside).<br />
                <br />
                Now, for perfect work you have to open cl_init.lua and put here basic code:<br />
 
                <pre class="lua" style="font-family: monospace;">
-                  include( "shared.lua" ) --Must be here, for normal client initialize without errors.
+<span style="color: #0000ff;">include</span>( "shared.lua" ) --Must be here, for normal client initialize without errors.
 
-function SWEP:DrawLargeWeaponBox( bSelected, xpos, ypos, boxWide, boxTall, selectedColor, alpha, number ) --Must be here so that it does not give an error.
-end
+<span style="color: #0000ff;">function </span> SWEP:DrawLargeWeaponBox( bSelected, xpos, ypos, boxWide, boxTall, selectedColor, alpha, number ) --Must be here so that it does not give an error.
+<span style="color: #0000ff;">end</span>
 
-function SWEP:DrawModel( flags )
-end
+<span style="color: #0000ff;">function </span> SWEP:DrawModel( flags )
+<span style="color: #0000ff;">end</span>
 
-function SWEP:MuzzleFlash( pos1, angles, type, firstPerson )
-end
+<span style="color: #0000ff;">function </span> SWEP:MuzzleFlash( pos1, angles, type, firstPerson )
+<span style="color: #0000ff;">end</span>
                </pre>
                 <br />
                Now same for init.lua: <br />
 
                 <pre class="lua" style="font-family: monospace;">
-include( "shared.lua" ) --Must be here, for normal server initialize without errors.
+<span style="color: #0000ff;">include</span>( "shared.lua" ) --Must be here, for normal server initialize without errors.
 
-function SWEP:CapabilitiesGet()
-end
+<span style="color: #0000ff;">function </span> SWEP:CapabilitiesGet()
+<span style="color: #0000ff;">end</span>
                </pre>
             </div>
          </div>
@@ -90,38 +125,38 @@ end
          <h1 id="fourthHeading" class="fourthHeading">SWEP Functions</h1>
          <div id="bodyContent">
             <div id="contentSub">
-               You have to know, how classes in lua are working, for simple: If function has self: in the string it means self is the base class of the script. <br />
-               If you will dont have SWEP: or ENT: etc in your function name, self: will not work! Because SWEP: is like a structure.<br />
+               You have to know, how classes in lua are working, for simple: <span style="color: #0000ff;">if</span> <span style="color: #0000ff;">function </span> has <span style="color: #FF0000;">self</span>: in the string it means <span style="color: #FF0000;">self</span> is the base class of the script. <br />
+               <span style="color: #0000ff;">if</span> you will dont have SWEP: or ENT: etc in your <span style="color: #0000ff;">function </span> name, <span style="color: #FF0000;">self</span>: will not work! Because SWEP: is like a structure.<br />
                <br />
-               Okay so, you must put a basic functions like Name, Viewmodel, Worldmodel, so for that you can use same functions like in GMOD:<br />
+               Okay so, you must put a basic <span style="color: #0000ff;">functions</span> like Name, Viewmodel, Worldmodel of weapon, so for that you can use same <span style="color: #0000ff;">functions</span> like in GMOD:<br />
 
                <pre class="lua" style="font-family: monospace;">
-SWEP.Name                  = "Base Weapon" --in SpawnMenu Name
-SWEP.PrintName             = "#HL2_357Handgun"
-SWEP.ViewModel             = "models/weapons/v_357.mdl"
-SWEP.WorldModel            = "models/weapons/w_357.mdl"
-SWEP.HoldType              = "python" --dont working
-SWEP.Slot                  = 1
-SWEP.SlotPos               = 1
-SWEP.Weight                = 7
-SWEP.item_flags            = 0
-SWEP.AutoSwitchTo          = 1
-SWEP.AutoSwitchFrom        = 1
-SWEP.BuiltRightHanded      = 0
-SWEP.AllowFlipping         = 0 --actually does the same like ViewModelFlip in gmod.
-SWEP.MeleeWeapon           = 0 --idk what it does.
-SWEP.Spawnable             = true
-SWEP.AdminOnly             = false
+<span style="color: #FF0000;">SWEP</span>.Name                  = "Base Weapon" --in SpawnMenu Name
+<span style="color: #FF0000;">SWEP</span>.PrintName             = "#HL2_357Handgun"
+<span style="color: #FF0000;">SWEP</span>.ViewModel             = "models/weapons/v_357.mdl"
+<span style="color: #FF0000;">SWEP</span>.WorldModel            = "models/weapons/w_357.mdl"
+<span style="color: #FF0000;">SWEP</span>.HoldType              = "python" --dont working
+<span style="color: #FF0000;">SWEP</span>.Slot                  = 1
+<span style="color: #FF0000;">SWEP</span>.SlotPos               = 1
+<span style="color: #FF0000;">SWEP</span>.Weight                = 7
+<span style="color: #FF0000;">SWEP</span>.item_flags            = 0
+<span style="color: #FF0000;">SWEP</span>.AutoSwitchTo          = 1
+<span style="color: #FF0000;">SWEP</span>.AutoSwitchFrom        = 1
+<span style="color: #FF0000;">SWEP</span>.BuiltRightHanded      = 0
+<span style="color: #FF0000;">SWEP</span>.AllowFlipping         = 0 --actually does the same like ViewModelFlip in gmod.
+<span style="color: #FF0000;">SWEP</span>.MeleeWeapon           = 0 --idk what it does.
+<span style="color: #FF0000;">SWEP</span>.Spawnable             = true
+<span style="color: #FF0000;">SWEP</span>.AdminOnly             = false
                </pre>
             </div>
          </div>
 
-         <h1 id="fifthHeading" class="fifthHeading">Firearm Settings</h1>
+         <h1>Firearm Settings</h1>
          <div id="bodyContent">
             <div id="contentSub">
                Each weapon must have its parameters configured (cartridges, magazine stock, initial ammunition, type of cartridges)<br />
                <br />
-               Fortunately, in this lua, the ammo def functions work the same way as in gmod, which means that they are tables, and I can show you 2 ways for setting up ammo. <br />
+               Fortunately, in this lua, the ammo def <span style="color: #0000ff;">functions</span> work the same way as in gmod, which means that they are tables, and I can show you 2 ways for setting up ammo. <br />
                <br />   
                First way, is making in like in default gmod swep:<br /> 
 
@@ -129,34 +164,34 @@ SWEP.AdminOnly             = false
 --This determins how big each clip/magazine for the gun is. You can 
 --set it to -1 to disable the ammo system, meaning primary ammo will 
 --not be displayed and will not be affected.
-SWEP.Primary.ClipSize = 126
+<span style="color: #FF0000;">SWEP</span>.Primary.ClipSize = 126
 
 --This sets the number of rounds in the clip when you first get the gun. Again it can be set to -1.
-SWEP.Primary.DefaultClip = 126
+<span style="color: #FF0000;">SWEP</span>.Primary.DefaultClip = 126
 
 --Obvious. Determines whether the primary fire is automatic. This should be true/false
-SWEP.Primary.Automatic = false
+<span style="color: #FF0000;">SWEP</span>.Primary.Automatic = false
 
 --Sets the ammunition type the gun uses, see below for a list of types.
-SWEP.Primary.Ammo = "357
+<span style="color: #FF0000;">SWEP</span>.Primary.Ammo = "357
 
-SWEP.Secondary.ClipSize = -1
-SWEP.Secondary.DefaultClip = -1
-SWEP.Secondary.Automatic = false
-SWEP.Secondary.Ammo = "None"
+<span style="color: #FF0000;">SWEP</span>.Secondary.ClipSize = -1
+<span style="color: #FF0000;">SWEP</span>.Secondary.DefaultClip = -1
+<span style="color: #FF0000;">SWEP</span>.Secondary.Automatic = false
+<span style="color: #FF0000;">SWEP</span>.Secondary.Ammo = "None"
                </pre>
 
                And here is the second way:<br /> 
 
                <pre class="lua" style="font-family: monospace;">
-SWEP.Primary = 
+<span style="color: #FF0000;">SWEP</span>.Primary = 
 {
    ClipSize=126,
    DefaultClip=126,
    Automatic = false,
    Ammo = "357",
 }
-SWEP.Secondary = 
+<span style="color: #FF0000;">SWEP</span>.Secondary = 
 {
    ClipSize=-1,
    DefaultClip=-1,
@@ -185,7 +220,7 @@ SMG1_Grenade - Ammunition for the SMG/MP7 grenade launcher (secondary fire)
 
 
             <pre class="lua" style="font-family: monospace;">
-SWEP.damage             = 15
+<span style="color: #FF0000;">SWEP</span>.damage             = 15
             </pre>
 
             </div>
@@ -197,13 +232,13 @@ SWEP.damage             = 15
                Now, i will show how to add a animations for the player:<br />
 
                <pre class="lua" style="font-family: monospace;">
-SWEP.m_acttable            =
+<span style="color: #FF0000;">SWEP</span>.m_acttable            =
 {
    { ACT_RANGE_ATTACK1,       ACT_RANGE_ATTACK_AR2,         true },
    { ACT_RELOAD,             ACT_RELOAD_SMG1,           true },
    { ACT_IDLE,                  ACT_IDLE_SMG1,             true },
    { ACT_IDLE_ANGRY,            ACT_IDLE_ANGRY_SMG1,       true },
-   { ACT_WALK,                  ACT_WALK_RIFLE,               true },
+   { ACT_WALK,                  ACT_WALK_R<span style="color: #0000ff;">if</span>LE,               true },
 
    { ACT_HL2MP_IDLE,             ACT_HL2MP_IDLE_AR2,              false },
    { ACT_HL2MP_RUN,              ACT_HL2MP_RUN_AR2,               false },
@@ -244,7 +279,7 @@ SWEP.m_acttable            =
                That's probably same thing like in game weapon scripts (.txt)<br />
 
                <pre class="lua" style="font-family: monospace;">
-SWEP.SoundData          =
+<span style="color: #FF0000;">SWEP</span>.SoundData          =
 {
    empty                = "Weapon_Pistol.Empty",
    single_shot          = "weapons/sound.wav" --any sound here
@@ -255,128 +290,128 @@ SWEP.SoundData          =
             </div>
          </div>
 
-         <h1 id="eighthHeading" class="eighthHeading">Functions</h1>
+         <h1 id="eighthHeading" class="eighthHeading"><span style="color: #0000ff;">Functions</span></h1>
          <div id="bodyContent">
             <div id="contentSub">
                Now you gonna code!<br />
                <br />
-               Starting from basics, SWEP:Initialize is used for defining values/bools and also is used for default weapon functions:<br />
+               Starting from basics, SWEP:Initialize is used for defining values/bools and also is used for default weapon <span style="color: #0000ff;">functions</span>:<br />
 
                <pre class="lua" style="font-family: monospace;">
-function SWEP:Initialize()
-   self.m_bReloadsSingly   = false;
-   self.m_bFiresUnderwater = false;
-end
+<span style="color: #0000ff;">function</span> </span><span style="color:#008000;">SWEP:Initialize()</span>
+   <span style="color: #FF0000;"><span style="color: #FF0000;">self</span></span>.m_bReloadsSingly   = false;
+   <span style="color: #FF0000;"><span style="color: #FF0000;">self</span></span>.m_bFiresUnderwater = false;
+<span style="color: #0000ff;">end</span>
                </pre>
-               Below you can see 2 basic functions, they do the same thing that is written on them.<br />
+               Below you can see 2 basic <span style="color: #0000ff;">functions</span>, they do the same thing that is written on them.<br />
                <br />
                But of course i will give you a example, i'm not sure you could understand anything:<br />
                
 
                <pre class="lua" style="font-family: monospace;">
-function SWEP:Initialize()
-   self.IsBool = true -- it's gonna be true by default
-    IsBool = true --the same but without self.
+<span style="color: #0000ff;">function</span> <span style="color:#008000;">SWEP:Initialize()</span>
+    <span style="color: #FF0000;">self</span>.IsBool = true -- it's gonna be true by default
+    IsBool = true --the same but not in swep global.
     
-    self.RandVal = 5 -- it's gonna equals to 5 by default
-    RandVal = 5 -- the same but without self.
-end
+    <span style="color: #FF0000;">self</span>.RandVal = 5 -- it's gonna equals to 5 by default
+    RandVal = 5 -- the same but not in swep global.
+<span style="color: #0000ff;">end</span>
                </pre>
 
                Next we will do the primary attack in our script!<br />
                
 
                <pre class="lua" style="font-family: monospace;">
-function SWEP:PrimaryAttack()
+<span style="color: #0000ff;">function</span> <span style="color:#008000;">SWEP:PrimaryAttack()</span>
    --code
-end
+<span style="color: #0000ff;">end</span>
                </pre>
 
-               Every time you do the SWEP, don't forget to identify the entity of the player who uses the weapon!<br />
+               Every time you do the SWEP, don't forget to idenify the entity of the player who uses the weapon!<br />
                
 
                <pre class="lua" style="font-family: monospace;">
-function SWEP:PrimaryAttack()
-   local pPlayer = self:GetOwner() --getting player who uses a weapon.
+<span style="color: #0000ff;">function</span> <span style="color:#008000;">SWEP:PrimaryAttack()</span>
+   <span style="color: #0000ff;">local</span> pPlayer = <span style="color: #FF0000;">self</span>:GetOwner() --getting player who uses a weapon.
     
-    if ( ToBaseEntity( pPlayer ) == NULL ) then -- returning if player is not valid ( basic check )
-      return;
-   end
+    <span style="color: #0000ff;">if</span> ( ToBaseEntity( pPlayer ) == NULL ) then -- returning if player is not valid ( basic check )
+      <span style="color: #0000ff;">return</span>;
+   <span style="color: #0000ff;">end</span>
 
-end
+<span style="color: #0000ff;">end</span>
                </pre>
 
-               Then there are primitive functions, animations, sound, subtraction of bullets from the clip:<br />
+               Then there are primitive <span style="color: #0000ff;">functions</span>, animations, sound, subtraction of bullets from the clip:<br />
                
 
                <pre class="lua" style="font-family: monospace;">
-function SWEP:PrimaryAttack()
-   local pPlayer = self:GetOwner() --getting player who uses a weapon.
+<span style="color: #0000ff;">function</span> <span style="color:#008000;">SWEP:PrimaryAttack()</span>
+   <span style="color: #0000ff;">local</span> pPlayer = <span style="color: #FF0000;">self</span>:GetOwner() --getting player who uses a weapon.
     
-    if ( ToBaseEntity( pPlayer ) == NULL ) then -- returning if player is not valid ( basic check )
-      return;
-   end
+    <span style="color: #0000ff;">if</span> ( ToBaseEntity( pPlayer ) == NULL ) then -- returning if player is not valid ( basic check )
+      <span style="color: #0000ff;">return</span>;
+   <span style="color: #0000ff;"><span style="color: #0000ff;">end</span></span>
    
-    if ( self.m_iClip1 <= 0 ) then --checking  for a empty clip
-      if ( not self.m_bFireOnEmpty ) then
-         self:Reload();
+    <span style="color: #0000ff;">if</span> ( <span style="color: #FF0000;">self</span>.m_iClip1 <= 0 ) then --checking  for a empty clip
+      <span style="color: #0000ff;">if</span> ( not <span style="color: #FF0000;">self</span>.m_bFireOnEmpty ) then
+         <span style="color: #FF0000;">self</span>:Reload();
       else
-         self:WeaponSound( 0 );
-         self.m_flNextPrimaryAttack = 0.3;
-      end
+         <span style="color: #FF0000;">self</span>:WeaponSound( 0 );
+         <span style="color: #FF0000;">self</span>.m_flNextPrimaryAttack = 0.3;
+      <span style="color: #0000ff;">end</span>
 
-      return;
-   end
+      <span style="color: #0000ff;">return</span>;
+   <span style="color: #0000ff;">end</span>
     
-    self:WeaponSound(1) --emit a shoot sound from SoundData
-    self:SendWeaponAnim(ACT_VM_PRIMARYATTACK) --do the animation of viewmodel
+    <span style="color: #FF0000;">self</span>:WeaponSound(1) --emit a shoot sound from SoundData
+    <span style="color: #FF0000;">self</span>:SendWeaponAnim(ACT_VM_PRIMARYATTACK) --do the animation of viewmodel
     pPlayer:SetAnimation( 5 ) --do the animation of player
-    self.m_iClip1 = self.m_iClip1 - 1; --remove one ammo from clip
+    <span style="color: #FF0000;">self</span>.m_iClip1 = <span style="color: #FF0000;">self</span>.m_iClip1 - 1; --remove one ammo from clip
     
-    self.m_flNextPrimaryAttack = gpGlobals.curtime() + 0.10; --next primary attack after shoot
+    <span style="color: #FF0000;">self</span>.m_flNextPrimaryAttack = gpGlobals.curtime() + 0.10; --next primary attack after shoot
 
-end
+<span style="color: #0000ff;">end</span>
                </pre> 
 
-               Okay, after that, i gonna show how to do the function for bullet, and recoil:<br />
+               Okay, after that, i gonna show how to do the <span style="color: #0000ff;">function </span> for bullet, and recoil:<br />
 
                <pre class="lua" style="font-family: monospace;">
-function SWEP:PrimaryAttack()
-   local pPlayer = self:GetOwner() --getting player who uses a weapon.
+<span style="color: #0000ff;">function</span> <span style="color:#008000;">SWEP:PrimaryAttack()</span>
+   <span style="color: #0000ff;">local</span> pPlayer = <span style="color: #FF0000;">self</span>:GetOwner() --getting player who uses a weapon.
     
-    if ( ToBaseEntity( pPlayer ) == NULL ) then -- returning if player is not valid ( basic check )
-      return;
-   end
+    <span style="color: #0000ff;">if</span> ( ToBaseEntity( pPlayer ) == NULL ) then -- returning if player is not valid ( basic check )
+      <span style="color: #0000ff;">return</span>;
+   <span style="color: #0000ff;">end</span>
    
-    if ( self.m_iClip1 <= 0 ) then --checking  for a empty clip
-      if ( not self.m_bFireOnEmpty ) then
-         self:Reload();
+    <span style="color: #0000ff;">if</span> ( <span style="color: #FF0000;">self</span>.m_iClip1 <= 0 ) then --checking  for a empty clip
+      <span style="color: #0000ff;">if</span> ( not <span style="color: #FF0000;">self</span>.m_bFireOnEmpty ) then
+         <span style="color: #FF0000;">self</span>:Reload();
       else
-         self:WeaponSound( 0 );
-         self.m_flNextPrimaryAttack = 0.3;
-      end
+         <span style="color: #FF0000;">self</span>:WeaponSound( 0 );
+         <span style="color: #FF0000;">self</span>.m_flNextPrimaryAttack = 0.3;
+      <span style="color: #0000ff;">end</span>
 
-      return;
-   end
+      <span style="color: #0000ff;">return</span>;
+   <span style="color: #0000ff;">end</span>
     
-    self:WeaponSound(1) --emit a shoot sound from SoundData
-    self:SendWeaponAnim(ACT_VM_PRIMARYATTACK) --do the animation of viewmodel
+    <span style="color: #FF0000;">self</span>:WeaponSound(1) --emit a shoot sound from SoundData
+    <span style="color: #FF0000;">self</span>:SendWeaponAnim(ACT_VM_PRIMARYATTACK) --do the animation of viewmodel
     pPlayer:SetAnimation( 5 ) --do the animation of player
-    self.m_iClip1 = self.m_iClip1 - 1; --remove one ammo from clip
+    <span style="color: #FF0000;">self</span>.m_iClip1 = <span style="color: #FF0000;">self</span>.m_iClip1 - 1; --remove one ammo from clip
     
-    self.m_flNextPrimaryAttack = gpGlobals.curtime() + 0.10; --next primary attack after shoot
+    <span style="color: #FF0000;">self</span>.m_flNextPrimaryAttack = gpGlobals.curtime() + 0.10; --next primary attack after shoot
 
-   local vecSrc      = pPlayer:Weapon_ShootPosition(); --these two functions must be defined!
-   local vecAiming      = pPlayer:GetAutoaimVector( 0.08715574274766 );
+   <span style="color: #0000ff;">local</span> vecSrc      = pPlayer:Weapon_ShootPosition(); --these two parametrs must be defined!
+   <span style="color: #0000ff;">local</span> vecAiming      = pPlayer:GetAutoaimVector( 0.08715574274766 );
 
    -- vecSrc - position of fire, vecAiming - Directory where is shooting, bullet spread, distance, Ammo Type
-   local info = FireBulletsInfo_t(1, vecSrc, vecAiming, vec3_origin,4096, self.m_iPrimaryAmmoType) -- actually BulletInfo table
+   <span style="color: #0000ff;">local</span> info = FireBulletsInfo_t(1, vecSrc, vecAiming, vec3_origin,4096, <span style="color: #FF0000;">self</span>.m_iPrimaryAmmoType) -- actually BulletInfo table
     info.m_pAttacker = pPlayer --defining our attacker
     
     pPlayer:FireBullets( info ) --and shoot the bullet with info from table
     
     pPlayer:ViewPunch( QAngle( -0.5, random.RandomFloat( -1, 1 ), 0 ) ); -- recoil
-end
+<span style="color: #0000ff;">end</span>
                </pre>
                 
             </div>
@@ -388,10 +423,10 @@ end
                Reload is must be ALWAYS look like that:<br />
                
                <pre class="lua" style="font-family: monospace;">
-function SWEP:Reload()
-   ToHL2MPPlayer(self:GetOwner()):DoAnimationEvent( 3 ) -- do the reload animation
-   return self:DefaultReload( self:GetMaxClip1(), self:GetMaxClip2(), 182 ); --actually reload our gun
-end
+<span style="color: #0000ff;">function</span> <span style="color:#008000;">SWEP:Reload()</span>
+   ToHL2MPPlayer(<span style="color: #FF0000;">self</span>:GetOwner()):DoAnimationEvent( 3 ) -- do the reload animation
+   <span style="color: #0000ff;">return</span> <span style="color: #FF0000;">self</span>:DefaultReload( <span style="color: #FF0000;">self</span>:GetMaxClip1(), <span style="color: #FF0000;">self</span>:GetMaxClip2(), 182 ); --actually reload our gun
+<span style="color: #0000ff;">end</span>
                </pre>
                <br />
             </div>
@@ -404,7 +439,7 @@ end
       </div>
       <div id="mw-panel" class="noprint collapsible bav"> 
          <div id="p-logo">
-            <a style="background-image: url(img/logo.png);"> 
+            <a style="background-image: url(img/logo.svg);"> 
             </a>
          </div>
       </div>
@@ -412,7 +447,7 @@ end
       <div id="footer">
          <ul id="footer-info">
             <li id="footer-info-lastmod">
-               This page was last modified on 28.09.2023
+               This page was last mod<span style="color: #0000ff;">if</span>ied on 01.12.2023
             </li>
             <li id="footer-info-viewcount">
                Thank you, for opening this page

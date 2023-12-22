@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>input</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>input</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="ClientSide" class="subFirstHeading">Client-Side</h3>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">CandidateListStartsAtOne</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetAppModalSurface</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCandidateListCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCandidateListPageSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCandidateListPageStart</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCandidateListSelectedItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCurrentIMEHandle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCursorPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCursorPos__USE_VCR_MODE</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCursorPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetEnglishIMEHandle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetFocus</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetModalSubTree</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetMouseCapture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetMouseOver</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetShouldInvertCompositionString</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsKeyDown</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsMouseDown</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnChangeIME</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnChangeIMEByHandle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnChangeIMEConversionModeByHandle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnChangeIMESentenceModeByHandle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnIMEChangeCandidates</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnIMECloseCandidates</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnIMEComposition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnIMEEndComposition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnIMERecomputeModes</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnIMEShowCandidates</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnIMEStartComposition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnInputLanguageChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnKeyCodeUnhandled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">RegisterKeyCodeUnhandledListener</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ReleaseAppModalSurface</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ReleaseModalSubTree</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetAppModalSurface</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetCandidateListPageStart</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetCandidateWindowPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetCursorPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetModalSubTree</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetModalSubTreeReceiveMessages</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetMouseCapture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetMouseCaptureEx</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetMouseFocus</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ShouldModalSubTreeReceiveMessages</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">UnregisterKeyCodeUnhandledListener</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">WasKeyPressed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">WasKeyReleased</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">WasKeyTyped</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">WasMouseDoublePressed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">WasMousePressed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">input</span><span style="color:#008000;">.</span><span style="color: #FF0000;">WasMouseReleased</span><span style="color:#008000;">()</span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 14.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

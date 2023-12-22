@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>Hooks</title>
+   </head>
+   <script src="../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+   </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>Hooks</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a href="index43df.html" title="ConCommands"><img alt="Page white text.png" src="../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>This is an introduction to the lua language in general and is a recommended read if you are a beginner.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="CreatingRunning"><img alt="Calendar.png" src="../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>December 15th 2023</td></tr>
+         </tbody></table>
+         <br>
+
+         <h2 id="firstHeading" class="firstHeading">Introdution</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               This article will teach you the basics of a couple important concepts in HL2GMED Lua scripting: events and hooks. <br>
+ 
+               <p>Events are specific happenings in the game world. One example of an event is when a player dies.<br>
+               More examples are when a player spawns, takes damage, or disconnects.<br>
+               There are even some events for non-game world things, such as drawing graphics on the Heads Up Display (or HUD, for short).<br>
+               Sometimes, events even carry associated information. For example, if a player died, then the event might also carry information about which player died.<br>
+               <br>
+               Whenever an event occurs, Game tells Lua that the event has happened.<br>
+               Lua responds to an event by running hooks. Hooks are functions that are "hooked up" to an event.<br />
+               <h2 id="InPractice" class="subFirstHeading">In Practice</h2>
+
+               A "Hook" is a way to make a function run whenever something happens in the game.<br>
+               A list of game-related hooks can be found here.<br>
+               Example: <br />
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">&nbsp;
+<span style="color: #0000ff;">local</span> MyHookFunction <span style="color: #008000;">=</span> <span style="color: #0000ff;">function</span><span style="color: #008000;">(</span>pPlayer<span style="color: #008000;">)</span>
+    <span style="color: #0000ff;">if</span> pPlayer</span>:IsAlive<span style="color: #008000;">(</span><span style="color: #008000;">)</span> <span style="color: #0000ff;">then</span>
+        dbg.Msg<span style="color: #008000;">(</span><span style="color: #FF0000;">"Player Spawned.<span style="color: #000099; font-weight: bold;">\n</span>"</span><span style="color: #008000;">)</span>
+    <span style="color: #0000ff;">end</span>
+<span style="color: #0000ff;">end</span>
+&nbsp;
+hook.add<span style="color: #008000;">(</span><span style="color: #FF0000;">"PlayerSpawn"</span>, <span style="color: #FF0000;">"My PlayerSpawn hook"</span>, MyHookFunction<span style="color: #008000;">)</span>
+&nbsp;</pre>
+               So, every player respawn, this script will print "Player Spawned." into the console.<br>
+               <br>
+               The function <b>hook.add</b> takes three <i>arguments</i>.<br>
+               <br>
+               The first argument is the <i>"type"</i> of hook.
+               There are many different types of hooks. There is one for when a player spawns, when a player dies, when someone connects, when someone takes damage, when someone presses a key, etc.
+               The full list is available at the <a href="../documentation/base_page.html#Hooks">Documentation page.</a><br />
+               Second argument is the unique<i>"name"</i> of created hook.<br>
+               This name should identify what your hook function (known as a callback) does.<br>
+               <br>
+               And the last one, third argument, is your hook <i>function.</i><br>
+               You can either store your hook function in a variable, and then pass that to this argument (like above), or you can do it inline: <br>
+               <br />
+
+               <pre class="lua" style="font-family:monospace;">&nbsp;
+hook.Add<span style="color: #008000;">(</span><span style="color: #FF0000;">"PlayerSpawn"</span>, <span style="color: #FF0000;">"blah blah"</span>, <span style="color: #0000ff;">function</span><span style="color: #008000;">(</span><span style="color: #008000;">)</span>
+    code code code
+<span style="color: #0000ff;">end</span><span style="color: #008000;">)</span>
+&nbsp;</pre>
+
+               Many coders use this way because it looks nicer.  <br />
+               <br /> 
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 15.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

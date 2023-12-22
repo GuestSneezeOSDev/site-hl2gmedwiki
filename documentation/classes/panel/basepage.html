@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>Panel</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>Panel</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="ClientSide" class="subFirstHeading">Client-Side</h3>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddActionSignalTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddKeyBinding</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanStartDragging</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ChainToAnimationMap</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ChainToMap</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DeletePanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DisableMouseInputForThisPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawBoxFade</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawHollowBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawTexturedBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EditKeyBindings</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FillRectSkippingPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindChildByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindChildIndexByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindSiblingByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAlpha</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBgColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBounds</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetChild</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetChildCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClassName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClipRect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCornerTextureSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDescription</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDragFrameColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDragPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDragStartTolerance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDropFrameColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFgColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetInset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetKeyBindingsFile</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetKeyBindingsFilePathID</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetKeyMappingCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMinimumSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetModuleName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPaintBackgroundType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPaintSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPanelBaseClassName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPanelClassName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPinCorner</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPinOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRefTable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetResizeOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTabPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTall</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWide</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetZPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasFocus</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasUserConfigSettings</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InitPropertyConverters</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InvalidateLayout</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAutoDeleteSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBeingDragged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBlockingDragChaining</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBottomAligned</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBuildGroupEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBuildModeActive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBuildModeDeletable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBuildModeEditable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsChildOfModalSubTree</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsChildOfSurfaceModalPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsCursorNone</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsCursorOver</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsDragEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsDropEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsKeyBindingChainToParentAllowed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsKeyBoardInputEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsKeyOverridden</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsKeyRebound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsLayoutInvalid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMouseInputDisabledForThisPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMouseInputEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsOpaque</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPopup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsProportional</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsRightAligned</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsStartDragWhenMouseExitsPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTriplePressAllowed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsValidKeyBindingsContext</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWithin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWithinTraverse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">KB_AddBoundKey</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">KB_ChainToMap</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">KeyCodeToString</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LocalToScreen</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MakePopup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MakeReadyForUse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MarkForDeletion</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MoveToFront</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnCommand</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnCursorEntered</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnCursorExited</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnCursorMoved</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnDelete</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnDraggablePanelPaint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnKeyCodePressed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnKeyCodeTyped</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnKeyFocusTicked</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnKillFocus</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnMouseCaptureLost</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnMouseDoublePressed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnMouseFocusTicked</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnMousePressed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnMouseReleased</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnMouseTriplePressed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnMouseWheeled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnMove</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnSetFocus</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnSizeChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnTick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Paint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PaintBackground</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PaintBorder</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PaintBuildOverlay</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ParentLocalToScreen</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PerformLayout</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PostChildPaint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ReloadKeyBindings</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveActionSignalTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveAllKeyBindings</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Repaint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RequestFocus</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RevertKeyBindingsToDefault</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ScreenToLocal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAllowKeyBindingChainToParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAlpha</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAutoDelete</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetAutoResize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBgColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBlockDragChaining</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBounds</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBuildModeDeletable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBuildModeEditable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetDragEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetDragSTartTolerance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetDropEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetFgColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetKeyBoardInputEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMinimumSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMouseInputEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPaintBackgroundEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPaintBackgroundType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPaintBorderEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPaintEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPinCorner</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPostChildPaintEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetProportional</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetScheme</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSilentMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSkipChildDuringPainting</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetStartDragWhenMouseExitsPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetTabPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetTall</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetTriplePressAllowed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWide</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetZPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldHandleInputMessage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StringToKeyCode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__gc</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">Panel</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 14.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

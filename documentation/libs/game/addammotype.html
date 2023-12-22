@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>game.AddAmmoType</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <div id="bodyContent">
+            <h1>game.AddAmmoType</h1>
+            <img alt="NewerShared.png" src="../../../img/NewerShared.png" width="12" height="17">  Adds a new ammo type to the game. <br>
+            <br>
+            <div id="contentSub">
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">game</span><span style="color:#008000;">.</span><span style="color: #FF0000;">AddAmmoType</span><span style="color:#008000;">( </span><span style="color: #6600ff;">string</span> name , <span style="color: #6600ff;">number</span> dmgtype , <span style="color: #6600ff;">number</span> tracer , <span style="color: #6600ff;">number</span> plydmg , <span style="color: #6600ff;">number</span> npcdmg , <span style="color: #6600ff;">number</span> force , <span style="color: #6600ff;">number</span> maxcarry , <span style="color: #6600ff;">number</span> minsplash , <span style="color: #6600ff;">number</span> maxsplash , <span style="color: #6600ff;">nubmer</span> flags <span style="color:#008000;"> )</span>
+               </pre>
+
+               <h2>Arguments:</h2>
+               <hr>
+
+               <ul>
+                  <h3><li> 1) <span style="color: #6600ff;">string</span> name</li></h3>
+                  Name of the ammo.
+                  <h3><li> 2) <span style="color: #6600ff;">number</span> dmgtype</li></h3>
+                  Damage type using <a href="../../enums/dmg.html">DMG enum</a>. <br>
+                  Default: <code>DMG_BULLET</code>
+                  <h3><li> 3) <span style="color: #6600ff;">number</span> tracer</li></h3>
+                  Tracer type using <a href="../../enums/tracer.html">TRACER enum</a>. <br>
+                  Default: <code>TRACER_NONE</code>
+                  <h3><li> 4) <span style="color: #6600ff;">number</span> plydmg</li></h3>
+                  The damage dealt to players. <br>
+                  Can also be a string pointing to a convar.
+                  <h3><li> 5) <span style="color: #6600ff;">number</span> npcdmg</li></h3>
+                  The damage dealt to NPCs. <br> 
+                  Can also be a string pointing to a convar.
+                  <h3><li> 6) <span style="color: #6600ff;">number</span> maxcarry</li></h3>
+                  Maximum amount of ammo of this type the player should be able to carry in reserve. <br>
+                  Can also be a string pointing to a convar.
+                  <h3><li> 7) <span style="color: #6600ff;">number</span> minsplash</li></h3>
+                  The minimum water splash size.
+                  <h3><li> 8) <span style="color: #6600ff;">number</span> maxsplash</li></h3>
+                  The maximum water splash size.
+                  <h3><li> 9) <span style="color: #6600ff;">number</span> flags</li></h3>
+                  Flags for the ammo type using <a href="../../enums/ammo.html">AMMO enum</a>. <br>
+                  Default: <code>0</code>
+               </ul>
+
+               <h2>Example:</h2>
+               <hr>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #888;">--Custom Ammo Example</span>
+
+<span style="color: #FF0000;">CreateConVar</span>("sk_ply_dmg_smg3", "1", FCVAR_NONE,"", "0", "999")
+<span style="color: #FF0000;">CreateConVar</span>("sk_npc_dmg_smg3", "1", FCVAR_NONE,"", "0", "999")
+<span style="color: #FF0000;">CreateConVar</span>("sk_max_smg3", "500", FCVAR_NONE,"", "0", "999")
+
+<span style="color: #0000ff;">game</span>.<span style="color: #FF0000;">AddAmmoType</span>(<span style="color: #be7de3;">"SMG3"</span>,<span style="color: #0000ff;">2</span>,<span style="color: #0000ff;">1</span>,<span style="color: #be7de3;">"sk_plr_dmg_smg3"</span>, <span style="color: #be7de3;">"sk_npc_dmg_smg3"</span>, <span style="color: #be7de3;">"sk_max_smg3"</span>,<span style="color: #0000ff;">0</span>, <span style="color: #0000ff;">0</span> );
+               </pre>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 02.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

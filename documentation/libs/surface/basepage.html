@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>surface</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>surface</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="ClientSide" class="subFirstHeading">Client-Side</h3>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">AddBitmapFontFile</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">AddCustomFontFile</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">AddPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ApplyChanges</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BringToFront</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">CalculateMouseVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ClearTemporaryFontCache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">CreateFont</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">CreateNewTextureID</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">CreatePopup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawFilledRect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawFilledRectFade</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawFlushText</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawGetAlphaMultiplier</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawGetTextPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawGetTextureFile</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawGetTextureId</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawGetTextureSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawLine</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawOutlinedCircle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawOutlinedRect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawPrintText</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawSetAlphaMultiplier</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawSetColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawSetTextColor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawSetTextFont</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawSetTextPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawSetTextScale</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawSetTexture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawSetTextureFile</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawTexturedRect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DrawTexturedSubRect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EnableMouseCapture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FlashWindow</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetAbsoluteWindowBounds</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetBitmapFontName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCharABCwide</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCharacterWidth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetEmbeddedPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetFontAscent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetFontTall</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetModalPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetNotifyPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetPopup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetPopupCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetProportionalBase</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetResolutionKey</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetScreenSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetTextSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetTextureID</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetTextureSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetTitle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetTopmostPopup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetWorkspaceBounds</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetZPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">HasCursorPosFunctions</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">HasFocus</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Invalidate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsCursorLocked</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsCursorVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsFontAdditive</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsMinimized</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsTextureIDValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsWithin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">LockCursor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">MovePopupToBack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">MovePopupToFront</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">NeedKBInput</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">OnScreenSizeChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PaintTraverse</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PaintTraverseEx</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PlaySound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PopMakeCurrent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">RunFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetAllowHTMLJavaScript</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetBitmapFontName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetEmbeddedPanel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetFontGlyphSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetTexture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetTranslateExtendedKeys</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetWorkspaceInsets</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SupportsFeature</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SurfaceGetCursorPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SurfaceSetCursorPos</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">surface</span><span style="color:#008000;">.</span><span style="color: #FF0000;">UnlockCursor</span><span style="color:#008000;">()</span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 14.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

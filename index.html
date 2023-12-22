@@ -1,83 +1,128 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <link href="styles/style.css" rel="stylesheet" type="text/css" />
-      <link rel=”icon” href=”/favicon.ico” type=”image/x-icon”>
-      <title>HL2GMED Wiki</title>
-   </head>
-   <body> 
-         <div id="mw-page-base" class="noprint"></div>
-         <div id="mw-head-base" class="noprint"></div>
-         <div id="content">
-            <a id="top"></a>
 
-            <h1>Welcome to HL2GMED Wiki!</h1>
-            <br>
-            Attention, this is not official wiki!
-            <br>
-            Here you will find tutorials and documentation about HL2GMED {WIP}!
-            <br>
+<head>
+   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+   <link rel=”icon” href=”/favicon.ico” type=”image/x-icon”>
+   <title>HL2GMED Wiki</title>
+</head>
+<script src="base.js"></script>
 
-            <h1 id="firstHeading" class="firstHeading">Main Page</h1>
-            <div id="bodyContent">
-               <div id="contentSub"></div>
+<body>
+   <div id="mw-page-base" class="noprint"></div>
+   <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="index.html">Main Page</a></div>
 
-               <h2>
-                  <span id="hl2gmed.1s" class="mw-headline">
-                     <a href="other/manuals.html" title="Manual">HL2GMED Manuals</a>
-                  </span>
-               </h2>
-               <ul>
-                  <li><a href="tutorials/gettingstarted.html" title="Lua Tutorials">Getting Started</a></li>
-               </ul>
-               <ul>
-                  <li><a href="tutorials/luadocs.html" title="Lua Tutorials">Lua Tutorials</a></li>
-               </ul>
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
 
-            <h1 id="secondHeading" class="secondHeading">About</h1>
-            <div id="bodyContent">
-               <div id="contentSub"></div>
-               <ul>
-                  <li><a href="other/faq.html" title="HL2GMED FAQ">FAQ</a></li>
-               </ul>
-               <ul>
-                  <li><a href="other/info.html" title="HL2GMED Info">HL2GMED Info</a></li>
-               </ul>
-               <ul>
-                  <li><a href="other/screenshots.html" title="HL2GMED Screenshots">HL2GMED Screenshots</a></li>
-               </ul>
-               <ul>
-                  <li><a href="other/videos.html" title="HL2GMED Videos">HL2GMED Videos</a></li>
-               </ul>
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
             </div>
 
-            <h1 id="thirdHeading" class="thirdHeading">Links</h1>
-            <div id="bodyContent">
-               <div id="contentSub"></div>
-               <ul>
-                  <li><a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">HL2GMED Discord Server</a></li>
-               </ul>
-               <ul>
-                  <li><a href="https://discord.com/invite/MRRUFXrfQA" title="Dim1xsDiscord">Dim1xs Discord Server</a></li>
-               </ul>
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+   </div>
+   <div id="content">
+      <a id="top"></a>
 
-            </div>
-         <div id="mw-panel" class="noprint collapsible bav"> 
+      <h1>Welcome to HL2GMED Wiki!</h1>
+      <br>
+      Attention, this is not official wiki!
+      <br>
+      Here you will find tutorials and documentation about HL2GMED {WIP}!
+      <br>
+
+      <h1 id="firstHeading" class="firstHeading">Main Page</h1>
+      <div id="bodyContent">
+         <div id="contentSub"></div>
+
+         <h2>
+            <span id="hl2gmed.1s" class="mw-headline">
+               <a href="other/manuals.html" title="Manual">HL2GMED Manuals</a>
+            </span>
+         </h2>
+         <ul>
+            <li><a href="tutorials/gettingstarted.html" title="Lua Tutorials">Getting Started</a></li>
+         </ul>
+         <ul>
+            <li><a href="tutorials/luadocs.html" title="Lua Tutorials">Lua Tutorials</a></li>
+         </ul>
+         <ul>
+            <li><a href="documentation/base_page.html" title="Lua Tutorials">HL2GMED Lua Documentation</a></li>
+         </ul>
+
+         <h1 id="secondHeading" class="secondHeading">About</h1>
+         <div id="bodyContent">
+            <div id="contentSub"></div>
+            <ul>
+               <li><a href="other/faq.html" title="HL2GMED FAQ">FAQ</a></li>
+            </ul>
+            <ul>
+               <li><a href="other/info.html" title="HL2GMED Info">HL2GMED Info</a></li>
+            </ul>
+            <ul>
+               <li><a href="other/screenshots.html" title="HL2GMED Screenshots">HL2GMED Screenshots</a></li>
+            </ul>
+            <ul>
+               <li><a href="other/videos.html" title="HL2GMED Videos">HL2GMED Videos</a></li>
+            </ul>
+         </div>
+
+         <h1 id="thirdHeading" class="thirdHeading">Links</h1>
+         <div id="bodyContent">
+            <div id="contentSub"></div>
+            <ul>
+               <li><a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">HL2GMED Discord Server</a>
+               </li>
+            </ul>
+            <ul>
+               <li><a href="https://discord.com/invite/MRRUFXrfQA" title="Dim1xsDiscord">Dim1xs Discord Server</a>
+               </li>
+            </ul>
+
+         </div>
+         <div id="mw-panel" class="noprint collapsible bav">
             <div id="p-logo">
-               <a style="background-image: url(img/logo.png);"> 
+               <a style="background-image: url(img/logo.svg);">
                </a>
             </div>
          </div>
-
-   </body>
-   <div id="footer">
-      <ul id="footer-info">
-         <li id="footer-info-lastmod">
-            This page was last modified on 28.09.2023
-         </li>
-         <li id="footer-info-viewcount">
-            Thank you, for opening this page
-            </li>
-      </ul>
+      </div>
    </div>
+</body>
+<div id="footer">
+   <ul id="footer-info">
+      <li id="footer-info-lastmod">
+         This page was last modified on 04.12.2023
+      </li>
+      <li id="footer-info-viewcount">
+         Thank you, for opening this page
+      </li>
+   </ul>
+</div>
+
 </html>

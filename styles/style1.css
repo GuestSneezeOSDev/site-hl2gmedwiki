@@ -41,7 +41,7 @@ table.prettytable caption {
 PRE.lua
 {
   padding: 5px;
-  overflow: auto;
+  overflow: Scroll;
 }
 
 pre {

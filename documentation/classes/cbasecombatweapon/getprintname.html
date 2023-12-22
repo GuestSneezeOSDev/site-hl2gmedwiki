@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>GetPrintName</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <div id="bodyContent">
+            <h1>GetPrintName</h1>
+            <img alt="NewerServer.png" src="../../../img/NewerShared.png" width="12" height="17">  Returns the print name of weapon. <br>
+            <br>
+            <div id="contentSub">
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">Weapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrintName</span><span style="color:#008000;">()</span>
+               </pre>
+
+               <h2>Returns:</h2>
+               <hr>
+
+               <ul>
+                  <h3><li> 1) <span style="color: #6600ff;">string</span> PrintName</li></h3>
+                  String which is going to be printed on weapon selection slot.
+               </ul>
+
+               <h2>Example:</h2>
+               <hr>
+               <br>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">function </span><span style="color:#008000;">getPrintName( </span><span style="color:#cc9900;">pPlayer</span></span><span style="color:#008000;"> )</span>
+   <span style="color: #0000ff;">print</span><span style="color:#008000;">(</span> pPlayer<span style="color: #0000ff;"></span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetActiveWeapon</span></span><span style="color:#008000;">()</span><span style="color: #0000ff;"></span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrintName</span><span style="color:#008000;">()</span><span style="color:#008000;"> ) </span><span style="color: #888;">--Returns print name of da weapon. </span>
+<span style="color: #0000ff;">end</span>
+
+concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"getPrintName"</span>, getPrintName<span style="color:#008000;">)</span>
+               </pre>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 19.11.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

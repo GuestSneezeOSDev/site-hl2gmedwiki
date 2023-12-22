@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>UTIL</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>UTIL</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="ServerSide" class="subFirstHeading">Server-Side</h3>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">AxisStringToPointDir</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">AxisStringToPointPoint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">AxisStringToUnitDir</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Beam</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BloodDecalTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BloodDrips</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BloodImpact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BloodSpray</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BloodStream</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BubbleTrail</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Bubbles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">CanCreateEntityClass</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ClearTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ClientPVSIsExpanded</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;"><a href="clientprint.html">ClientPrint</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ClientPrintAll</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ClipPunchAngleOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DecalTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DisableRemoveImmediate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DropToFloor</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ENTINDEX</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;"><a href="effect.html">Effect</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EmitAmbientSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EnableRemoveImmediate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EntitiesInBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EntitiesInSphere</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EntityByIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EntityHasMatchingRootParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EntityInSolid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FNullEnt</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FStrEq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FindClientInPVS</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FindWaterSurface</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCommandClient</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetCommandClientIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetListenServerHost</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetLocalPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetPlayerConnectionInfo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetSimulationInterval</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">INDEXENT</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ImpactTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsCommandIssuedByServerAdmin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsLowViolence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsSpaceEmpty</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsValidEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">MuzzleFlash</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ParticleTracer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PlayerByIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PlayerByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PlayerByUserId</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PlayerDecalTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PointAtEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PointContents</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PointOnLineNearestPoint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PrecacheDecal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PrecacheOther</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PredictedPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">RandomBloodVector</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Remove</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">RemoveImmediate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SayText</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SayTextAll</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ScreenShake</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ScreenShakeObject</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SharedRandomAngle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SharedRandomFloat</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SharedRandomInt</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SharedRandomVector</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ShouldShowBlood</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ShowMessage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ShowMessageAll</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Smoke</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SnapDirectionToAxis</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TeamsMatch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TraceEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TraceHull</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TraceLine</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TraceModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Tracer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TransferPoseParameters</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ValidateSoundName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">VecToPitch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">VecToYaw</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ViewPunch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">WaterLevel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">YawToVector</span><span style="color:#008000;">()</span>
+               </pre>
+
+               <h3 id="ClientSide" class="subFirstHeading">Client-Side</h3>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">AngleDiff</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BloodDecalTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BloodDrips</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BloodImpact</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">BoundToWorldSize</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Bubbles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;"><a href="clientprint.html">ClientPrint</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ComputeStringWidth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">DecalTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;"><a href="effect.html">Effect</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EntitiesInBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EntitiesInSphere</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">EntityHasMatchingRootParent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetLocalPlayerIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetSpectatorMode</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">GetSpectatorTarget</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ImpactTrace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">InterpolateAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsLocalPlayerSpectator</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsLowViolence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsPlayerIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">IsSpaceEmpty</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">NormalizeAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ParticleTracer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PlayerByIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PointContents</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">PrecacheOther</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SafeName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ScreenHeight</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ScreenShake</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ScreenWidth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SetOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SharedRandomAngle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SharedRandomFloat</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SharedRandomInt</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">SharedRandomVector</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ShouldShowBlood</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Smoke</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TraceEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TraceHull</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TraceLine</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">TraceModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Tracer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">VecToPitch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">VecToYaw</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">UTIL</span><span style="color:#008000;">.</span><span style="color: #FF0000;">YawToVector</span><span style="color:#008000;">()</span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 02.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

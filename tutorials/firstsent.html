@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>First SENT</title>
+   </head>
+   <script src="../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+   </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>First Scripted Entity</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a href="index43df.html" title="ConCommands"><img alt="Page white text.png" src="../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>Article about SENT.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="ConCommands"><img alt="Calendar.png" src="../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>September 28th 2023</td></tr>
+         </tbody></table>
+         <br>
+
+         This article will learn you, how to code your first Scripted Entity - <span style="color: #FF0000;">SENT</span>
+         <h1 id="firstHeading" class="firstHeading">Scripted Weapons</h1>
+         <div id="bodyContent">
+            <div id="contentSub">
+               ENT or SENT (from the word Scripted Entity), is a lua entity that can perform various functions. In this tutorial, we will write code for SENT that will change color every 5 seconds.
+               <br />
+               <br />
+               <img alt="result.gif" src="https://s5.gifyu.com/images/SiYch.gif" width="328" height="168">
+            </div>
+         </div>
+
+         <h1 id="secondHeading" class="secondHeading">The Basic Layout</h1>
+         <div id="bodyContent">
+            <div id="contentSub">
+               By going to the <i>'entities'</i> subdirectory from the <i>'lua'</i> directory (<i>'hl2/custom/hl2gmed/lua/entities'</i>),<br>
+               you can find an entity (folder) named <b>'prop_example'</b>. <br>
+               <br>
+               You can create a copy of the folder and name it your class, or continue working in the same folder.<br>
+               <br />
+            </div>
+         </div>
+
+         <h1 id="thirdHeading" class="thirdHeading">Files</h1>
+         <div id="bodyContent">
+            <div id="contentSub">
+               In entity folder you can find 3 files:<br />
+               <br />
+                  🔵init.lua<br />
+                  <br />
+                  🔵cl_init.lua<br />
+                  <br />
+                  🔵shared.lua<br />
+                  <br />
+               init.lua is run Serverside <span style="color: #0000ff;">functions</span>.<br />
+               <br />
+               cl_init.lua is run Clientside <span style="color: #0000ff;">functions</span>.<br />
+               <br />
+               shared.lua is run in both environments (server/clientside).<br />
+               <br />
+
+               If you want to start from clear project, then open <i>shared.lua</i> script, and remove everything from functions:<br>
+               <pre class="lua" style="font-family: monospace;">
+<span style="color: #0000ff;">function </span> ENT:Initialize() 
+<span style="color: #0000ff;">end</span>
+
+<span style="color: #0000ff;">function </span> ENT:StartTouch( pEntity )
+<span style="color: #0000ff;">end</span>
+
+<span style="color: #0000ff;">function </span> ENT:Touch( pEntity )
+<span style="color: #0000ff;">end</span>
+
+<span style="color: #0000ff;">function </span> ENT:EndTouch( pEntity )
+<span style="color: #0000ff;">end</span>
+
+<span style="color: #0000ff;">function </span> ENT:VPhysicsUpdate( pPhysics )
+<span style="color: #0000ff;">end</span>
+               </pre>
+                <br />
+            </div>
+         </div>
+
+         <h1 id="fourthHeading" class="fourthHeading">Initialization</h1>
+         <div id="bodyContent">
+            <div id="contentSub">
+               Okay, so, now we need fill in the Initialization so that our entity at least represents something.<br>
+               <br>
+               Initializaition is <img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="16">Shared function, so you can call any function from it.
+               <pre class="lua" style="font-family: monospace;">
+<span style="color: #0000ff;">function </span>ENT:Initialize()
+   <span style="color: #0000ff;">if</span> ( <span style="color: #0000ff;">not</span> CLIENT ) <span style="color: #0000ff;">then</span>
+      <span style="color: #0000ff;">local</span> pModel = <span style="color: #FF0000;">"models/props_junk/wood_crate001a.mdl"</span><span style="color: #888;">--Box model. </span>
+      <span style="color: #0000ff;">self</span>.SetAllowPrecache(<span style="color: #0000ff;">true</span>)
+      <span style="color: #0000ff;">self</span>.PrecacheModel(pModel)
+      <span style="color: #0000ff;">self</span>:SetModel(pModel)
+      <span style="color: #0000ff;">self</span>.pCooldown = 5 <span style="color: #888;">--Set cooldown for next color change (in seconds). </span>
+      <span style="color: #0000ff;">self</span>.NextColorChange = gpGlobals.curtime() + <span style="color: #0000ff;">self</span>.pCooldown <span style="color: #888;">--Cooldown for next time change. </span>
+      <span style="color: #0000ff;">self</span>:VPhysicsInitNormal( <span style="color: #0000ff;">6</span>, <span style="color: #0000ff;">0</span>, <span style="color: #0000ff;">false</span> ); <span style="color: #888;">--Turn Entity into CPhysicsProp. </span>
+   <span style="color: #0000ff;">end</span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+            </div>
+         </div>
+
+         <h1>ChangeColor</h1>
+         <div id="bodyContent">
+            <div id="contentSub">
+               So, we need create our new unction, and code for it execution.<br />
+               <br />
+               Move on to <i>init.lua</i> script.<br />
+               <br />
+               Now let's create color change function:
+               <pre class="lua" style="font-family: monospace;">
+
+<span style="color: #0000ff;">include</span>( <span style="color: #FF0000;">"shared.lua"</span> )
+
+<span style="color: #0000ff;">function</span> ENT:Think()
+<span style="color: #0000ff;">end</span>
+
+<span style="color: #0000ff;">function</span> ENT:ChangeColor() <span style="color: #888;">--Here, color change function. </span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               Okay, good, now code color change:<br /> 
+
+               <pre class="lua" style="font-family: monospace;">
+<span style="color: #0000ff;">local</span> red = random.RandomFloat(1,255) <span style="color: #888;">--Always random color. </span>
+<span style="color: #0000ff;">local</span> green = random.RandomFloat(1,255) <span style="color: #888;">--Always random color. </span>
+<span style="color: #0000ff;">local</span> blue = random.RandomFloat(1,255) <span style="color: #888;">--Always random color. </span>
+<span style="color: #0000ff;">self</span>:SetRenderColor(red,green,blue,255)<span style="color: #888;">--Final color change. </span>
+               </pre>
+            And put this stuff into the function:<br />
+            <br />
+               <pre class="lua" style="font-family: monospace;">
+<span style="color: #0000ff;">function</span> ENT:ChangeColor() <span style="color: #888;">--Here, color change function. </span>
+   <span style="color: #0000ff;">local</span> red = random.RandomFloat(1,255) <span style="color: #888;">--Always random color. </span>
+   <span style="color: #0000ff;">local</span> green = random.RandomFloat(1,255) <span style="color: #888;">--Always random color. </span>
+   <span style="color: #0000ff;">local</span> blue = random.RandomFloat(1,255) <span style="color: #888;">--Always random color. </span>
+   <span style="color: #0000ff;">self</span>:SetRenderColor(red,green,blue,255)<span style="color: #888;">--Final color change. </span>
+<span style="color: #0000ff;">end</span>
+               </pre>
+            <h1>Think</h1>
+            Last one part.<br />
+            <br />
+            So, now we need write code for executing our ColorChange function, move to Think function.<br />
+            <br />
+            We need to calculate our cooldown with current time:
+            <pre class="lua" style="font-family: monospace;">
+<span style="color: #0000ff;">function</span> ENT:Think()
+   <span style="color: #0000ff;">if</span> <span style="color: #0000ff;">self</span>.NextColorChange < gpGlobals.curtime() <span style="color: #0000ff;">then</span>
+         <span style="color: #0000ff;">self</span>.NextColorChange = gpGlobals.curtime() + self.pCooldown
+         <span style="color: #0000ff;">self</span>:ChangeColor()
+   <span style="color: #0000ff;">end</span>
+<span style="color: #0000ff;">end</span>
+            </pre>
+
+         Now run the game and check it!<br /> 
+         <h2>Result:</h2>
+         <hr>
+         <img alt="result.gif" src="https://s5.gifyu.com/images/SiYch.gif" width="528" height="268"><br />
+         <br />
+         Thank you for reading this tutorial, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+   </div>
+</div>   
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last mod<span style="color: #0000ff;">if</span>ied on 01.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

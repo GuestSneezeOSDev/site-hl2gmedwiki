@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid blue;
+}
+</style>
+   <head>
+      <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>Effects</title>
+   </head>
+<script src="../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+   </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <div id="bodyContent">
+            <h1>Effects</h1>
+            This is a complete list of effects available to be used with <a href="../../documentation/libs/util/effect.html">util.Effect</a>.
+            
+            <br>
+            Not all Effects was tested.
+            <div id="contentSub">
+               <h2>Engine Effects:</h2>
+               <hr>
+               <br>
+<table class="prettytable" style="width:95%">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Used Fields</th>
+  </tr>
+  <tr>
+    <td><div id="tableText1">ManhackSparks</div></td>
+    <td><div id="tableText1">A large fountain of sparks</div></td>
+    <td><div id="tableText1">Origin, Normal, Angles</div></td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">TeslaZap</div></td>
+    <td><div id="tableText1">Lightning</div></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">TeslaHitboxes</div></td>
+    <td><div id="tableText1">The same body-spanning electrical zaps that come from ragdolls grabbed the supercharged gravity gun in hl2</div></td>
+    <td><div id="tableText1">Entity, Magnitude</div></td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">CommandPointer</div></td>
+    <td><div id="tableText1">The small red dot seen at the end of the hl2 RPGs laser beam</div></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">GunshipImpact</div></td>
+    <td><div id="tableText1">A small pink pulse of energy, not sure why its named gunshipimpact</div></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">Smoke</div></td>
+    <td><div id="tableText1">Creates a bunch of messed up smoke that can't be deleted, not recommended</div></td>
+    <td><div id="tableText1">Origin, Angles, Entity, Attachment, Color</div></td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">StriderBlood</div></td>
+    <td><div id="tableText1">Looks like a giant spray of turds.</div></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">MuzzleFlash</div></td>
+    <td><div id="tableText1">Makes a muzzle flash, SetFlags to change the appearance</div></td>
+    <td><div id="tableText1">SetFlags</div></td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">BloodImpact</div></td>
+    <td><div id="tableText1">A splatter of blood, the same one used when bullets hit a player</div></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">cball_explode</div></td>
+    <td><div id="tableText1">A small flash and a bigger burst of sparks</div></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">cball_bounce</div></td>
+    <td><div id="tableText1">A small flash and a burst of sparks</div></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">VortDispel</div></td>
+    <td><div id="tableText1">A large green pulse of energy that travels along the ground</div></td>
+    <td><div id="tableText1">Origin</div></td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">Explosion</td>
+    <td><div id="tableText1">We all know exactly what this does [with damage]</div></td>
+    <td><div id="tableText1">Origin, Magnitude, Scale, Flags</div></td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">WaterSurfaceExplosion</div></td>
+    <td><div id="tableText1">The explosion effect you get when you detonate grenades underwater</div></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">GlassImpact</div></td>
+    <td><div id="tableText1">A small spray of glass shards, like when you shoot breakable windows</div></td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">RifleShellEject</div></td>
+    <td><div id="tableText1">SMG/Rifle shells</div></td>
+    <td><div id="tableText1">Entity, Origin, Angles</div></td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">ShotgunShellEject</div></td>
+    <td><div id="tableText1">Shotgun shells</div></td>
+    <td><div id="tableText1">Entity, Origin, Angles</div></td>
+  </tr>
+  <tr>
+    <td><div id="tableText1">ShellEject</div></td>
+    <td><div id="tableText1">Pistol shells</div></td>
+    <td><div id="tableText1">Entity, Origin, Angles</div></td>
+  </tr>
+</table>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 02.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

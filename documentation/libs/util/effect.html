@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>UTIL.Effect</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <div id="bodyContent">
+            <h1>UTIL.Effect</h1>
+            <img alt="NewerShared.png" src="../../../img/NewerShared.png" width="12" height="17">  Creates an effect with the specified data. <br>
+            <br>
+            <div id="contentSub">
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Effect</span><span style="color:#008000;">( </span><span style="color: #6600ff;">string</span> effectName , <span style="color: #6600ff;">CEffectData</span> effectData<span style="color:#008000;"> )</span>
+               </pre>
+
+               <h2>Arguments:</h2>
+               <hr>
+
+               <ul>
+                  <h3><li> 1) <span style="color: #6600ff;">string</span> effectName</li></h3>
+                  The name of the effect to create.
+                  You can find a list of <a href="../../other/effects.html">built-in engine effects here</a>.
+                  <h3><li> 2) <span style="color: #6600ff;">CEffectData</span> effectData</li></h3>
+                  The effect data describing the effect.
+               </ul>
+
+               <h2>Example:</h2>
+               <hr>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">function </span><span style="color:#008000;">SWEP:PrimaryAttack()</span>
+   <span style="color: #0000ff;">local </span>pPlayer<span style="color:#008000;"> = </span><span style="color: #0000ff;">self</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetOwner</span><span style="color:#008000;">()</span> <span style="color: #888;">--Returns owner entity. </span>
+
+   <span style="color: #0000ff;">if </span><span style="color:#008000;">( </span>pPlayer<span style="color:#008000;"> == </span><span style="color: #FF0000;">NULL</span><span style="color:#008000;"> )</span><span style="color: #0000ff;"> then</span>
+      <span style="color: #0000ff;">return</span> <span style="color: #888;">--Ends the function if player is invalid. </span>
+   <span style="color: #0000ff;">end</span>
+
+   <span style="color: #0000ff;">local </span>vForward<span style="color:#008000;"> = </span>Vector()
+   <span style="color: #0000ff;">local </span>vecEye<span style="color:#008000;"> = </span>pPlayer<span style="color:#008000;">:</span><span style="color: #FF0000;">EyePosition</span><span style="color:#008000;">()</span>
+   pPlayer<span style="color:#008000;">:</span><span style="color: #FF0000;">EyeVectors</span><span style="color:#008000;">(</span> vForward, <span style="color: #0000ff;">nil</span>, <span style="color: #0000ff;">nil</span><span style="color:#008000;"> )</span>
+   <span style="color: #0000ff;">local </span>tr<span style="color:#008000;"> = </span><span style="color: #FF0000;">trace_t</span><span style="color:#008000;">()</span>
+
+   <span style="color: #0000ff;">UTIL</span>.<span style="color: #FF0000;">TraceLine</span><span style="color:#008000;">(</span> vecEye, vecEye <span style="color: #0000ff;">+</span> vForward <span style="color: #0000ff;">*</span> 4096, MASK_SHOT_HULL, pPlayer, 0, tr <span style="color:#008000;">)</span>  
+
+   <span style="color: #0000ff;">local </span>effect<span style="color:#008000;"> = </span><span style="color: #FF0000;">EffectData</span><span style="color:#008000;">()</span>
+   effect:<span style="color: #FF0000;">SetOrigin</span><span style="color:#008000;">(</span> tr.endpos <span style="color:#008000;">)</span> 
+   <span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Effect</span><span style="color:#008000;">( </span><span style="color: #be7de3;">"cball_bounce"</span>, effect<span style="color:#008000;"> )</span>
+
+<span style="color: #0000ff;">end</span>
+               </pre>
+
+               <h2>Result:</h2>
+               <hr> <br>
+
+               <img alt="result.png" src="../../../img/result/result1.png" width="626" height="305"> 
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 02.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

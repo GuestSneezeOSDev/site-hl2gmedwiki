@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>CBaseAnimating</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>CBaseAnimating</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="ServerSide" class="subFirstHeading">Server-Side</h3>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CalculateIKLocks</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeEntitySpaceHitboxSurroundingBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeHitboxSurroundingBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DoMuzzleFlash</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindBodygroupByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindTransitionSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAnimTimeInterval</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAttachmentLocal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBaseAnimating</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBodygroup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBodygroupCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBodygroupName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBonePosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCycle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFlexDescFacs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHitboxSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHitboxSetCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHitboxSetName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetModelWidthScale</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNumBodyGroups</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNumFlexControllers</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlaybackRate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPoseParameter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPoseParameterRange</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceActivityName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceGroundSpeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceLinearMotion</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InvalidateBoneCache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InvalidateMdlCache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsActivityFinished</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsOnFire</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsRagdoll</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSequenceFinished</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSequenceLooping</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupBone</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupPoseParameter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetSequenceInfo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SelectWeightedSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SequenceDuration</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SequenceLoops</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBoneController</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCycle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetHitboxSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetHitboxSetByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModelWidthScale</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlaybackRate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPoseParameter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StudioFrameAdvance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TransferDissolveFrom</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UseClientSideAnimation</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+               </pre>
+
+               <h3 id="ClietnSide" class="subFirstHeading">Client-Side</h3>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddToClientSideAnimationList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BecomeRagdollOnClient</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClampCycle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Clear</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClearRagdoll</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ClientSideAnimationChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeClientSideAnimationFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateRagdollCopy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CreateUnragdollInfo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DisableMuzzleFlash</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DispatchMuzzleEffect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawClientHitboxes</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DrawModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindFollowedEntity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FireEvent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FireObsoleteEvent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ForceClientSideAnimationOn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FrameAdvance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAimEntOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAttachmentVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBlendedLinearVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBody</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBoneControllers</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetClientSideFade</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCollideType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFlexControllerName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFlexControllerType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRenderAngles</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRenderBounds</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRenderOrigin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetServerIntendedCycle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSkin</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IgniteRagdoll</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InitBoneSetupThreadPool</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InitModelEffects</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InternalDrawModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Interpolate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InvalidateBoneCaches</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsBoneCacheValid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSelfAnimating</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupRandomAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NotifyShouldTransmit</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnDataChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnPreDataChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PopBoneAccess</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PostDataUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PreDataUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ProcessMuzzleFlashEvent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PushAllowBoneAccess</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RagdollMoved</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Release</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveFromClientSideAnimationList</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetEventsParity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetLatched</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RetrieveRagdollInfo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBodygroup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPredictable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPredictionEligible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPredictionPlayer</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetReceivedSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetServerIntendedCycle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShadowCastType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldMuzzleFlash</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldResetSequenceOnNewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShutdownBoneSetupThreadPool</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Simulate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ThreadedBoneSetup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UncorrectViewModelAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateClientSideAnimation</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateClientSideAnimations</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UpdateIKLocks</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesPowerOfTwoFrameBufferTexture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsGetObjectList</span><span style="color:#008000;">()</span>
+               </pre>
+               
+               <h3 id="Shared" class="subFirstHeading">Shared</h3>
+
+<pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CalculateIKLocks</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeEntitySpaceHitboxSurroundingBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ComputeHitboxSurroundingBox</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DoMuzzleFlash</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindBodygroupByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FindTransitionSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAnimTimeInterval</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAttachmentLocal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBaseAnimating</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBodygroup</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBodygroupCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBodygroupName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBonePosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCycle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFlexDescFacs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHitboxSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHitboxSetCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetHitboxSetName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetModelWidthScale</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNumBodyGroups</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNumFlexControllers</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPlaybackRate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPoseParameter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPoseParameterRange</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceActivityName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceGroundSpeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceLinearMotion</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSequenceName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InvalidateBoneCache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InvalidateMdlCache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsActivityFinished</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsOnFire</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsRagdoll</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSequenceFinished</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSequenceLooping</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupAttachment</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupBone</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupPoseParameter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LookupSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ResetSequenceInfo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SelectWeightedSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SequenceDuration</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SequenceLoops</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBoneController</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCycle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetHitboxSet</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetHitboxSetByName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetModelWidthScale</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPlaybackRate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPoseParameter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StudioFrameAdvance</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">TransferDissolveFrom</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UseClientSideAnimation</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VPhysicsUpdate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+               </pre>
+
+               <h2 id="secondHeading" class="secondHeading">Values</h2>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Booleans</h3>
+               These values will return boolean. [true/false]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseAnimating</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_bClientSideAnimation</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_bLastClientSideFrameReset</span>
+               </pre>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Numbers</h3>
+               These values will return numbers. [ints]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_nBody</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_nHitboxSet</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_nSkin</span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 14.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

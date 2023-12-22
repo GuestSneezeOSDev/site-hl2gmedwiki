@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>IPhysicsObject</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>IPhysicsObject</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="Shared" class="subFirstHeading">Shared</h3>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ApplyForceCenter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ApplyForceOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ApplyTorqueCenter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BecomeHinged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">BecomeTrigger</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CalculateAngularDrag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CalculateForceOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CalculateLinearDrag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CalculateVelocityOffset</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EnableCollisions</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EnableDrag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EnableGravity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">EnableMotion</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetCallbackFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetContactPoint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetContents</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDamping</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEnergy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGameFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetGameIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetImplicitVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetInertia</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetInvInertia</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetInvMass</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMass</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMassCenterLocalSpace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaterialIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetShadowPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSphereRadius</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetVelocityAtPoint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAsleep</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAttachedToConstraint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsCollisionEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsDragEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsFluid</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsGravityEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsHinged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMotionEnabled</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMoveable</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsStatic</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTrigger</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LocalToWorld</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">LocalToWorldVector</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OutputDebugInfo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RecheckCollisionFilter</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RecheckContactPoints</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveHinged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveShadowController</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RemoveTrigger</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetBuoyancyRatio</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetCallbackFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetContents</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetDragCoefficient</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGameFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetGameIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMass</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMaterialIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetShadow</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetVelocity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetVelocityInstantaneous</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Sleep</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Wake</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldToLocal</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WorldToLocalVector</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IPhysicsObject</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 14.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>IMaterial</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>IMaterial</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="Shared" class="subFirstHeading">Shared</h3>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddRef</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AlphaModulate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ColorModulate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DecrementReferenceCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DeleteIfUnreferenced</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAlphaModulation</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetColorModulation</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetEnumerationID</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMappingHeight</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMappingWidth</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaterialPage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaterialVarFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMorphFormat</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNumAnimationFrames</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetNumPasses</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPropertyFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetReflectivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetShaderName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTextureGroupName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetTextureMemoryBytes</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">InMaterialPage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IncrementReferenceCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAlphaTested</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsErrorMaterial</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsSpriteCard</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTranslucent</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsTwoSided</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsVertexLit</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NeedsFullFrameBufferTexture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NeedsLightmapBlendAlpha</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NeedsPowerOfTwoFrameBufferTexture</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NeedsSoftwareLighting</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NeedsSoftwareSkinning</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">NeedsTangentSpace</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RecomputeStateSnapshots</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Refresh</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RefreshPreservingMaterialVars</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Release</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetMaterialVarFlag</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetShader</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetUseFixedFunctionBakedLighting</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShaderParamCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesEnvCubemap</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WasReloadedFromWhitelist</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">IMaterial</span><span style="color:#008000;">.</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 14.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

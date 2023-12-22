@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>CBaseCombatWeapon</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>CBaseCombatWeapon</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="ServerSide" class="subFirstHeading">Server-Side</h3>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AbortReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Activate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ActivityListCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ActivityOverride</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddViewKick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AllowsAutoSwitchFrom</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AllowsAutoSwitchTo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CalcViewmodelBob</span><span style="color:#008000;">()</span> <span style="color: #888;">--maybe dont working. </span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanBePickedUpByNPCs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanBeSelected</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanDeploy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanHolster</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanLower</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CheckReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Clip1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Clip2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DefaultDeploy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DefaultReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DefaultTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Deploy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DisplayAltFireHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DisplayReloadHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Drop</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FinishReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAnimPrefix</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBulletType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDamage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDeathNoticeName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultAnimSpeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultClip1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultClip2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDrawActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFireRate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetIdealActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetIdealSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxAutoAimDeflection</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxBurst</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxClip1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxClip2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxRestTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMinBurst</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMinRestTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getname.html">GetName</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getowner.html">GetOwner</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrimaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrimaryAmmoType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrimaryAttackActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getprintname.html">GetPrintName</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRandomBurst</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRumbleEffect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSecondaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSecondaryAmmoType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSecondaryAttackActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetShootSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSlot</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSubType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewModelSequenceDuration</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeaponFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeaponIdleTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeight</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWorldModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWpnData</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GiveDefaultAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HandleFireOnEmpty</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasPrimaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasSecondaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasWeaponIdleTimeElapsed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HideThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAllowedToSwitch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsLocked</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMeleeWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPredicted</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsScripted</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsViewModelSequenceFinished</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWeaponVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWeaponZoomed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemBusyFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemHolsterFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPostFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPreFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Lock</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Lower</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MaintainIdealActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnActiveStateChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnRestore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Precache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrimaryAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Ready</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Reload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ReloadOrSwitchWeapons</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RescindAltFireHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RescindReloadHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SecondaryAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SendViewModelAnim</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="sendweaponanim.html">SendWeaponAnim</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetIdealActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetIronSights</span><span style="color:#008000;">()</span> <span style="color: #888;">--maybe dont working. </span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPickupTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPrimaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSecondaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSubType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetViewModelIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWeaponIdleTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWeaponVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldDisplayAltFireHUDHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldDisplayReloadHUDHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldShowControlPanels</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Spawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartSprinting</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopSprinting</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopWeaponSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesClipsForAmmo1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesClipsForAmmo2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesPrimaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesSecondaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VisibleInWeaponSelection</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponAutoAimScale</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponIdle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponState</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__WeaponSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+               </pre>
+
+               <h3 id="ClietnSide" class="subFirstHeading">Client-Side</h3>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AbortReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Activate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ActivityListCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ActivityOverride</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddViewKick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AllowsAutoSwitchFrom</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AllowsAutoSwitchTo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CalcViewmodelBob</span><span style="color:#008000;">()</span> <span style="color: #888;">--maybe dont working. </span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanBePickedUpByNPCs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanBeSelected</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanDeploy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanHolster</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanLower</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CheckReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Clip1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Clip2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DefaultDeploy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DefaultReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DefaultTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Deploy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DisplayAltFireHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DisplayReloadHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Drop</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FinishReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAnimPrefix</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBulletType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDamage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDeathNoticeName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultAnimSpeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultClip1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultClip2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDrawActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFireRate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetIdealActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetIdealSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxAutoAimDeflection</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxBurst</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxClip1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxClip2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxRestTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMinBurst</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMinRestTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getname.html">GetName</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getowner.html">GetOwner</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrimaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrimaryAmmoType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrimaryAttackActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getprintname.html">GetPrintName</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRandomBurst</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRumbleEffect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSecondaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSecondaryAmmoType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSecondaryAttackActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetShootSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSlot</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSubType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewModelSequenceDuration</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeaponFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeaponIdleTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeight</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWorldModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWpnData</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GiveDefaultAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HandleFireOnEmpty</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasPrimaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasSecondaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasWeaponIdleTimeElapsed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HideThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAllowedToSwitch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsLocked</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMeleeWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPredicted</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsScripted</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsViewModelSequenceFinished</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWeaponVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWeaponZoomed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemBusyFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemHolsterFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPostFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPreFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Lock</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Lower</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MaintainIdealActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnActiveStateChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnRestore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Precache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrimaryAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Ready</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Reload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ReloadOrSwitchWeapons</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RescindAltFireHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RescindReloadHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SecondaryAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SendViewModelAnim</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="sendweaponanim.html">SendWeaponAnim</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetIdealActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetIronSights</span><span style="color:#008000;">()</span> <span style="color: #888;">--maybe dont working. </span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPickupTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPrimaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSecondaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSubType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetViewModelIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWeaponIdleTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWeaponVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldDisplayAltFireHUDHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldDisplayReloadHUDHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldShowControlPanels</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Spawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartSprinting</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopSprinting</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopWeaponSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesClipsForAmmo1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesClipsForAmmo2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesPrimaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesSecondaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VisibleInWeaponSelection</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponAutoAimScale</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponIdle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponState</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__WeaponSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+               </pre>
+               
+               <h3 id="Shared" class="subFirstHeading">Shared</h3>
+
+<pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AbortReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Activate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ActivityListCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ActivityOverride</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AddViewKick</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AllowsAutoSwitchFrom</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">AllowsAutoSwitchTo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CalcViewmodelBob</span><span style="color:#008000;">()</span> <span style="color: #888;">--maybe dont working. </span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanBePickedUpByNPCs</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanBeSelected</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanDeploy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanHolster</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CanLower</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">CheckReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Clip1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Clip2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DefaultDeploy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DefaultReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DefaultTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Deploy</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DestroyItem</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DisplayAltFireHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">DisplayReloadHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Drop</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">FinishReload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetAnimPrefix</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetBulletType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDamage</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDeathNoticeName</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultAnimSpeed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultClip1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDefaultClip2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetDrawActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetFireRate</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetIdealActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetIdealSequence</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxAutoAimDeflection</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxBurst</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxClip1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxClip2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMaxRestTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMinBurst</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetMinRestTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getname.html">GetName</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getowner.html">GetOwner</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPosition</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrimaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrimaryAmmoType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetPrimaryAttackActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="getprintname.html">GetPrintName</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRandomBurst</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetRumbleEffect</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSecondaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSecondaryAmmoType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSecondaryAttackActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetShootSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSlot</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetSubType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetViewModelSequenceDuration</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeaponFlags</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeaponIdleTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWeight</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWorldModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetWpnData</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GiveDefaultAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HandleFireOnEmpty</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasPrimaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasSecondaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HasWeaponIdleTimeElapsed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">HideThink</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsAllowedToSwitch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsLocked</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsMeleeWeapon</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsPredicted</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsScripted</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsViewModelSequenceFinished</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWeaponVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">IsWeaponZoomed</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemBusyFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemHolsterFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPostFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ItemPreFrame</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Lock</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Lower</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">MaintainIdealActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnActiveStateChanged</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">OnRestore</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Precache</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">PrimaryAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Ready</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Reload</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ReloadOrSwitchWeapons</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RescindAltFireHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">RescindReloadHudHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SecondaryAttack</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SendViewModelAnim</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;"><a href="sendweaponanim.html">SendWeaponAnim</a></span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetIdealActivity</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetIronSights</span><span style="color:#008000;">()</span> <span style="color: #888;">--maybe dont working. </span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPickupTouch</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetPrimaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSecondaryAmmoCount</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetSubType</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetViewModel</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetViewModelIndex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWeaponIdleTime</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">SetWeaponVisible</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldDisplayAltFireHUDHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldDisplayReloadHUDHint</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">ShouldShowControlPanels</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">Spawn</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StartSprinting</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopSprinting</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">StopWeaponSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesClipsForAmmo1</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesClipsForAmmo2</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesPrimaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">UsesSecondaryAmmo</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">VisibleInWeaponSelection</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponAutoAimScale</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponIdle</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">WeaponState</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__WeaponSound</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__eq</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__index</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__newindex</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__tostring</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">:</span><span style="color: #FF0000;">__type</span><span style="color:#008000;">()</span>
+               </pre>
+
+               <h2 id="secondHeading" class="secondHeading">Values</h2>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Booleans</h3>
+               These values will return boolean. [true/false]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_bAltFiresUnderwater</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_bFireOnEmpty</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_bFiresUnderwater</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_bInReload</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_bReloadsSingly</span>
+               </pre>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Floats</h3>
+               These values will return numbers. [floats]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_fFireDuration</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_flNextEmptySoundTime</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_flNextPrimaryAttack</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_flNextSecondaryAttack</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_flTimeWeaponIdle</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_flUnlockTime</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_fMaxRange1</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_fMaxRange2</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_fMinRange1</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_fMinRange2</span>
+               </pre>
+
+               <h3 id="secondSubHeading" class="secondSubHeading">Numbers</h3>
+               These values will return numbers. [ints]
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iClip1</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iClip2</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iPrimaryAmmoType</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iSecondaryAmmoType</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iState</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iSubType</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iViewModelIndex</span>
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_iWorldModelIndex</span>
+
+<span style="color: #0000ff;">CBaseCombatWeapon</span><span style="color:#008000;">.</span><span style="color: #FF0000;">m_nViewModelIndex</span> <span style="color: #888;">--idk what is this. </span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 19.11.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

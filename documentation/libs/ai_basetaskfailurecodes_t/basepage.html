@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>AI_BaseTaskFailureCodes_t</title>
+   </head>
+<script src="../../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <h1>AI_BaseTaskFailureCodes_t</h1>
+
+         Please make sure, that not all functions was tested to be working.
+
+         <h2 id="firstHeading" class="firstHeading">Functions</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               <h3 id="SharedSide" class="subFirstHeading">Shared</h3>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_ALREADY_LOCKED</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_BAD_ACTIVITY</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_BAD_PATH_GOAL</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_BAD_POSITION</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_ITEM_NO_FIND</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_ITEM_TAKEN</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_AI_NETWORK</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_BACKAWAY_NODE</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_COVER</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_ENEMY</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_FLANK</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_GOAL</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_HINT_NODE</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_PLAYER</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_REACHABLE_NODE</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_ROUTE</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_ROUTE_BLOCKED</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_ROUTE_GOAL</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_ROUTE_ILLEGAL</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_SCENT</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_SHOOT</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_SOUND</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_TARGET</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_NO_WALK</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_SCHEDULE_NOT_FOUND</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_STUCK_ONTOP</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">FAIL_WEAPON_OWNED</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">NO_TASK_FAILURE</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">NUM_FAIL_CODES</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">all</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">idend</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">idstart</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">AI_BaseTaskFailureCodes_t</span><span style="color:#008000;">.</span><span style="color: #FF0000;">size</span><span style="color:#008000;">()</span>
+               </pre>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 14.12.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

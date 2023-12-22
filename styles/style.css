@@ -5,80 +5,130 @@ body {
     padding: 0;
     font-family: sans-serif;
     font-size: 1em;
-
+    pointer-events: all;
 }
-
-
 
 table.wikitable,
 table.prettytable {
-  margin: 1em 1em 1em 0;
-  background: #f9f9f9;
-  border: 1px #aaaaaa solid;
-  border-collapse: collapse;
+    margin: 1em 1em 1em 0;
+    background: #f9f9f9;
+    font-size: 18px;
+    border: 1px #aaaaaa solid;
+    border-collapse: collapse;
 }
 
-table.wikitable th, table.wikitable td,
-table.prettytable th, table.prettytable td {
-  border: 1px #aaaaaa solid;
-  padding: 0.2em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+table.wikitable th,
+table.wikitable td,
+table.prettytable th,
+table.prettytable td {
+    border: 1px #aaaaaa solid;
+    padding: 0.2em;
+    font-size: 15px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 table.wikitable th,
 table.prettytable th {
-  background: #f2f2f2;
-  text-align: center;
+    background: #f2f2f2;
+    font-size: 18px;
+    text-align: center;
 }
 
 table.wikitable caption,
 table.prettytable caption {
-  margin-left: inherit;
-  margin-right: inherit;
+    margin-left: inherit;
+    font-size: 15px;
+    margin-right: inherit;
 }
 
-PRE.lua
-{
-  padding: 5px;
-  overflow: auto;
+
+#toc,
+.toc,
+.mw-warning {
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 5px;
+    font-size: 95%;
+}
+#toc h2,
+.toc h2 {
+    display: inline;
+    border: none;
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+}
+#toc #toctitle,
+.toc #toctitle,
+#toc .toctitle,
+.toc .toctitle {
+    text-align: center;
+}
+#toc ul,
+.toc ul {
+    list-style-type: none;
+    list-style-image: none;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+}
+#toc ul ul,
+.toc ul ul {
+    margin: 0 0 0 2em;
+}
+#toc .toctoggle,
+.toc .toctoggle {
+    font-size: 94%;
+}
+
+PRE.lua {
+    padding: 5px;
+    overflow: Scroll;
 }
 
 pre {
-  padding: 1em;
-  border: 2px dashed #2f6fab;
-  color: black;
-  background-color: #f9f9f9;
-  line-height: 1.1em;
+    padding: 1em;
+    border: 2px dashed #2f6fab;
+    color: black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
+}
+
+code {
+    color: blue;
+    border-radius: 15%;
+    background-color: #cce6ff;
 }
 
 SPAN.usr_1,
 SPAN.usr_2,
-SPAN.usr_4
-{
-  background-color: #ffa;
- font-weight: bold;
+SPAN.usr_4 {
+    background-color: #ffa;
+    font-weight: bold;
 }
 
-DIV.lual, DIV.lua1, DIV.lua2
-{
+DIV.lual,
+DIV.lua1,
+DIV.lua2 {
     border-bottom: 1px solid #eee;
     color: #333;
 }
 
-DIV.lua2
-{
+DIV.lua2 {
     background-color: #fafafa;
 }
 
-DIV.lual
-{
-  color: #555;
+DIV.lual {
+    color: #555;
 }
 
-.collapseButton {         /* 'show'/'hide' buttons created dynamically by the        */
-    float: right;         /* CollapsibleTables javascript in [[MediaWiki:Common.js]] */
-    font-weight: normal;  /* are styled here so they can be customised.              */
+.collapseButton {
+    /* 'show'/'hide' buttons created dynamically by the        */
+    float: right;
+    /* CollapsibleTables javascript in [[MediaWiki:Common.js]] */
+    font-weight: normal;
+    /* are styled here so they can be customised.              */
     text-align: right;
     width: auto;
 }
@@ -94,11 +144,13 @@ DIV.lual
 .toclimit-4 .toclevel-4,
 .toclimit-5 .toclevel-5,
 .toclimit-6 .toclevel-6,
-.toclimit-7 .toclevel-7 { display: none; }
+.toclimit-7 .toclevel-7 {
+    display: none;
+}
 
-H2, H1
-{
-    font-size: 25px;  
+H2,
+H1 {
+    font-size: 25px;
     font-family: arial black;
     letter-spacing: -1px;
     color: #445;
@@ -106,45 +158,46 @@ H2, H1
     border-bottom: 0;
 }
 
-H1
-{
+H1 {
     font-size: 35px !important;
     font-family: arial black;
     letter-spacing: -2px;
     color: #445;
 }
 
-A
-{
+A {
     color: #df33ee !important;
 }
 
-A:visited
-{
+A.tutorial {
+    font-size: 16px;
+}
+
+A:visited {
     color: #26d !important;
 }
 
 
-A:hover
-{
+A:hover {
     color: #59f !important;
     text-decoration: none;
 }
 
-PRE
-{
+PRE {
     font-size: 12px;
+
 }
 
 
-BODY, #mw-head
-{
+BODY,
+#mw-head {
     width: 1000px !important;
     position: absolute !important;
     left: 50% !important;
     margin-left: -500px !important;
     background-color: #f3f3f3;
-    background-image: url(../img/page_gradient.png);
+
+
 }
 
 #mw-head {
@@ -152,30 +205,28 @@ BODY, #mw-head
     top: 0;
     right: 0;
     width: 100%;
+
 }
+
 #mw-head h5 {
     margin: 0;
     padding: 0;
 }
 
 #mw-page-base {
-    height: 5em;
+    height: 5em
 }
+
 #mw-head-base {
     height: 5em;
-    background-image: url(../img/border.png);
-    background-position: bottom left;
-    background-repeat: repeat-x;
 }
 
 #footer {
     margin-left: 0;
     margin-top: 0;
     padding: 0.15em;
-    background-image: url(images/border.png);
-    background-position: bottom left;
-    background-repeat: repeat;
 }
+
 #footer ul {
     list-style: none;
     list-style-image: none;
@@ -183,6 +234,7 @@ BODY, #mw-head
     margin: 3;
     padding: 0;
 }
+
 #footer ul li {
     margin: 0;
     padding: 0;
@@ -191,13 +243,16 @@ BODY, #mw-head
     color: #333333;
     font-size: 0.7em;
 }
+
 #footer #footer-icons {
     float: right;
 }
+
 /* @noflip */
 body.ltr #footer #footer-places {
     float: left;
 }
+
 #footer #footer-info li {
     line-height: 1em;
 }
@@ -211,38 +266,114 @@ body.ltr #footer #footer-places {
     text-decoration: none;
 }
 
-BODY
-{
-    background-image: url("../img/page_gradient.png") !important;
-    background-image: url("../img/page_gradient.png"), url( "../img/stripes.png" ) !important;
-    background-position: left top !important;
-    background-repeat: repeat-x, repeat !important;
-    background-color: #eaeaef !important;
+/* Main Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(234, 234, 239);
 }
 
-.editsection
-{
- font-family: Arial !important;
- font-size: 13px !important;
- letter-spacing: 0;
+/* Stripes */
+body::before {
+
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: repeating-linear-gradient(-55deg, rgb(224, 224, 234), rgb(224, 224, 234) 40px, rgb(234, 234, 239) 40px, rgb(234, 234, 239) 80px);
 }
 
-A.new
-{
- color: red !important;
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 5em;
+    background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+}
+
+.editsection {
+    font-family: Arial !important;
+    font-size: 13px !important;
+    letter-spacing: 0;
+}
+
+A.new {
+    color: red !important;
+}
+
+#tableText1 {
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #ebf3fb;
+}
+
+#propertyTextMain {
+    padding: 0.23em;
+    font-size: 15px;
+    background-image: url(../img/portal-break.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+
+#propertyTextCol {
+    font-size: 15px;
+    background-image: url(../img/arrow-right.png);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+#propertyTextSub {
+    padding: 0.93em;
+    font-size: 12px;
+    left: -9px;
+}
+
+.property-list {
+    padding: 10px;
+    padding-top: 0px;
+    position: relative;
+    top: 85px;
+    left: -185px;
+    width: 145px;
+    height: 350px;
+}
+
+.property-list .property-label {
+    position: relative;
+    padding: 0.23em;
+    font-size: 15px;
+    background-image: url(../img/portal-break.png);
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+
+
+.property-list .property-content {
+    position: relative;
+    margin: 5px 15px;
+    height: 0;
+    font-size: 12px;
 }
 
 #content {
-    padding: 2em;
-    background-image: url(../img/border.png);
+    padding: 1.9em;
     background-position: bottom right;
     background-repeat: repeat-x;
     background-color: white;
+    outline: 1px solid pink
 }
 
 
-#comment_box
-{
+#comment_box {
     background-color: #fafafa !important;
     padding: 10px;
     padding-top: 0px;
@@ -252,34 +383,32 @@ A.new
     border-top: 1px solid #ace;
 }
 
-#comment_box H3
-{
+#comment_box H3 {
     display: none;
 }
 
-#comment_box UL, #comment_box LI, #comment_box OL
-{
+#comment_box UL,
+#comment_box LI,
+#comment_box OL {
     list-style-image: none !important;
 }
 
-.dsq-global-toolbar-container
-{
-    background-color: #fafafa !important; 
+.dsq-global-toolbar-container {
+    background-color: #fafafa !important;
     display: none;
 }
 
-#dsq-sort-by, #dsq-footer, #dsq-account-dropdown
-{
+#dsq-sort-by,
+#dsq-footer,
+#dsq-account-dropdown {
     display: none;
 }
 
-.dsq-comment-message
-{
+.dsq-comment-message {
     padding: 20px 10px;
 }
 
-.dsq-comment-footer
-{
+.dsq-comment-footer {
     padding: 0;
     font-size: 11px;
 }
@@ -292,6 +421,7 @@ A.new
     width: 120px;
     height: 100px;
 }
+
 #p-logo a {
     display: block;
     width: 120px;
@@ -300,3 +430,66 @@ A.new
     background-position: center center;
     text-decoration: none;
 }
+
+/*Added from original css file */
+/* Personal */
+
+#mw-panel div.portal h5 {
+    font-weight: normal;
+    color: #444444;
+    padding: 0em;
+    padding-top: 0;
+    padding-left: 1.25em;
+    cursor: default;
+    border: none;
+    font-size: 0.75em;
+    user-select: none;
+    background-image: url("../img/arrow-right.png");
+    background-repeat: no-repeat;
+    
+}
+
+#mw-panel div.portal div.body {
+    margin: 0;
+    margin-left: 1.25em;
+}
+
+#mw-panel div.portal div.body ul {
+    list-style: none;
+    list-style-image: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mw-panel div.portal div.body ul li {
+    line-height: 1.125em;
+    padding: 0;
+    padding-bottom: 0.5em;
+    margin: 0;
+    overflow: hidden;
+    font-size: 0.75em;
+}
+
+#mw-panel div.portal div.body ul li a {
+    color: #0645ad;
+}
+
+#mw-panel div.portal div.body ul li a:visited {
+    color: #0b0080;
+}
+
+#mw-panel.collapsible-nav div h5:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#mw-panel.collapsible-nav div.collapsed h5:hover {
+    text-decoration: underline;
+}
+
+#mw-panel.collapsible-nav div.portal div.body {
+    background: none !important;
+}
+
+/* */
