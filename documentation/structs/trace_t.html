@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
-<style>
-table, th, td {
-  border:1px solid blue;
-}
-</style>
    <head>
       <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
-      <title>MOVETYPE</title>
+      <title>trace_t</title>
    </head>
 <script src="../../base.js"></script>
    <body> 
@@ -48,86 +43,53 @@ table, th, td {
          </div>  <!-- Collapsible Elements End -->
       </div>
       </div>
+   </div>
       <div id="content">
          <a id="top"></a>
 
          <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
 
          <div id="bodyContent">
-            <h1>MOVETYPE</h1>
-            <img alt="NewerServer.png" src="../../img/NewerShared.png" width="12" height="17">  Enumerations used by functions like <a href="../classes/cbaseentity/setmovetype.html">Entity:SetMoveType</a> and <a href="../classes/cbaseentity/getmovetype.html">Entity:GetMoveType</a>.<br>
+            <h1>trace_t</h1>
+            Table structure used as trace result. Default values are when the trace hits nothing.
             <br>
             <div id="contentSub">
-               <h2>Values:</h2>
+               <h2>Members</h2>
                <hr>
                <br>
-<table class="prettytable" style="width:75%">
-  <tr>
-    <th>ENUM</th>
-    <th>NUM</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>MOVETYPE_NONE</td>
-    <td>0</td>
-    <td>Don't move</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_ISOMETRIC</td>
-    <td>1</td>
-    <td>For players, in TF2 commander view, etc</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_WALK</td>
-    <td>2</td>
-    <td>Player only, moving on the ground</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_STEP</td>
-    <td>3</td>
-    <td>Monster/NPC movement</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_FLY</td>
-    <td>4</td>
-    <td>Fly, no gravity</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_FLYGRAVITY</td>
-    <td>5</td>
-    <td>Fly, with gravity</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_VPHYSICS</td>
-    <td>6</td>
-    <td>Physics movetype</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_PUSH</td>
-    <td>7</td>
-    <td>No clip to world, but pushes and crushes things.</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_NOCLIP</td>
-    <td>8</td>
-    <td>Noclip</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_LADDER</td>
-    <td>9</td>
-    <td>For players, when moving on a ladder</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_OBSERVER</td>
-    <td>10</td>
-    <td>Spectator movetype. DO NOT use this to make player spectate</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_CUSTOM</td>
-    <td>11</td>
-    <td>Custom movetype, can be applied to the player to prevent the default movement code from running, while still calling the related hooks</td>
-  </tr>
-</table>
+<table>
+<tbody><tr>
+<th>Type
+</th><th>Name
+</th><th>Description
+</th></tr>
+<tr>
+<td>Vector  </td><td width="15%"> startpos   </td><td> The start of the TraceLine as a Vector.
+</td></tr>
+<tr>
+<td>String  </td><td width="45%"> endpos   </td><td>  The end of the TraceLine as a Vector.
+</td></tr>
+<tr>
+<td>Table  </td><td> plane   </td><td> Contains the information about the plane you hit.
+<tr>
+<td>Number  </td><td> fraction   </td><td>  How far the trace went before hitting something. 0-1, 1.0 means it didn't hit anything.
+</td></tr>
+<tr>
+<td>Boolean  </td><td> allsolid  </td><td>  If true, the plane is not valid. (You never left the solid you started in)
+</td></tr>
+<tr>
+<td>Boolean  </td><td> startsolid  </td><td>  If true, the initial point was in a solid area.
+</td></tr>
+<tr>
+<td>Integer  </td><td> hitbox  </td><td>  Returns the int of the hitbox hit.
+</td></tr>
+<tr>
+<td>Entity  </td><td> Entity  </td><td>  The entity hit. Can be invalid.
+</td></tr>
+<tr>
+<td>Boolean  </td><td> DidHit  </td><td>  Returns true if it hit something.
+</td></tr>
+</tbody></table>
             </div>
          </div>
       </div>
@@ -137,11 +99,11 @@ table, th, td {
             </a>
          </div>
       </div>
-
+   </div>
       <div id="footer">
          <ul id="footer-info">
             <li id="footer-info-lastmod">
-               This page was last modified on 30.11.2023
+               This page was last modified on 02.01.2024
             </li>
             <li id="footer-info-viewcount">
                Thank you, for opening this page

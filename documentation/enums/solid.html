@@ -7,7 +7,7 @@ table, th, td {
 </style>
    <head>
       <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
-      <title>MOVETYPE</title>
+      <title>SOLID</title>
    </head>
 <script src="../../base.js"></script>
    <body> 
@@ -54,78 +54,53 @@ table, th, td {
          <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
 
          <div id="bodyContent">
-            <h1>MOVETYPE</h1>
-            <img alt="NewerServer.png" src="../../img/NewerShared.png" width="12" height="17">  Enumerations used by functions like <a href="../classes/cbaseentity/setmovetype.html">Entity:SetMoveType</a> and <a href="../classes/cbaseentity/getmovetype.html">Entity:GetMoveType</a>.<br>
+            <h1>SOLID</h1>
+            <img alt="NewerServer.png" src="../../img/NewerShared.png" width="12" height="17">  Enumerations used by <a href="../classes/cbaseentity/basepage.html">Entity</a>:SetSolid(), <a href="../classes/cbaseentity/basepage.html">Entity</a>:GetSolid() and <a href="../classes/cbaseentity/basepage.html">Entity</a>:VPhysicsInitNormal().
             <br>
             <div id="contentSub">
                <h2>Values:</h2>
                <hr>
                <br>
-<table class="prettytable" style="width:75%">
+<table class="prettytable" style="width:55%">
   <tr>
     <th>ENUM</th>
     <th>NUM</th>
     <th>Description</th>
   </tr>
   <tr>
-    <td>MOVETYPE_NONE</td>
+    <td>SOLID_NONE</td>
     <td>0</td>
-    <td>Don't move</td>
+    <td> Does not collide with anything.</td>
   </tr>
   <tr>
-    <td>MOVETYPE_ISOMETRIC</td>
+    <td>SOLID_BSP</td>
     <td>1</td>
-    <td>For players, in TF2 commander view, etc</td>
+    <td>The entity has a brush model defined by the map. Does not collide with other SOLID_BSP entities.</td>
   </tr>
   <tr>
-    <td>MOVETYPE_WALK</td>
+    <td>SOLID_BBOX</td>
     <td>2</td>
-    <td>Player only, moving on the ground</td>
+    <td>Uses the entity's axis-aligned bounding box for collisions.</td>
   </tr>
   <tr>
-    <td>MOVETYPE_STEP</td>
+    <td>SOLID_OBB</td>
     <td>3</td>
-    <td>Monster/NPC movement</td>
+    <td>Uses the entity's object-aligned bounding box for collisions.</td>
   </tr>
   <tr>
-    <td>MOVETYPE_FLY</td>
+    <td>SOLID_OBB_YAW</td>
     <td>4</td>
-    <td>Fly, no gravity</td>
+    <td>Same as SOLID_OBB but restricts orientation to the Z-axis.</td>
   </tr>
   <tr>
-    <td>MOVETYPE_FLYGRAVITY</td>
+    <td>SOLID_CUSTOM</td>
     <td>5</td>
-    <td>Fly, with gravity</td>
+    <td>?</td>
   </tr>
   <tr>
-    <td>MOVETYPE_VPHYSICS</td>
+    <td>SOLID_VPHYSICS</td>
     <td>6</td>
-    <td>Physics movetype</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_PUSH</td>
-    <td>7</td>
-    <td>No clip to world, but pushes and crushes things.</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_NOCLIP</td>
-    <td>8</td>
-    <td>Noclip</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_LADDER</td>
-    <td>9</td>
-    <td>For players, when moving on a ladder</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_OBSERVER</td>
-    <td>10</td>
-    <td>Spectator movetype. DO NOT use this to make player spectate</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_CUSTOM</td>
-    <td>11</td>
-    <td>Custom movetype, can be applied to the player to prevent the default movement code from running, while still calling the related hooks</td>
+    <td>Uses the PhysObjects of the entity.</td>
   </tr>
 </table>
             </div>

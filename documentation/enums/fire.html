@@ -7,7 +7,7 @@ table, th, td {
 </style>
    <head>
       <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
-      <title>MOVETYPE</title>
+      <title>FIRE</title>
    </head>
 <script src="../../base.js"></script>
    <body> 
@@ -54,78 +54,38 @@ table, th, td {
          <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
 
          <div id="bodyContent">
-            <h1>MOVETYPE</h1>
-            <img alt="NewerServer.png" src="../../img/NewerShared.png" width="12" height="17">  Enumerations used by functions like <a href="../classes/cbaseentity/setmovetype.html">Entity:SetMoveType</a> and <a href="../classes/cbaseentity/getmovetype.html">Entity:GetMoveType</a>.<br>
+            <h1>FIRE</h1>
+            <img alt="NewerServer.png" src="../../img/NewerShared.png" width="12" height="17">  Enumerations used by FireBulletsInfo_t
             <br>
             <div id="contentSub">
                <h2>Values:</h2>
                <hr>
                <br>
-<table class="prettytable" style="width:75%">
+<table class="prettytable" style="width:55%">
   <tr>
     <th>ENUM</th>
     <th>NUM</th>
     <th>Description</th>
   </tr>
   <tr>
-    <td>MOVETYPE_NONE</td>
-    <td>0</td>
-    <td>Don't move</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_ISOMETRIC</td>
+    <td>FIRE_BULLETS_FIRST_SHOT_ACCURATE</td>
     <td>1</td>
-    <td>For players, in TF2 commander view, etc</td>
+    <td>Fire the first shot with perfect accuracy.</td>
   </tr>
   <tr>
-    <td>MOVETYPE_WALK</td>
+    <td>FIRE_BULLETS_DONT_HIT_UNDERWATER</td>
     <td>2</td>
-    <td>Player only, moving on the ground</td>
+    <td>If the shot hits its target underwater, don't damage it.</td>
   </tr>
   <tr>
-    <td>MOVETYPE_STEP</td>
-    <td>3</td>
-    <td>Monster/NPC movement</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_FLY</td>
+    <td>FIRE_BULLETS_ALLOW_WATER_SURFACE_IMPACTS</td>
     <td>4</td>
-    <td>Fly, no gravity</td>
+    <td>If the shot hits water surface, still call DoImpactEffect().</td>
   </tr>
   <tr>
-    <td>MOVETYPE_FLYGRAVITY</td>
-    <td>5</td>
-    <td>Fly, with gravity</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_VPHYSICS</td>
-    <td>6</td>
-    <td>Physics movetype</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_PUSH</td>
-    <td>7</td>
-    <td>No clip to world, but pushes and crushes things.</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_NOCLIP</td>
+    <td>FIRE_BULLETS_TEMPORARY_DANGER_SOUND</td>
     <td>8</td>
-    <td>Noclip</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_LADDER</td>
-    <td>9</td>
-    <td>For players, when moving on a ladder</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_OBSERVER</td>
-    <td>10</td>
-    <td>Spectator movetype. DO NOT use this to make player spectate</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_CUSTOM</td>
-    <td>11</td>
-    <td>Custom movetype, can be applied to the player to prevent the default movement code from running, while still calling the related hooks</td>
+    <td>Danger sounds added from this impact can be stomped immediately if another is queued.</td>
   </tr>
 </table>
             </div>

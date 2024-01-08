@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>SWEP</title>
+   </head>
+<script src="../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+   </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <div id="bodyContent">
+            <h1>SWEP</h1>
+            Information about Scripted Weapons (SWEPs).
+            <br>
+            <div id="contentSub">
+               <h2>Shared Members</h2>
+               <hr>
+               <br>
+<table>
+<tbody><tr>
+<th>Type
+</th><th>Name
+</th><th>Description
+</th></tr>
+<tr>
+<td>Boolean  </td><td width="45%"> AdminOnly   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> If false, admins can't spawn that weapon (you can set to false for base weapons).
+</td></tr>
+<tr>
+<td>Boolean  </td><td> AllowFlipping   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Same as ViewModelFlip.
+<tr>
+<td>String  </td><td> AnimPrefix   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> This is for animations. (dont working rn)
+</td></tr>
+<tr>
+<td>Boolean  </td><td> MeleeWeapon   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Does nothing, just from Source Engine combat weapon.
+</td></tr>
+<tr>
+<td>Table  </td><td> m_acttable   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Table for activities (animations).
+</td></tr>
+<tr>
+<td>String  </td><td> Name   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Used for name in SpawnMenu.
+</td></tr>
+<tr>
+<td>String  </td><td> PrintName   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Used for name in Weapon Selection.
+</td></tr>
+<td>Table  </td><td> Primary  </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Contains infos about the primary attack.
+</td></tr>
+<td>Table  </td><td> Secondary   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Contains infos about the secondary attack.
+</td></tr>
+<tr>
+<td>Boolean  </td><td> Spawnable  </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> If false, players can't spawn that weapon (you can set to false for base weapons).
+</td></tr>
+<tr>
+<td>String  </td><td> ViewModel    </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Path to the view model (the weapon viewed from the player's point of view)
+</td></tr>
+<tr>
+<td>Boolean  </td><td> ViewModelFlip    </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Should the view model be flipped? (left handed weapon).
+</td></tr>
+<tr>
+<td>Number  </td><td> ViewModelFOV    </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> An angle of FOV used for the view model.
+</td></tr>
+<tr>
+<td>String  </td><td> WorldModel   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Path to the world model (the weapon viewed on the ground or in hands of NPCs).
+</td></tr>
+</tbody></table>
+<h3>Primary/Secondary Members</h3>
+               <hr>
+               <br>
+<table>
+<tbody><tr>
+<th>Type
+</th><th>Name
+</th><th>Description
+</th></tr>
+<tr>
+<td>String  </td><td width="15%"> Ammo    </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Ammo type for the primary/secondary fire mode ("Pistol", "SMG" etc) 
+</td></tr>
+<tr>
+<td>Boolean  </td><td> Automatic   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> Should the weapon keep firing if the player's mouse is still down? 
+</td></tr>
+<tr>
+<td>Integer  </td><td> ClipSize   </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> The size of a clip (how much you can shoot before you reload) 
+</td></tr>
+<td>Integer  </td><td> DefaultClip  </td><td> <a title="Shared Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a> The default amount of ammo to give when you get the weapon 
+</td></tr>
+</tbody></table>
+               <h2>Server-Side Members</h2>
+               <hr>
+               <br>
+<table>
+<tbody><tr>
+<th>Type
+</th><th>Name
+</th><th>Description
+</th></tr>
+<tr>
+<td>Boolean  </td><td width="15%"> AutoSwitchFrom   </td><td> <a title="Server Lua"><img alt="NewerServer.png" src="../../img/NewerServer.png" width="12" height="16"></a> Auto switch from if you pick up a better weapon.
+</td></tr>
+<tr>
+<td>Boolean  </td><td> AutoSwitchTo   </td><td> <a title="Server Lua"><img alt="NewerServer.png" src="../../img/NewerServer.png" width="12" height="16"></a> Auto switch to if we pick it up. 
+</td></tr>
+<tr>
+<td>Integer  </td><td> Weight   </td><td> <a title="Server Lua"><img alt="NewerServer.png" src="../../img/NewerServer.png" width="12" height="16"></a> Decides whether we should switch from/to this. 
+</td></tr>
+</tbody></table>
+<h2>Client-Side Members</h2>
+               <hr>
+               <br>
+<table>
+<tbody><tr>
+<th>Type
+</th><th>Name
+</th><th>Description
+</th></tr>
+<tr>
+<td>Number  </td><td width="15%"> BobScale   </td><td> <a title="Client Lua"><img alt="NewerClient.png" src="../../img/NewerClient.png" width="12" height="16"></a> The scale of the viewmodel bob (1.0 default). 
+</td></tr>
+<tr>
+<td>Boolean  </td><td> DrawAmmo    </td><td> <a title="Client Lua"><img alt="NewerClient.png" src="../../img/NewerClient.png" width="12" height="16"></a> Should draw the default HL2 ammo counter. 
+</td></tr>
+<tr>
+<td>Boolean  </td><td> DrawCrosshair    </td><td> <a title="Client Lua"><img alt="NewerClient.png" src="../../img/NewerClient.png" width="12" height="16"></a> Should draw the default crosshair. 
+</td></tr>
+<tr>
+<td>Integer  </td><td> Slot    </td><td> <a title="Client Lua"><img alt="NewerClient.png" src="../../img/NewerClient.png" width="12" height="16"></a> Slot in the weapon selection menu. 
+</td></tr>
+<tr>
+<td>Integer  </td><td> SlotPos    </td><td> <a title="Client Lua"><img alt="NewerClient.png" src="../../img/NewerClient.png" width="12" height="16"></a> Position in the slot.
+</td></tr>
+<tr>
+<td>Float     </td><td> SwayScale     </td><td> <a title="Client Lua"><img alt="NewerClient.png" src="../../img/NewerClient.png" width="12" height="16"></a> The scale of the viewmodel sway (1.0 default). 
+</td></tr>
+<tr>
+<td>String  </td><td> WepSelectIcon     </td><td> <a title="Client Lua"><img alt="NewerClient.png" src="../../img/NewerClient.png" width="12" height="16"></a> Path to an texture. Override this in your SWEP to set the icon in the weapon selection. 
+</td></tr>
+</tbody></table>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+   </div>
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 02.01.2024
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

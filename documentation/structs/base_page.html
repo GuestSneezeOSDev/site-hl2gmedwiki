@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
-<style>
-table, th, td {
-  border:1px solid blue;
-}
-</style>
    <head>
       <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
-      <title>MOVETYPE</title>
+      <title>Structs</title>
    </head>
 <script src="../../base.js"></script>
    <body> 
@@ -54,80 +49,35 @@ table, th, td {
          <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
 
          <div id="bodyContent">
-            <h1>MOVETYPE</h1>
-            <img alt="NewerServer.png" src="../../img/NewerShared.png" width="12" height="17">  Enumerations used by functions like <a href="../classes/cbaseentity/setmovetype.html">Entity:SetMoveType</a> and <a href="../classes/cbaseentity/getmovetype.html">Entity:GetMoveType</a>.<br>
+            <h1>Structs</h1>
             <br>
             <div id="contentSub">
-               <h2>Values:</h2>
                <hr>
                <br>
-<table class="prettytable" style="width:75%">
-  <tr>
-    <th>ENUM</th>
-    <th>NUM</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>MOVETYPE_NONE</td>
-    <td>0</td>
-    <td>Don't move</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_ISOMETRIC</td>
-    <td>1</td>
-    <td>For players, in TF2 commander view, etc</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_WALK</td>
-    <td>2</td>
-    <td>Player only, moving on the ground</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_STEP</td>
-    <td>3</td>
-    <td>Monster/NPC movement</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_FLY</td>
-    <td>4</td>
-    <td>Fly, no gravity</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_FLYGRAVITY</td>
-    <td>5</td>
-    <td>Fly, with gravity</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_VPHYSICS</td>
-    <td>6</td>
-    <td>Physics movetype</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_PUSH</td>
-    <td>7</td>
-    <td>No clip to world, but pushes and crushes things.</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_NOCLIP</td>
-    <td>8</td>
-    <td>Noclip</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_LADDER</td>
-    <td>9</td>
-    <td>For players, when moving on a ladder</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_OBSERVER</td>
-    <td>10</td>
-    <td>Spectator movetype. DO NOT use this to make player spectate</td>
-  </tr>
-  <tr>
-    <td>MOVETYPE_CUSTOM</td>
-    <td>11</td>
-    <td>Custom movetype, can be applied to the player to prevent the default movement code from running, while still calling the related hooks</td>
-  </tr>
-</table>
+               <table cellspacing="0" style="-webkit-border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 10px; border: 4px solid #CCDDEE; background-color: #CDE">
+
+<tbody><tr>
+<td valign="top" style="padding-left: 1.0em; padding-right: 3.0em;">
+<h3> <span class="mw-headline" id="Server">Server (0)</span></h3>
+<br>
+</p>
+</td><td valign="top" style="padding-left: 1.0em; padding-right: 3.0em;">
+<h3> <span class="mw-headline" id="Shared">Shared (6)</span></h3>
+<p>
+<a title="Sharedside Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a><a href="ent.html">ENT</a><br>
+<a title="Sharedside Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a><a href="firebulletsinfo_t.html">FireBulletsInfo_t</a><br>
+<a title="Sharedside Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a><a href="gm.html">GM</a><br>
+<a title="Sharedside Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a><a href="swep.html">SWEP</a><br>
+<a title="Sharedside Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a><a href="takedamageinfo_t.html">TakeDamageInfo_t</a><br>
+<a title="Sharedside Lua"><img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="16"></a><a href="trace_t.html">trace_t</a><br>
+<br>
+</p>
+</td><td valign="top" style="padding-left: 1.0em; padding-right: 3.0em;">
+<h3> <span class="mw-headline" id="Client">Client (0)</span></h3>
+<p>
+<br>
+</p>
+</td></tr></tbody></table>
             </div>
          </div>
       </div>
@@ -141,7 +91,7 @@ table, th, td {
       <div id="footer">
          <ul id="footer-info">
             <li id="footer-info-lastmod">
-               This page was last modified on 30.11.2023
+               This page was last modified on 02.01.2024
             </li>
             <li id="footer-info-viewcount">
                Thank you, for opening this page
