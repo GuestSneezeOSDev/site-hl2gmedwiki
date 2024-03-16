@@ -67,8 +67,8 @@
                For adding ConVar you can use this function:
 
                <pre class="lua" style="font-family:monospace;">
---Command Name, Default Value, FLAGS, Minimum Value, Maximum Value
-CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"CommandName"</span>, <span style="color: #FF0000;">"defValue"</span>, FCVAR_NONE, <span style="color: #FF0000;">"minValue"</span>, <span style="color: #FF0000;">"maxValue"</span><span style="color:#008000;">)</span>
+--Command Name, Default Value, FLAGS, HelpText, Minimum Value, Maximum Value
+CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"CommandName"</span>, <span style="color: #FF0000;">"defValue"</span>, FCVAR_NONE, <span style="color: #FF0000;">"HelpText"</span>, <span style="color: #FF0000;">"minValue"</span>, <span style="color: #FF0000;">"maxValue"</span><span style="color:#008000;">)</span>
                </pre>
 
                <h2 id="Examples" class="subFirstHeading1">Examples</h2>
@@ -78,7 +78,7 @@ CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"
                First is going example, for getting bool from ConVar:
 
                <pre class="lua" style="font-family:monospace;">
-<span style="color: #0000ff;">local</span> checkBool<span style="color:#008000;"> = </span>CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"gmed_giveweapons"</span>, <span style="color: #FF0000;">"1"</span>, FCVAR_CLIENT, <span style="color: #FF0000;">"0"</span>, <span style="color: #FF0000;">"1"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">local</span> checkBool<span style="color:#008000;"> = </span>CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"gmed_giveweapons"</span>, <span style="color: #FF0000;">"1"</span>, FCVAR_CLIENT, <span style="color: #FF0000;">"Give weapons?"</span>, <span style="color: #FF0000;">"0"</span>, <span style="color: #FF0000;">"1"</span><span style="color:#008000;">)</span>
 
 <span style="color: #0000ff;">if</span> checkBool<span style="color: #0000ff;">:GetBool()</span> <span style="color:#008000;">==</span> <span style="color: #FF0000;">true</span><span style="color: #0000ff;"> then</span>
    <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConVar is Working!"</span><span style="color: #0000ff;">)
@@ -88,7 +88,7 @@ CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"
                Next is example, how to get int from ConVar:
 
 <pre class="lua" style="font-family:monospace;">
-<span style="color: #0000ff;">local</span> checkInt<span style="color:#008000;"> = </span>CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"checkInteger"</span>, <span style="color: #FF0000;">"1"</span>, FCVAR_SERVER, <span style="color: #FF0000;">"0"</span>, <span style="color: #FF0000;">"255"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">local</span> checkInt<span style="color:#008000;"> = </span>CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"checkInteger"</span>, <span style="color: #FF0000;">"1"</span>, FCVAR_SERVER, <span style="color: #FF0000;">"Checks Integer"</span>, <span style="color: #FF0000;">"0"</span>, <span style="color: #FF0000;">"255"</span><span style="color:#008000;">)</span>
 
 <span style="color: #0000ff;">if</span> checkBool<span style="color: #0000ff;">:GetInt()</span> <span style="color:#008000;">==</span> <span style="color: #FF0000;">133</span><span style="color: #0000ff;"> then</span>
    <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"int = 133"</span><span style="color: #0000ff;">)
@@ -97,12 +97,8 @@ CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"
 
                 <h2 id="Flags" class="subFirstHeading2">Flags</h2>
 
-                FCVAR_NONE - Just Simple ConVar, can be executed from Server and Client states. <br />
-
-                FCVAR_CLIENTDLL - Executable only from Client state.<br />
-
-                FCVAR_SERVER - Executalbe only from Server state.<br />
-                <br />
+               Flags are using <a href="../documentation/enums/fcvar.html">FCVAR</a> enum. <br>
+               <br>
 
                Thank you for reading this tutorial, see ya later!<br />
                <br />

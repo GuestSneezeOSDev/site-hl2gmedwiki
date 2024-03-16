@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid blue;
+}
+</style>
+   <head>
+      <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>FCVAR</title>
+   </head>
+<script src="../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <div id="bodyContent">
+            <h1>FCVAR</h1>
+            <img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="17">  Enumerations used by ConCommands and ConVars.<br>
+            <br>
+            <div id="contentSub">
+               <h2>Values:</h2>
+               <hr>
+               <br>
+               <table class="prettytable" style="width:95%">
+                  <tr>
+                   <th>ENUM</th>
+                   <th>NUM</th>
+                   <th>Description</th>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_ACCESSIBLE_FROM_THREADS</td>
+                   <td>33554432</td>
+                   <td>?</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_ALLOWED_IN_COMPETITIVE</td>
+                   <td>262144</td>
+                   <td>?</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_ARCHIVE</td>
+                   <td>128</td>
+                   <td>Save the ConVar value into client.vdf (dont works huh??) </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_ARCHIVE_XBOX</td>
+                   <td>16777216</td>
+                   <td>Save the ConVar value into config.vdf on XBox</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_CHEAT</td>
+                   <td>16384</td>
+                   <td>Requires sv_cheats to be enabled to change the ConVar or run the command </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_CLIENTCMD_CAN_EXECUTE</td>
+                   <td>1073741824</td>
+                   <td>IVEngineClient::ClientCmd is allowed to execute this command </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_CLIENTDLL</td>
+                   <td>8</td>
+                   <td>ConVar is defined by the client DLL. </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_DEMO</td>
+                   <td>65536</td>
+                   <td>Force the ConVar to be recorded by demo recordings.</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_DEVELOPMENTONLY</td>
+                   <td>2</td>
+                   <td>?</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_DONTRECORD</td>
+                   <td>131072</td>
+                   <td>Opposite of FCVAR_DEMO, ensures the ConVar is not recorded in demos </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_EXEC_DESPITE_DEFAULT</td>
+                   <td>-2147483648</td>
+                   <td>Description</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_GAMEDLL</td>
+                   <td>4</td>
+                   <td>ConVar is defined by the game DLL. This flag is set automatically</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_HIDDEN</td>
+                   <td>16</td>
+                   <td>Invisible.</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_INTERNAL_USE</td>
+                   <td>32768</td>
+                   <td>?</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_MATERIAL_SYSTEM_THREAD</td>
+                   <td>8388608</td>
+                   <td>?</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_MATERIAL_THREAD_MASK</td>
+                   <td>11534336</td>
+                   <td>?</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_NEVER_AS_STRING</td>
+                   <td>4096</td>
+                   <td>Tells the engine to never print this variable as a string. This is used for variables which may contain control characters. </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_NONE</td>
+                   <td>0</td>
+                   <td>No flags</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_NOTIFY</td>
+                   <td>256</td>
+                   <td>For serverside ConVars, notifies all players with blue chat text when the value gets changed </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_NOT_CONNECTED</td>
+                   <td>4194304</td>
+                   <td>Makes the ConVar not changeable while connected to a server or in singleplayer</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_PRINTABLEONLY</td>
+                   <td>1024</td>
+                   <td>Forces the ConVar to only have printable characters ( No control characters ) </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_PROTECTED</td>
+                   <td>32</td>
+                   <td>Makes the ConVar value hidden from all clients ( For example sv_password ) </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_RELOAD_MATERIALS</td>
+                   <td>1048576</td>
+                   <td>?</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_RELOAD_TEXTURES</td>
+                   <td>2097152</td>
+                   <td>?</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_REPLICATED</td>
+                   <td>8192</td>
+                   <td>For serverside ConVars, it will send its value to all clients. The ConVar with the same name must also exist on the client! </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_SERVER_CANNOT_QUERY</td>
+                   <td>536870912</td>
+                   <td>Prevents the server from querying value of this ConVar</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_SERVER_CAN_EXECUTE</td>
+                   <td>268435456</td>
+                   <td>The server is allowed to execute this command on clients. </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_SPONLY</td>
+                   <td>64</td>
+                   <td>Executing the command or changing the ConVar is only allowed in singleplayer </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_UNLOGGED</td>
+                   <td>2048</td>
+                   <td>Don't log the ConVar changes to console/log files/users </td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_UNREGISTERED</td>
+                   <td>1</td>
+                   <td>If this is set, the convar will become anonymous and won't show up in the 'find' results.</td>
+                  </tr>
+                  <tr>
+                   <td>FCVAR_USERINFO</td>
+                   <td>512</td>
+                   <td>For clientside commands, sends the value to the server</td>
+                  </tr>
+                  </table>                                   
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 30.11.2023
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

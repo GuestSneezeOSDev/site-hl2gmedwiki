@@ -2,7 +2,7 @@
 <html>
    <head>
       <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
-      <title>concommand</title>
+      <title>concommand.Add</title>
    </head>
 <script src="../../../base.js"></script>
    <body> 
@@ -48,28 +48,42 @@
 
          <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
 
-         <h1>concommand</h1>
-
-         Please make sure, that not all functions was tested to be working. <br>
-         You can read <a href="../../../tutorials/concommandnew.html">tutorial</a> for looking how to create ConCommands.
-
-         <h2 id="firstHeading" class="firstHeading">Functions</h2>
          <div id="bodyContent">
+            <h1>concommand.Add</h1>
+            <img alt="NewerShared.png" src="../../../img/NewerShared.png" width="12" height="17">  Creates an effect with the specified data. <br>
+            <br>
             <div id="contentSub">
-               <h3 id="SharedSide" class="subFirstHeading">Shared</h3>
                <pre class="lua" style="font-family:monospace;">
-<span style="color: #0000ff;"><a href="add.html">concommand</a></span><span style="color:#008000;">.</span><span style="color: #FF0000;"><a href="add.html">Add</a></span><span style="color:#008000;">()</span>
-<span style="color: #0000ff;">concommand</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Remove</span><span style="color:#008000;">()</span>
-<span style="color: #0000ff;">concommand</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Run</span><span style="color:#008000;">()</span>
-<span style="color: #0000ff;">concommand</span><span style="color:#008000;">.</span><span style="color: #FF0000;">_M</span><span style="color:#008000;">()</span>
-<span style="color: #0000ff;">concommand</span><span style="color:#008000;">.</span><span style="color: #FF0000;">_NAME</span><span style="color:#008000;">()</span>
-<span style="color: #0000ff;">concommand</span><span style="color:#008000;">.</span><span style="color: #FF0000;">_PACKAGE</span><span style="color:#008000;">()</span>
+<span style="color: #0000ff;">concommand</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Add</span><span style="color:#008000;">( </span><span style="color: #6600ff;">string</span> name , <span style="color: #6600ff;">function</span> callback, <span style="color: #6600ff;">string</span> helpstring, <span style="color: #6600ff;">number</span> flags<span style="color:#008000;"> )</span>
                </pre>
 
-               Thank you for reading this article, see ya later!<br />
-               <br />
+               <h2>Arguments:</h2>
+               <hr>
 
-               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+               <ul>
+                  <h3><li> 1) <span style="color: #6600ff;">string</span> name</li></h3>
+                  The command name to be used in console. <br>
+                  <br>
+                  This cannot be a name of existing console command or console variable. It will silently fail if it is.
+                  <h3><li> 2) <span style="color: #6600ff;">function</span> callback</li></h3>
+                  The function to run when the concommand is executed.<br>
+                  <br>
+                  Function callback arguments are:
+                  <ul>
+                     <li><span style="color: #0066ff;"><a href="../../classes/cbaseplayer/basepage.html">CBasePlayer</a></span> ply</li> - The player that ran the concommand. NULL entity if command was entered with the dedicated server console. <br>
+                     <li><span style="color: #0066ff;">string</span> cmd</li> - The player that ran the concommand. NULL entity if command was entered with the dedicated server console. <br>
+                     <li><span style="color: #0066ff;">string</span> arg</li>  - The arguments as a string. <br>
+                  </ul>
+               </ul>
+
+               <h2>Example:</h2>
+               <hr>
+               <pre class="lua" style="font-family:monospace;">
+concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span>, <span style="color: #0000ff;">function()</span> 
+   <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConCommand is Working!"</span><span style="color: #0000ff;">)</span>
+end<span style="color:#008000;">)</span>
+               </pre>
+               </pre>
             </div>
          </div>
       </div>

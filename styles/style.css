@@ -85,6 +85,15 @@ table.prettytable caption {
 PRE.lua {
     padding: 5px;
     overflow: Scroll;
+    border: 2px dashed #2f6fab;
+}
+
+internal {
+    padding: 1em;
+    border: 2px dashed #4e4e4e;
+    color: black;
+    background-color: #f9f9f9;
+    line-height: 1.1em;
 }
 
 pre {
@@ -99,6 +108,67 @@ code {
     color: blue;
     border-radius: 15%;
     background-color: #cce6ff;
+}
+
+function {
+    background-color: #e6e6e6;
+    font-family: monospace;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-top: 1px;
+}
+
+.markdown div.internal {
+    /*padding: 16px 16px;*/
+    color: #6b6b6b;
+    font-size: 12px;
+    margin: 10px 5px;
+    border: 3px dashed #6b6b6b;
+    background-color: rgba(107, 107, 107, 0.1);
+  }
+  .markdown div.internal a {
+    color: #6b6b6b;
+    text-decoration: underline;
+  }
+  .markdown div.internal:before {
+    content: "Internal";
+    font-weight: bolder;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #6b6b6b;
+    margin: 16px;
+    margin-bottom: 10px;
+  }
+  .markdown div.internal .inner {
+    margin: 16px;
+    margin-top: 10px;
+  }
+  .markdown div.warning {
+    /*padding: 16px 16px;*/
+    color: #f44336;
+    font-size: 12px;
+    margin: 10px 5px;
+    border: 3px dashed #f44336;
+    background-color: rgba(244, 67, 54, 0.1);
+  }
+.markdown div.warning a {
+    color: #f44336;
+    text-decoration: underline;
+  }
+
+.markdown div.warning:before {
+    content: "Warning";
+    font-weight: bolder;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #f44336;
+    margin: 16px;
+    margin-bottom: 10px;
 }
 
 SPAN.usr_1,
