@@ -2,7 +2,7 @@
 <html>
    <head>
       <link href="../../../styles/style.css" rel="stylesheet" type="text/css" />
-      <title>concommand.Add</title>
+      <title>engine.ServerCommand</title>
    </head>
 <script src="../../../base.js"></script>
    <body> 
@@ -49,46 +49,29 @@
          <a href="../../base_page.html" title="GetBack">Return to Main Docs Page</a>
 
          <div id="bodyContent">
-            <h1>concommand.Add</h1>
-            <img alt="NewerShared.png" src="../../../img/NewerShared.png" width="12" height="17">  Creates a console command that runs a function in lua with optional autocompletion function and help text. <br>
+            <h1>engine.ServerCommand</h1>
+            <img alt="NewerServer.png" src="../../../img/NewerServer.png" width="12" height="17">  Used by the engine to run a console command from server-side. <br>
             <br>
             <div id="contentSub">
                <pre class="lua" style="font-family:monospace;">
-<span style="color: #0000ff;">concommand</span><span style="color:#008000;">.</span><span style="color: #FF0000;">Add</span><span style="color:#008000;">( </span><span style="color: #6600ff;">string</span> name , <span style="color: #6600ff;">function</span> callback, <span style="color: #6600ff;">string</span> helpstring, <span style="color: #6600ff;">number</span> flags<span style="color:#008000;"> )</span>
+<span style="color: #0000ff;">engine</span><span style="color:#008000;">.</span><span style="color: #FF0000;">ServerCommand</span><span style="color:#008000;">( </span><span style="color: #6600ff;">string</span> cmd<span style="color:#008000;"> )</span>
                </pre>
-
+               Can be used for setup server cvars on gamemode initialization.
                <h2>Arguments:</h2>
                <hr>
-
+               
                <ul>
-                  <h3><li> 1) <span style="color: #6600ff;">string</span> name</li></h3>
-                  The command name to be used in console. <br>
-                  <br>
-                  This cannot be a name of existing console command or console variable. It will silently fail if it is.
-                  <h3><li> 2) <span style="color: #6600ff;">function</span> callback</li></h3>
-                  The function to run when the concommand is executed.<br>
-                  <br>
-                  Function callback arguments are:
-                  <ul>
-                     <li><span style="color: #0066ff;"><a href="../../classes/cbaseplayer/basepage.html">CBasePlayer</a></span> ply</li> - The player that ran the concommand. NULL entity if command was entered with the dedicated server console. <br>
-                     <li><span style="color: #0066ff;">string</span> cmd</li> - The concommand string (if one callback is used for several concommands). <br>
-                     <li><span style="color: #0066ff;">string</span> arg</li>  - The arguments as a string. <br>
-                  </ul>
-                  <h3><li> 3) <span style="color: #6600ff;">string</span> helpstring</li></h3>
-                  The function to run when the concommand is executed.<br>
-                  <br>
-                  <h3><li> 4) <span style="color: #6600ff;">number</span> flags</li></h3>
-                  The function to run when the concommand is executed.<br>
-                  <br>
+                  <h3><li> 1) <span style="color: #6600ff;">string</span> cmd</li></h3>
+                  Command to run. <br>
                </ul>
 
                <h2>Example:</h2>
                <hr>
                <pre class="lua" style="font-family:monospace;">
-concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span>, <span style="color: #0000ff;">function()</span> 
-   <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConCommand is Working!"</span><span style="color: #0000ff;">)</span>
-end<span style="color:#008000;">)</span>
-               </pre>
+<span style="color: #0000ff;">function</span> <span style="color:#008000;">GM:Initialize()</span>
+   engine.ServerCommand<span style="color:#008000;">(</span><span style="color: #FF0000;">"sv_accelerate 10\n"</span><span style="color:#008000;">)</span>
+   engine.ServerCommand<span style="color:#008000;">(</span><span style="color: #FF0000;">"sv_airaccelerate 100\n"</span><span style="color:#008000;">)</span>
+<span style="color: #0000ff;">end</span>
                </pre>
             </div>
          </div>

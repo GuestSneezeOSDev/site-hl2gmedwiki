@@ -94,7 +94,9 @@ lua_dofile_cl myscript
                   </a>
                   Shared - This is used on both the server and the client.
                </p>
-
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: blue;">print</span>( <span style="color: #ec3939;">"Loaded from SHARED."</span> )
+               </pre>
                <p>
                   2.
                   <a title="Server Lua">
@@ -102,7 +104,11 @@ lua_dofile_cl myscript
                   </a>
                   Server - This side, is used on Dedicated Servers, and your local hosted game, it can`t do client-side scripts.
                </p>
-
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: blue;">if</span> SERVER <span style="color: blue;">then</span>
+   <span style="color: blue;">print</span>( <span style="color: #ec3939;">"Loaded from SERVER."</span> )
+<span style="color: blue;">end</span>
+               </pre>
                <p>
                   3.
                   <a title="Client Lua">
@@ -110,6 +116,11 @@ lua_dofile_cl myscript
                   </a>
                   Client - This side, is used only on your local game, it can`t do server-side scripts.
                </p>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: blue;">if</span> CLIENT <span style="color: blue;">then</span>
+   <span style="color: blue;">print</span>( <span style="color: #ec3939;">"Loaded from CLIENT."</span> )
+<span style="color: blue;">end</span>
+               </pre>
 
 
                Thank you for reading this article, see ya later!<br />
@@ -129,7 +140,7 @@ lua_dofile_cl myscript
       <div id="footer">
          <ul id="footer-info">
             <li id="footer-info-lastmod">
-               This page was last modified on 28.09.2023
+               This page was last modified on 17.03.2024
             </li>
             <li id="footer-info-viewcount">
                Thank you, for opening this page

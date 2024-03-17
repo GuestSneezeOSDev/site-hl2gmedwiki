@@ -7,7 +7,7 @@ table, th, td {
 </style>
    <head>
       <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
-      <title>CreateEntityByName</title>
+      <title>vec3_origin</title>
    </head>
 <script src="../../base.js"></script>
    <body> 
@@ -55,43 +55,20 @@ table, th, td {
          <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
 
          <div id="bodyContent">
-            <h1>CreateEntityByName</h1> 
+            <h1>vec3_origin</h1> 
             <function style="font-family:monospace;"> <img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="17">
-<span style="color: #0066ff;"><a href="../classes/cbaseentity/basepage.html">CBaseEntity</a></span> CreateEntityByName(<span style="color: #0066ff;">string</span> classname )
+<span style="color: #0066ff;"><a href="../classes/vector/basepage.html">Vector</a></span> vec3_origin
             </function>
             <div id="contentSub">
                <h2>Description:</h2><hr>
                <br>
-               Creates an entity.
-               <h2>Arguments:</h2><hr>
-               <br>
-               <ul>
-                  <h3><li> 1) <span style="color: #0066ff;">string</span> classname</li></h3>
-                  Classname of the entity to create.
-               </ul>
+               Returns empty vector. Used to check for validity or just for shortcut.
                <h2>Returns:</h2><hr>
                <br>
                <ul>
-                  <h3><li> 1) <span style="color: #0066ff;"><a href="../classes/cbaseentity/basepage.html">CBaseEntity</a></span> </li></h3>
-                  Returns <a href="../classes/cbaseentity/basepage.html">CBaseEntity</a> object.
+                  <h3><li> 1) <span style="color: #0066ff;"><a href="../classes/vector/basepage.html">Vector</a></span>( <span style="font-size:14px">x = 0, y = 0, z = 0</span> ) </li></h3>
+                  Returns empty vector.
                </ul>
-               <h2>Example:</h2><hr>
-               <br>
-               Code from a weapon_cola swep.
-               <pre class="lua">
-<span style="color: blue;">if</span> !CLIENT <span style="color: blue;">then</span>
-   <span style="color: blue;">local</span> ent = <a href="tocphysicsprop.html">ToCPhysicsProp</a>(CreateEntityByName(<span style="color: red;">"prop_cola"</span>))
-   <span style="color: blue;">if</span> ent <span style="color: green;">~=</span> NULL <span style="color: blue;">or</span> ent <span style="color: green;">~=</span> <span style="color: red;">nil</span> <span style="color: blue;">then</span>
-      ent:SetLocalOrigin(vecSrc + forward * 16)
-      ent.m_nSkin = 1;
-      ent:Spawn()		
-      <span style="color: blue;">local</span> phys = ent:VPhysicsGetObject()
-      <span style="color: blue;">if</span> phys <span style="color: green;">~=</span> <span style="color: red;">nil</span> <span style="color: blue;">then</span>
-         phys:SetVelocity(forward * 1024,forward * 1024)
-      <span style="color: blue;">end</span>
-   <span style="color: blue;">end</span>
-<span style="color: blue;">end</span>
-               </pre>
             </div>
          </div>
       </div>

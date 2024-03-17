@@ -69,6 +69,30 @@ table, th, td {
                   <h3><li> 1) <span style="color: #0066ff;"><a href="../classes/ceffectdata/basepage.html">CEffectData</a></span> </li></h3>
                   The <a href="../classes/ceffectdata/basepage.html">CEffectData</a> object.
                </ul>
+               <h2>Example:</h2>
+               <hr>
+
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">function </span><span style="color:#008000;">SWEP:PrimaryAttack()</span>
+   <span style="color: #0000ff;">local </span>pPlayer<span style="color:#008000;"> = </span><span style="color: #0000ff;">self</span><span style="color:#008000;">:</span><span style="color: #FF0000;">GetOwner</span><span style="color:#008000;">()</span> <span style="color: #888;">--Returns owner entity. </span>
+
+   <span style="color: #0000ff;">if </span><span style="color:#008000;">( </span>pPlayer<span style="color:#008000;"> == </span><span style="color: #FF0000;">NULL</span><span style="color:#008000;"> )</span><span style="color: #0000ff;"> then</span>
+      <span style="color: #0000ff;">return</span> <span style="color: #888;">--Ends the function if player is invalid. </span>
+   <span style="color: #0000ff;">end</span>
+
+   <span style="color: #0000ff;">local </span>vForward<span style="color:#008000;"> = </span>Vector()
+   <span style="color: #0000ff;">local </span>vecEye<span style="color:#008000;"> = </span>pPlayer<span style="color:#008000;">:</span><span style="color: #FF0000;">EyePosition</span><span style="color:#008000;">()</span>
+   pPlayer<span style="color:#008000;">:</span><span style="color: #FF0000;">EyeVectors</span><span style="color:#008000;">(</span> vForward, <span style="color: #0000ff;">nil</span>, <span style="color: #0000ff;">nil</span><span style="color:#008000;"> )</span>
+   <span style="color: #0000ff;">local </span>tr<span style="color:#008000;"> = </span><span style="color: #FF0000;">trace_t</span><span style="color:#008000;">()</span>
+
+   <span style="color: #0000ff;">UTIL</span>.<span style="color: #FF0000;">TraceLine</span><span style="color:#008000;">(</span> vecEye, vecEye <span style="color: #0000ff;">+</span> vForward <span style="color: #0000ff;">*</span> 4096, MASK_SHOT_HULL, pPlayer, 0, tr <span style="color:#008000;">)</span>  
+
+   <span style="color: #0000ff;">local </span>effect<span style="color:#008000;"> = </span><span style="color: #FF0000;">EffectData</span><span style="color:#008000;">()</span>
+   effect:<span style="color: #FF0000;">SetOrigin</span><span style="color:#008000;">(</span> tr.endpos <span style="color:#008000;">)</span> 
+   <span style="color: #0000ff;">util</span><span style="color:#008000;">.</span><span style="color: #FF0000;"><a href="../libs/util/effect.html">Effect</a></span><span style="color:#008000;">( </span><span style="color: #be7de3;">"cball_bounce"</span>, effect<span style="color:#008000;"> )</span>
+
+<span style="color: #0000ff;">end</span>
+               </pre>
             </div>
          </div>
       </div>

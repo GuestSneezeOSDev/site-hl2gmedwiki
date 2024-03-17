@@ -7,7 +7,7 @@ table, th, td {
 </style>
    <head>
       <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
-      <title>CreateEntityByName</title>
+      <title>SERVER</title>
    </head>
 <script src="../../base.js"></script>
    <body> 
@@ -55,41 +55,27 @@ table, th, td {
          <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
 
          <div id="bodyContent">
-            <h1>CreateEntityByName</h1> 
-            <function style="font-family:monospace;"> <img alt="NewerShared.png" src="../../img/NewerShared.png" width="12" height="17">
-<span style="color: #0066ff;"><a href="../classes/cbaseentity/basepage.html">CBaseEntity</a></span> CreateEntityByName(<span style="color: #0066ff;">string</span> classname )
+            <h1>SERVER</h1> 
+            <function style="font-family:monospace;"> <img alt="NewerServer.png" src="../../img/NewerServer.png" width="12" height="17">
+<span style="color: #0066ff;">boolean</span> SERVER <span style="color: #0066ff;">or</span> _SERVER
             </function>
             <div id="contentSub">
                <h2>Description:</h2><hr>
                <br>
-               Creates an entity.
-               <h2>Arguments:</h2><hr>
+               Returns true when the code is executed from the server. It is used for an exception during code running or for checking. <br>
+               The opposite of CLIENT-Side.<br>
                <br>
-               <ul>
-                  <h3><li> 1) <span style="color: #0066ff;">string</span> classname</li></h3>
-                  Classname of the entity to create.
-               </ul>
+
+               See <a href="../../tutorials/gmedinstances.html">this tutorial</a> for more info.
                <h2>Returns:</h2><hr>
-               <br>
                <ul>
-                  <h3><li> 1) <span style="color: #0066ff;"><a href="../classes/cbaseentity/basepage.html">CBaseEntity</a></span> </li></h3>
-                  Returns <a href="../classes/cbaseentity/basepage.html">CBaseEntity</a> object.
+                  <h3><li> 1) <span style="color: #0066ff;">boolean</span> </li></h3>
+                  Returns true if the code is running on the server.
                </ul>
                <h2>Example:</h2><hr>
-               <br>
-               Code from a weapon_cola swep.
-               <pre class="lua">
-<span style="color: blue;">if</span> !CLIENT <span style="color: blue;">then</span>
-   <span style="color: blue;">local</span> ent = <a href="tocphysicsprop.html">ToCPhysicsProp</a>(CreateEntityByName(<span style="color: red;">"prop_cola"</span>))
-   <span style="color: blue;">if</span> ent <span style="color: green;">~=</span> NULL <span style="color: blue;">or</span> ent <span style="color: green;">~=</span> <span style="color: red;">nil</span> <span style="color: blue;">then</span>
-      ent:SetLocalOrigin(vecSrc + forward * 16)
-      ent.m_nSkin = 1;
-      ent:Spawn()		
-      <span style="color: blue;">local</span> phys = ent:VPhysicsGetObject()
-      <span style="color: blue;">if</span> phys <span style="color: green;">~=</span> <span style="color: red;">nil</span> <span style="color: blue;">then</span>
-         phys:SetVelocity(forward * 1024,forward * 1024)
-      <span style="color: blue;">end</span>
-   <span style="color: blue;">end</span>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: blue;">if</span> SERVER <span style="color: blue;">then</span>
+   <span style="color: blue;">print</span>( <span style="color: #ec3939;">"Loaded from SERVER."</span> )
 <span style="color: blue;">end</span>
                </pre>
             </div>

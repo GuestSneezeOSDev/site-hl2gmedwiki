@@ -85,6 +85,15 @@ table, th, td {
                   <h3><li> 1) <span style="color: #0066ff;"><a href="../classes/convar/basepage.html">Convar</a></span> </li></h3>
                   The <a href="../classes/convar/basepage.html">ConVar</a> object.
                </ul>
+               <h2>Example:</h2><hr>
+               <br>
+               <pre class="lua" style="font-family:monospace;">
+<span style="color: #0000ff;">local</span> checkBool<span style="color:#008000;"> = </span>CreateConVar<span style="color:#008000;">(</span><span style="color: #FF0000;">"gmed_giveweapons"</span>, <span style="color: #FF0000;">"1"</span>, FCVAR_CLIENT, <span style="color: #FF0000;">"Give weapons?"</span>, <span style="color: #FF0000;">"0"</span>, <span style="color: #FF0000;">"1"</span><span style="color:#008000;">)</span>
+                  
+<span style="color: #0000ff;">if</span> checkBool<span style="color: #0000ff;">:GetBool()</span> <span style="color:#008000;">==</span> <span style="color: #FF0000;">true</span><span style="color: #0000ff;"> then</span>
+   <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConVar is Working!"</span><span style="color: #0000ff;">)
+</span><span style="color: #0000ff;">end</span><span style="color:#008000;"></span>
+               </pre>
             </div>
          </div>
       </div>
