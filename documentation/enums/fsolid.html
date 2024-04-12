@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid blue;
+}
+</style>
+   <head>
+      <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>FSOLID</title>
+   </head>
+<script src="../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <div id="bodyContent">
+            <h1>FSOLID</h1>
+            <img alt="NewerServer.png" src="../../img/NewerShared.png" width="12" height="17">  Enumerations used by <a href="../classes/cbaseentity/basepage.html">Entity</a>:SetSolidFlags(), <a href="../classes/cbaseentity/basepage.html">Entity</a>:GetSolidFlags().
+            <br>
+            <div id="contentSub">
+               <h2>Values:</h2>
+               <hr>
+               <br>
+               <table class="prettytable" style="width:95%">
+                  <tr>
+                   <th>ENUM</th>
+                   <th>NUM</th>
+                   <th>Description</th>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_CUSTOMRAYTEST</td>
+                   <td>1</td>
+                   <td>Ignore solid type + always call into the entity for ray tests</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_CUSTOMBOXTEST</td>
+                   <td>2</td>
+                   <td>Ignore solid type + always call into the entity for swept box tests</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_NOT_SOLID</td>
+                   <td>4</td>
+                   <td>The object is currently not solid</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_TRIGGER</td>
+                   <td>8</td>
+                   <td>This is something may be collideable but fires touch functions even when it's not collideable (when the FSOLID_NOT_SOLID flag is set)</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_MAX_BITS</td>
+                   <td>10</td>
+                   <td>The amount of bits needed to store the all the flags in a variable/sent over network.</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_NOT_STANDABLE</td>
+                   <td>16</td>
+                   <td>The player can't stand on this</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_VOLUME_CONTENTS</td>
+                   <td>32</td>
+                   <td>Contains volumetric contents (like water)</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_FORCE_WORLD_ALIGNED</td>
+                   <td>64</td>
+                   <td>Forces the collision representation to be world-aligned even if it's SOLID_BSP or SOLID_VPHYSICS</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_USE_TRIGGER_BOUNDS</td>
+                   <td>128</td>
+                   <td>Uses a special trigger bounds separate from the normal OBB</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_ROOT_PARENT_ALIGNED</td>
+                   <td>256</td>
+                   <td>Collisions are defined in root parent's local coordinate space</td>
+                  </tr>
+                  <tr>
+                   <td>FSOLID_TRIGGER_TOUCH_DEBRIS</td>
+                   <td>512</td>
+                   <td>This trigger will touch debris objects</td>
+                  </tr>
+                  </table>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 12.04.2024
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

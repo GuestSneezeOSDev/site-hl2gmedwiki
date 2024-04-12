@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid blue;
+}
+</style>
+   <head>
+      <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>COLLISION_GROUP</title>
+   </head>
+<script src="../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+      </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../base_page.html" title="GetBack">Return to Main Docs Page</a>
+
+         <div id="bodyContent">
+            <h1>COLLISION_GROUP</h1>
+            <img alt="NewerServer.png" src="../../img/NewerShared.png" width="12" height="17">  Enumerations used by <a href="../classes/cbaseentity/basepage.html">Entity</a>:SetCollisionGroup(), <a href="../classes/cbaseentity/basepage.html">Entity</a>:GetCollisionGroup().
+            <br>
+            <div id="contentSub">
+               <h2>Values:</h2>
+               <hr>
+               <br>
+               <table class="prettytable" style="width:95%">
+                  <tr>
+                   <th>ENUM</th>
+                   <th>NUM</th>
+                   <th>Description</th>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_NONE</td>
+                   <td>0</td>
+                   <td>Normal</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_DEBRIS</td>
+                   <td>1</td>
+                   <td>Collides with nothing but world and static stuff</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_DEBRIS_TRIGGER</td>
+                   <td>2</td>
+                   <td>Same as debris, but hits triggers. Useful for an item that can be shot, but doesn't collide.</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_INTERACTIVE_DEBRIS</td>
+                   <td>3</td>
+                   <td>Collides with everything except other interactive debris or debris</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_INTERACTIVE</td>
+                   <td>4</td>
+                   <td>Collides with everything except interactive debris or debris</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_PLAYER</td>
+                   <td>5</td>
+                   <td></td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_BREAKABLE_GLASS</td>
+                   <td>6</td>
+                   <td>NPCs can see straight through an Entity with this applied.</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_VEHICLE</td>
+                   <td>7</td>
+                   <td></td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_PLAYER_MOVEMENT</td>
+                   <td>8</td>
+                   <td>For HL2, same as Collision_Group_Player, for TF2, this filters out other players and CBaseObjects</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_NPC</td>
+                   <td>9</td>
+                   <td>Generic NPC group</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_IN_VEHICLE</td>
+                   <td>10</td>
+                   <td>Doesn't collide with anything, no traces</td>
+                  </tr>
+                  <tr>
+                     <td>COLLISION_GROUP_WEAPON</td>
+                     <td>11</td>
+                     <td>Doesn't collide with players and vehicles</td>
+                    </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_VEHICLE_CLIP</td>
+                   <td>12</td>
+                   <td>Only collides with vehicles</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_PROJECTILE</td>
+                   <td>13</td>
+                   <td></td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_DOOR_BLOCKER</td>
+                   <td>14</td>
+                   <td>Blocks entities not permitted to get near moving doors</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_PASSABLE_DOOR</td>
+                   <td>15</td>
+                   <td>Lets the Player through, nothing else.</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_DISSOLVING</td>
+                   <td>16</td>
+                   <td>Things that are dissolving are in this group</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_PUSHAWAY</td>
+                   <td>17</td>
+                   <td>Nonsolid on client and server, pushaway in player code</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_NPC_ACTOR</td>
+                   <td>18</td>
+                   <td>Used so NPCs in scripts ignore the player</td>
+                  </tr>
+                  <tr>
+                   <td>COLLISION_GROUP_NPC_SCRIPTED</td>
+                   <td>19</td>
+                   <td>Used for NPCs in scripts that should not collide with each other</td>
+                  </tr>
+                  <tr>
+                   <td>LAST_SHARED_COLLISION_GROUP</td>
+                   <td>20</td>
+                   <td>Amount of COLLISION_GROUP_ enumerations</td>
+                  </tr>
+                  </table>
+                  
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 12.04.2024
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>
