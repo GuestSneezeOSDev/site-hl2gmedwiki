@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>Creating a Nextbot</title>
+   </head>
+   <script src="../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elem<span style="color: #000ff0;">ENT</span>s -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            </div>
+         </div>  <!-- Collapsible Elem<span style="color: #000ff0;">ENT</span>s End -->
+      </div>
+   </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>Creating a Nextbot</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a title="ConCommands"><img alt="Page white text.png" src="../../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>How to make a nextbot.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="CreatingRunning"><img alt="Calendar.png" src="../../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>April 13th 2024</td></tr>
+         </tbody></table>
+         <br>
+
+         <h2 id="firstHeading" class="firstHeading">The Beggining</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               This tutorial will show you how to make a simple Nextbot, with using Nextbot Base.<br />
+               <br />
+
+               Make sure you have installed <b>Nextbot Base</b>. (it's on discord server) <br />
+               <br />
+
+               <a href="../documentation/classes/keyvalues/basepage.html">Look here for Nextbot Hook list</a>
+
+         <h2 id="firstHeading" class="firstHeading">Starting from script</h2>
+               You can make a new script, or just copy a example, it is in the <i>srceng/hl2/custom/nextbots base/lua/entities/<b>nextbot_example</b></i><br />
+               <br />
+               Open <b>🔵shared.lua</b>
+
+               <pre class="lua" style="font-family: monospace;">      
+<span style="color: #000ff0;"><span style="color: #000ff0;">ENT</span></span>.Name = <span style="color: #aab150;">"[NEXTBOT] Example"</span> <span style="color: #aaa;">// Name in SpawnMenu</span>
+<span style="color: #000ff0;">ENT</span>.Base = <span style="color: #aab150;">"nextbot_base"</span>
+                  
+<span style="color: #aaa;">//Settings:</span>
+<span style="color: #000ff0;">ENT</span>.Texture = <span style="color: #aab150;">"nextbot_base/nextbot_base.vmt"</span> <span style="color: #aaa;">// Path to texture. [ONLY .VMT!]</span>
+<span style="color: #000ff0;">ENT</span>.Scale = <span style="color: rgb(180, 61, 61);">0.5</span> <span style="color: #aaa;">// Scale of Texture. [ BETTER DONT TOUCH! ]</span>
+<span style="color: #000ff0;">ENT</span>.Distance = <span style="color: rgb(180, 61, 61);">16192</span> <span style="color: #aaa;">// Distance to find players/doors/props.</span>
+<span style="color: #000ff0;">ENT</span>.Speed = <span style="color: rgb(180, 61, 61);">2.5</span> <span style="color: #aaa;">// Speed of nextbot movement.</span>
+<span style="color: #000ff0;">ENT</span>.JumpCooldown = <span style="color: rgb(180, 61, 61);">1.5</span> <span style="color: #aaa;">// How many seconds will it be possible to jump again.</span>
+                  
+<span style="color: #000ff0;">ENT</span>.IdleSound = <span style="color: #aab150;">"base/idle.wav"</span> <span style="color: #aaa;">// Idle sound, plays everytime [path]</span>
+<span style="color: #000ff0;">ENT</span>.IdleDuration = <span style="color: rgb(180, 61, 61);">2</span> <span style="color: #aaa;">// in Seconds [ Required for auto sound refresh. ]</span>
+<span style="color: #000ff0;">ENT</span>.IdlePlayEverywhere = <span style="color: #000ff0;">false</span> <span style="color: #aaa;">// Play Idle Sound Everywhere?</span>
+<span style="color: #000ff0;">ENT</span>.IdlePitch = <span style="color: rgb(180, 61, 61);">100</span> <span style="color: #aaa;">// Pitch.</span>
+<span style="color: #000ff0;">ENT</span>.IdleVolume = <span style="color: rgb(180, 61, 61);">1</span>  <span style="color: #aaa;">// Volume.</span>
+<span style="color: #000ff0;">ENT</span>.IdleDistance = <span style="color: rgb(180, 61, 61);">75</span> <span style="color: #aaa;">// Distance Multiplier. {MIN: 55}</span>
+                  
+<span style="color: #000ff0;">ENT</span>.KillWalkSound = <span style="color: #aab150;">"base/killwalk.wav"</span> <span style="color: #aaa;">// What sound should play on killing walking player? [path]</span>
+<span style="color: #000ff0;">ENT</span>.KillRunSound = <span style="color: #aab150;">"base/killrun.wav"</span> <span style="color: #aaa;">// What sound should play on killing running player? [path]</span>
+<span style="color: #000ff0;">ENT</span>.JumpSound = <span style="color: #aab150;">"base/jump.wav"</span> <span style="color: #aaa;">// What sound should play on nextbot jump? [path]</span>
+<span style="color: #000ff0;">ENT</span>.Murder = <span style="color: #000ff0;">true</span> <span style="color: #aaa;">// if <span style="color: #000ff0;">false</span> then it don't kills anyone.</span>
+<span style="color: #000ff0;">ENT</span>.Damage = <span style="color: rgb(180, 61, 61);">25</span> <span style="color: #aaa;">// WIP.</span>
+<span style="color: #000ff0;">ENT</span>.AttackOnlyPlayer = <span style="color: #000ff0;">true</span> <span style="color: #aaa;">// Dont touches NPC if true. [ Kinda broken ]</span>
+<span style="color: #000ff0;">ENT</span>.ThrowRagdolls = <span style="color: #000ff0;">true</span> <span style="color: #aaa;">//Throw ragdolls on touch.</span>
+                  
+<span style="color: #aaa;">//Props</span>
+<span style="color: #000ff0;">ENT</span>.UnfreezeProps = <span style="color: #000ff0;">true</span> <span style="color: #aaa;">// Will nextbot unfreeze props that it touches?</span>
+                  
+<span style="color: #aaa;">//Doors settings</span>
+<span style="color: #000ff0;">ENT</span>.BreakDoors = <span style="color: #000ff0;">true</span> <span style="color: #aaa;">// Will nextbot break doors that it touches?</span>
+<span style="color: #000ff0;">ENT</span>.BreakDoorSound = <span style="color: #aab150;">"physics/wood/wood_plank_break1.wav"</span> <span style="color: #aaa;">// What sound should play on door break? [path]</span>
+<span style="color: #000ff0;">ENT</span>.BreakDoorType = <span style="color: rgb(180, 61, 61);">1</span> <span style="color: #aaa;">// Flag for door breaking</span>
+<span style="color: #aaa;">// 1 = Break and throw door</span>
+<span style="color: #aaa;">// 2 = Remove the door</span>
+<span style="color: #000ff0;">ENT</span>.BreakDoorCooldown = <span style="color: rgb(180, 61, 61);">1.5</span> <span style="color: #aaa;">// in Seconds</span>
+                  
+<span style="color: #aaa;">//Searching [BROKEN]</span>
+<span style="color: #000ff0;">ENT</span>.SearchForProps = <span style="color: #000ff0;">false</span> <span style="color: #aaa;">// This thing can broke nextbot and it will just stay. [ FIXME ]</span>
+<span style="color: #000ff0;">ENT</span>.SearchForDoors = <span style="color: #000ff0;">false</span> <span style="color: #aaa;">// This thing can broke nextbot and it will just stay. [ FIXME ]</span>
+
+<span style="color: #aaa;">//OTHER</span>
+<span style="color: #000ff0;">ENT</span>.PlayerRunSpeed = <span style="color: rgb(180, 61, 61);">321</span> <span style="color: #aaa;">// for detecting [ BETTER DONT TOUCH! ]</span>
+<span style="color: #000ff0;">ENT</span>.PlayerWalkSpeed = <span style="color: rgb(180, 61, 61);">191</span> <span style="color: #aaa;">// for detecting  [ BETTER DONT TOUCH! ] </span>
+<span style="color: #000ff0;">ENT</span>.PlayerNoclipSpeed = <span style="color: rgb(180, 61, 61);">1000</span> <span style="color: #aaa;">// for detecting (better more than 1000) [ BETTER DONT TOUCH! ]</span>
+                  
+<span style="color: #aaa;">//TODO:</span>
+<span style="color: #000ff0;">ENT</span>.CollisionSize = <span style="color: rgb(180, 61, 61);">1</span>
+
+                                 </pre>
+               Make sure that your Nextbot texture is in VTF format, and path is set to VMT! <br>
+               <br>                  
+<b><i>TODO:</i> Continue tutorial</b><br>
+<br>                    
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 13.04.2024
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

@@ -8,6 +8,16 @@ body {
     pointer-events: all;
 }
 
+.arrow-right {
+    background-image: url('../img/arrow-right.png');
+    background-repeat: no-repeat;
+}
+
+.arrow-down {
+    background-image: url('../img/arrow-down.png');
+    background-repeat: no-repeat;
+}
+
 table.wikitable,
 table.prettytable {
     margin: 1em 1em 1em 0;

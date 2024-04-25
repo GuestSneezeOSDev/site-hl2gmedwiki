@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>Using KeyValues</title>
+   </head>
+   <script src="../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elements -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            </div>
+         </div>  <!-- Collapsible Elements End -->
+      </div>
+   </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>Using KeyValues</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a title="ConCommands"><img alt="Page white text.png" src="../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>How to use Source Engine KeyValues.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="CreatingRunning"><img alt="Calendar.png" src="../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>April 13th 2024</td></tr>
+         </tbody></table>
+         <br>
+
+         <h2 id="firstHeading" class="firstHeading">The Beggining</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               The <b>KeyValues</b> format is used in the Source engine to store meta data for resources, scripts, materials, VGUI elements, and more...<br />
+               <br />
+
+               <b>KeyValues(VDF)</b> is a bit similar to JSON, but unfortunately JSON is not yet embedded in HL2GMED (you still can use JSON library for lua)<br />
+               <br />
+
+               <a href="../documentation/classes/keyvalues/basepage.html">Look here for all KeyValues class methods.</a>
+
+         <h2 id="firstHeading" class="firstHeading">KeyValues usage examples</h2>
+               Let's try to parse some script, for example we could try to read weapon script: <br />
+               <br />
+
+               <pre class="lua" style="font-family: monospace;">      
+<span style="color: #0000ff;">function </span>parseWeaponScript( strPath )
+   <span style="color: #0000ff;">local</span> curfilename = strPath
+   <span style="color: #0000ff;">local</span> kv = <a href="../documentation/globals/keyvalues.html">KeyValues</a>(<span style="color: #857e1e;">"weapon_357.txt"</span>)
+   kv:LoadFromFile(curfilename)
+
+   <span style="color: #0000ff;">local</span> sub = kv:GetFirstSubKey()
+   <span style="color: #0000ff;">while</span> sub ~= NULL_KEYVALUES <span style="color: #0000ff;">do</span>
+      <span style="color: #0059ff">print(</span>sub:GetName()..<span style="color: #857e1e;">"=="</span>..sub:GetString()<span style="color: #0059ff">)</span>
+      sub = sub:GetNextKey()
+   <span style="color: #0000ff;">end</span>
+
+   kv:deleteThis()
+<span style="color: #0000ff;">end</span>
+                  
+parseWeaponScript(<span style="color: #857e1e;">"scripts/weapon_357.txt"</span>)
+
+                                 </pre>
+
+                                 Don't forget to remove <b>KeyValue</b> object after use, otherwise it will make a lot of garbage in Lua memory! <br>
+                                 <br>
+                                 <b>Output:</b><br>
+                                 <pre class="lua" style="font-family: monospace;">
+printname==#HL2_357Handgun
+viewmodel==models/weapons/v_357.mdl
+playermodel==models/weapons/w_357.mdl
+anim_prefix==python
+Bucket==1
+bucket_position==1
+clip_size==6
+default_clip==6
+primary_ammo==357
+secondary_ammo==None
+weight==7
+item_flags==0
+damage==75
+SoundData==
+TextureData==                                                                    
+                                 </pre>
+               Here's also another example, how to loop values. <br>
+               Make sure you are using <b>NULL_KEYVALUES</b> instead of <b>NULL</b><br>
+               <br>                  
+<!---<b><i>TODO:</i> MAKE WRITING KEYVALUES EXAMPLE</b><br> im not sure that its possible lmao
+<br>                    --->
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 26.04.2024
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>

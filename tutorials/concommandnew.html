@@ -80,11 +80,20 @@ end<span style="color:#008000;">)</span>
                </pre>
 
                <span style="color: #0000ff;">function()</span> is supporting arguments:
-               <pre class="lua", style="font-family: monospace;">
-concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span>, <span style="color: #0000ff;">function(</span><span style="color: #0000ff;"> args )</span>
-   <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConCommand is Working!"</span><span style="color: #0000ff;">)
-</span>end<span style="color:#008000;">)</span>
-               </pre>
+               <pre class="lua" style="font-family:monospace;">
+concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span>, <span style="color: #0000ff;">function(ply, cmd, arg)</span> 
+   <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConCommand is Working!"</span><span style="color: #0000ff;">)</span>
+   <span style="color: #0000ff;">if</span> arg ~= <span style="color: #0000ff;">nil</span> <span style="color: #0000ff;">then</span>
+      <span style="color: #0000ff;">print(</span>ply:GetPlayerName()..<span style="color: #FF0000;">" executed command: "</span>..cmd..<span style="color: #FF0000;">" with "</span>..arg..<span style="color: #FF0000;">" as argument. "</span></span><span style="color: #0000ff;">)</span>
+   <span style="color: #0000ff;">end</span>
+end<span style="color:#008000;">)</span>
+                                 </pre>
+                                 <h3>Output:</h3>
+                                 <hr>
+                                 <pre class="lua" style="font-family:monospace;">
+ConCommand is Working!
+Dim1xs executed command: ConsoleCommand with 1 as argument.  
+                                 </pre>
             </div>
          </div>
          <h3 id="secondHeading" class="secondHeading">concommand.Remove</h3>
@@ -114,7 +123,7 @@ concommand.Remove<span style="color:#008000;">(</span><span style="color: #FF000
       <div id="footer">
          <ul id="footer-info">
             <li id="footer-info-lastmod">
-               This page was last modified on 28.09.2023
+               This page was last modified on 13.04.2024
             </li>
             <li id="footer-info-viewcount">
                Thank you, for opening this page

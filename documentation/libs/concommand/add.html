@@ -50,7 +50,7 @@
 
          <div id="bodyContent">
             <h1>concommand.Add</h1>
-            <img alt="NewerShared.png" src="../../../img/NewerShared.png" width="12" height="17">  Creates a console command that runs a function in lua with optional autocompletion function and help text. <br>
+            <img alt="NewerShared.png" src="../../../img/NewerShared.png" width="12" height="17">  Creates a console command that runs a function in lua. <br>
             <br>
             <div id="contentSub">
                <pre class="lua" style="font-family:monospace;">
@@ -85,9 +85,18 @@
                <h2>Example:</h2>
                <hr>
                <pre class="lua" style="font-family:monospace;">
-concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span>, <span style="color: #0000ff;">function()</span> 
+concommand.Add<span style="color:#008000;">(</span><span style="color: #FF0000;">"ConsoleCommand"</span>, <span style="color: #0000ff;">function(ply, cmd, arg)</span> 
    <span style="color: #0000ff;">print(</span><span style="color: #FF0000;">"ConCommand is Working!"</span><span style="color: #0000ff;">)</span>
+   <span style="color: #0000ff;">if</span> arg ~= <span style="color: #0000ff;">nil</span> <span style="color: #0000ff;">then</span>
+      <span style="color: #0000ff;">print(</span>ply:GetPlayerName()..<span style="color: #FF0000;">" executed command: "</span>..cmd..<span style="color: #FF0000;">" with "</span>..arg..<span style="color: #FF0000;">" as argument. "</span></span><span style="color: #0000ff;">)</span>
+   <span style="color: #0000ff;">end</span>
 end<span style="color:#008000;">)</span>
+               </pre>
+               <h2>Output:</h2>
+               <hr>
+               <pre class="lua" style="font-family:monospace;">
+ConCommand is Working!
+Dim1xs executed command: ConsoleCommand with 1 as argument.  
                </pre>
                </pre>
             </div>
@@ -103,7 +112,7 @@ end<span style="color:#008000;">)</span>
       <div id="footer">
          <ul id="footer-info">
             <li id="footer-info-lastmod">
-               This page was last modified on 17.03.2024
+               This page was last modified on 13.04.2024
             </li>
             <li id="footer-info-viewcount">
                Thank you, for opening this page
