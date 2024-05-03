@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
+      <title>Getting a player weapons</title>
+   </head>
+   <script src="../../base.js"></script>
+   <body> 
+      <div id="mw-page-base" class="noprint"></div>
+      <div id="mw-head-base" class="noprint">
+      <div class="property-list">
+         <div class="hl2gmed-logo"><img alt="logo.png" src="../../img/logo.svg" width="128" height="108"></div>
+         <div id="propertyTextMain"><a href="../../index.html">Main Page</a></div>
+
+         <div id="mw-panel" class="noprint"> <!-- Collapsible Elem<span style="color: #000ff0;">ENT</span>s -->
+            <div class="collapsible-nav"> 
+
+               <!-- Lua Scripting -->
+               <div class="portal" id='p-Lua_Scripting'>
+                  <h5><a>Manuals</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-Overview"><a href="../../documentation/base_page.html">Lua Docs</a></li>
+                        <li id="n-Getting-Started"><a href="../../tutorials/gettingstarted.html">Getting Started</a></li>
+                        <li id="n-Tutorials"><a href="../../tutorials/luadocs.html">Tutorials</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- About -->
+               <div class="portal" id='p-About'>
+                  <h5><a>About</a></h5>
+                  <div class="body">
+                     <ul>
+                        <li id="n-FAQ"><a href="../../other/faq.html">FAQ</a></li>
+                        <li id="n-Info"><a href="../../other/info.html">Info</a></li>
+                        <li id="n-Screenshots"><a href="../../other/screenshots.html">Screenshots</a></li>
+                        <li id="n-Videos"><a href="../../other/videos.html">Videos</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            </div>
+         </div>  <!-- Collapsible Elem<span style="color: #000ff0;">ENT</span>s End -->
+      </div>
+   </div>
+      <div id="content">
+         <a id="top"></a>
+
+         <a href="../../index.html" title="GetBack">Return to Main Page</a>
+
+         <h1>Getting a player weapons</h1>
+         <table style="padding: 2px; width: 100%; margin: -1px 0% 0px; border: 1px solid #aaa; border-left: 15px solid #333333; border-top: 0; background: #fbfbfb;"><tbody><tr><td style="width: 130px;"><a title="ConCommands"><img alt="Page white text.png" src="../../img/Page_white_text.png" width="16" height="16"></a> <b>Description:</b></td><td>Getting a player entity with different ways.</td></tr>
+         <tr><td><a href="indexfdbf.html" class="image" title="link=User:Dim1xs"><img alt="link=User:Dim1xs" src="../../img/User.png" width="16" height="16"></a> <b>Author:</b></td><td><a href="../../other/users/dim1xs.html" title="User:Dim1xs">Dim1xs</a></td></tr>
+         <tr><td> <a href="index43df.html" title="CreatingRunning"><img alt="Calendar.png" src="../../img/Calendar.png" width="16" height="16"></a> <b>Created:</b></td><td>May 3nd 2024</td></tr>
+         </tbody></table>
+         <br>
+
+         <h2 id="firstHeading" class="firstHeading">The Beggining</h2>
+         <div id="bodyContent">
+            <div id="contentSub">
+               Fast tutorial that will show you, how to get all items/weapons from player inventory.<br />
+               <br />
+
+               Make sure you have lastest HL2GMED version.<br />
+         <h2 id="firstHeading" class="firstHeading">Starting from script</h2>
+               Make sure that you have already read <a href="../creatingrunning.html">this tutorial</a>. </i><br />
+               <br />
+
+               <pre class="lua" style="font-family: monospace;">
+<span style="color: red;"><a href="../../documentation/classes/cbaseplayer/basepage.html">CBasePlayer</a></span>:GetWeapon(2)
+               </pre>
+               This function is returning weapon from inventory by index/id.<br>
+               <br>                  
+               Each weapon has own index in player inventory.<br>
+<pre class="lua" style="font-family: monospace;">
+<span style="color:blue">local</span> ply = <span style="color: red;"><a href="../../documentation/libs/util/basepage.html">UTIL</a></span>.PlayerByIndex(1)
+<span style="color:blue">print</span>(ply:GetWeapon(2))
+               </pre>
+               <h3>Output:</h3>
+               <pre class="lua" style="font-family: monospace;">
+CBaseCombatWeapon: 70 weapon_pistol
+               </pre>
+
+               For getting a table with all player weapons, you can use this loop method: <br>
+               <h3>Output:</h3>
+               <pre class="lua" style="font-family: monospace;">
+<span style="color:blue">local</span> tWeapons = {}
+<span style="color:blue">local</span> ply = <span style="color: red;"><a href="../../documentation/libs/util/basepage.html">UTIL</a></span>.PlayerByIndex(1)
+<span style="color:blue">local</span> count = ply:WeaponCount()
+<span style="color:blue">for</span> i=0,count <span style="color:blue">do</span>
+   i=i+1
+   <span style="color:blue">local</span> weapon = ply:GetWeapon(i)
+   <span style="color:blue">if</span> ToBaseEntity(weapon) ~= NULL <span style="color:blue">then</span>
+      table.insert(tWeapons, weapon)
+   <span style="color:blue">end</span>
+<span style="color:blue">end</span>      
+               </pre>
+               <b>BUG! For some reasons, source engine also uses 0 number for weapons index, but lua can't have 0 key in table, so this can be inaccurate.</b> <br>
+               <br> 
+               If you want to use it in function, add <code>return tWeapons</code> on function end and player on function arguments, And you will be able to use this function to get all weapons from different player. <br>
+               <br>
+
+               Thank you for reading this article, see ya later!<br />
+               <br />
+
+               <a href="https://discord.com/invite/5er8wTvQu7" title="HL2GMEDDiscord">JOIN HL2GMED DISCORD SERVER!</a>
+            </div>
+         </div>
+      </div>
+      <div id="mw-panel" class="noprint collapsible bav"> 
+         <div id="p-logo">
+            <a style="background-image: url(img/logo.svg);"> 
+            </a>
+         </div>
+      </div>
+
+      <div id="footer">
+         <ul id="footer-info">
+            <li id="footer-info-lastmod">
+               This page was last modified on 03.05.2024
+            </li>
+            <li id="footer-info-viewcount">
+               Thank you, for opening this page
+            </li>
+         </ul>
+      </div>
+   </body>
+
+</html>
