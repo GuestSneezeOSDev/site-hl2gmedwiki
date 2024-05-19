@@ -63,6 +63,7 @@
                You can use any text editor, but to make your life easier, we recommend that you use Quick Edit. <br />
                <br />
                <h3 id="CreatingScript" class="subFirstHeading">Creating the script</h3>
+               <hr>
 
                For our first script, we're not going to do anything too complex. Just send some message into game console.<br />
                <br />
@@ -73,6 +74,7 @@
                </pre>
 
                <h3 id="SavingScript" class="subFirstHeading1">Saving the script</h3>
+               <hr>
 
                You're now ready to create the actual Lua script file. To find your lua folder follow the following path - it will look something like this:<br />
                <br />
@@ -80,10 +82,12 @@
                <pre class="lua" style="font-family:monospace;">
 srceng/hl2/custom/hl2gmed/lua/*
                </pre>
-
+               
                And you must save it with lua format (.lua)
 
-               <h3 id="RunningScript" class="subFirstHeading2">Running the script</h3>
+               <h2 id="RunningScript" class="subFirstHeading2">Running the script</h2>
+
+               <h3 id="RunningScript" class="subFirstHeading2">Running file script</h3>
 
                 To run any of your scripts you need to be playing a map. <br />
 
@@ -93,20 +97,50 @@ srceng/hl2/custom/hl2gmed/lua/*
 lua_dofile scriptname.lua
                </pre>
 
+               Make sure, using <code>lua_dofile</code> command will run script from <img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><b>SERVER</b> side. <br>
+               <br>
+               That also means using <code>lua_dofile_cl</code> command will run script from <img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><b>CLIENT</b> side. <br>
+               <br>
+
                Send it. If you did everything correctly up to this point you should see a message in the console :<br />
                <pre class="lua" style="font-family:monospace;">
 Hello World!
                </pre>
                The script has done exactly what you told it to. <br />
-               <h3 id="Autoruning" class="subFirstHeading3">Autorun</h3>
+
+               <h3 id="RunningScript" class="subFirstHeading2">Running script line</h3>
+               <hr>
+
+               By using <code>lua_dostring</code> command, line from argument, will be executed from Lua <img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"><b>SERVER</b> side. <br>
+               <br>
+               So logically using <code>lua_dostring_cl</code> command, same will be done from <img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"><b>CLIENT</b> side. <br>
+               <br>
+
+               Look at the example:<br />
+               <pre class="lua" style="font-family:monospace;">
+lua_dostring print("Hello World")
+               </pre>
+               After sending that command let's look at the output:<br />
+               <pre class="lua" style="font-family:monospace;">
+Hello World
+               </pre>
+
+               <h2 id="Autoruning" class="subFirstHeading3">Autorun</h2>
+               <hr>
+
 
                You can also use <b>'lua/autorun/'</b> directory, for make script run every map start. <br />
                <h4>Autorun Structure</h4>
                <ul>
-                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"> <b>'/autorun/</b> - Shared</li>
-                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"> <b>'/autorun/client/</b> - Client</li>
-                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"> <b>'/autorun/server/</b> - Server</li>
+                  <li><img alt="NewerShared.png" src="../img/NewerShared.png" width="12" height="17"> <b>'lua/autorun/</b> - Shared</li>
+                  <li><img alt="NewerClient.png" src="../img/NewerClient.png" width="12" height="17"> <b>'lua/autorun/client/</b> - Client</li>
+                  <li><img alt="NewerServer.png" src="../img/NewerServer.png" width="12" height="17"> <b>'lua/autorun/server/</b> - Server</li>
                </ul>
+
+               Simply just put lua script into one of those folders listed above, and it gonna be exectued at the map start. <br>
+               <br>
+               <hr>
+
                
                Thank you for reading this tutorial, see ya later!<br />
                <br />
@@ -125,7 +159,7 @@ Hello World!
       <div id="footer">
          <ul id="footer-info">
             <li id="footer-info-lastmod">
-               This page was last modified on 03.05.2024
+               This page was last modified on 20.05.2024
             </li>
             <li id="footer-info-viewcount">
                Thank you, for opening this page
