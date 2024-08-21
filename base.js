@@ -5,17 +5,17 @@ function togglePortal(portal) {
     if (body && h5) {
        if(body.style.display == "none")
        {
-          body.style.display = "block"
-          
-          h5.style.backgroundImage = "url('img/arrow-down.png')"; 
-          h5.style.backgroundRepeat = "no-repeat";
+         portal.classList.remove("arrow-down");
+         portal.classList.remove("arrow-right");
+         portal.classList.add("arrow-down");
+         body.style.display = "block"
        }
        else
        {
-          body.style.display = "none"
-          
-          h5.style.backgroundRepeat = "no-repeat";
-          h5.style.backgroundImage = "url('img/arrow-right.png')"; 
+         portal.classList.remove("arrow-down");
+         portal.classList.remove("arrow-right");
+         portal.classList.add("arrow-right");
+         body.style.display = "none"
        }
     }
  }
@@ -31,6 +31,7 @@ function togglePortal(portal) {
     portals.forEach(function (portal) {
        
        portal.querySelector('.body').style.display = "none"
+       portal.classList.add("arrow-right");
        portal.addEventListener('click', function () {
           portal.classList.toggle("expanded");
           togglePortal(portal);
