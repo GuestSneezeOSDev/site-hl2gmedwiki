@@ -20,7 +20,13 @@ function togglePortal(portal) {
     }
  }
  document.addEventListener("DOMContentLoaded", function () {
-    const portals = document.querySelectorAll('.portal');
+   const portals = document.querySelectorAll('.portal');
+   let oLastModif = new Date(document.lastModified);
+   let nFullDate = oLastModif.toLocaleDateString();
+   let string = "This page was last modified on ";
+   let message = string.concat("", nFullDate);
+
+   document.getElementById("footer-info-lastmod").innerHTML = message;
 
     portals.forEach(function (portal) {
        
