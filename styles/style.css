@@ -398,6 +398,7 @@ tr:nth-child(even) {
 #propertyTextMain {
     padding: 0.23em;
     font-size: 15px;
+    background-image: url(../img/portal-break.png);
     background-position: bottom;
     background-repeat: repeat-x;
 }
