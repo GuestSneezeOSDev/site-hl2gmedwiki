@@ -1,3 +1,4 @@
+![HL2GMed_Logo](https://github.com/Dim1xs/site-hl2gmedwiki/blob/main/img/logo.svg)
 # HL2GMED Wiki
 ## Thanks to [@Null7781](https://github.com/Null7781) for helping with some stuff. <br>
 Thanks to [@maurits150](https://github.com/maurits150/) for continuing hosting the [old Garry's Mod Wiki](https://maurits.tv/data/garrysmod/wiki/wiki.garrysmod.com/index4875.html), <br>
